@@ -3,7 +3,7 @@ package com.vanniktech.locale
 data class Locale(
   val language: Language,
   val country: Country?,
-) {
+) : Comparable<Locale> {
   override fun toString() = listOfNotNull(
     language.identifier,
     country?.identifier,
@@ -26,6 +26,9 @@ data class Locale(
       fromOrNull(it.name, inferDefaultCountry = true) == this || isIndonesian || isHebrew || isChineseTaiwan
     }
   }
+
+  override fun compareTo(other: Locale): Int =
+    compareValuesBy(this, other, { it.language }, { it.country })
 
   companion object {
     fun from(locale: String, inferDefaultCountry: Boolean) = fromOrNull(locale, inferDefaultCountry) ?: error("Can't get locale for $locale")

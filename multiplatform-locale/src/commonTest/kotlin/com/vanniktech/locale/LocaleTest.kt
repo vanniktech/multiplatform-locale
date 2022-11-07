@@ -4,6 +4,19 @@ import kotlin.test.Test
 import kotlin.test.assertEquals
 
 class LocaleTest {
+  @Test fun sorted() {
+    assertEquals(
+      expected = listOf(
+        Locale(Language.ENGLISH, country = Country.USA),
+        Locale(Language.GERMAN, country = Country.GERMANY),
+      ),
+      actual = listOf(
+        Locale(Language.GERMAN, country = Country.GERMANY),
+        Locale(Language.ENGLISH, country = Country.USA),
+      ).sorted(),
+    )
+  }
+
   @Test fun fromOrNull() {
     listOf(
       Triple(Locale(Language.ENGLISH, country = null), "en", false),

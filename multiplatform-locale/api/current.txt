@@ -450,9 +450,10 @@ package com.vanniktech.locale {
     method public com.vanniktech.locale.Language? fromOrNull(String? identifier);
   }
 
-  public final class Locale {
+  public final class Locale implements java.lang.Comparable<com.vanniktech.locale.Locale> {
     ctor public Locale(com.vanniktech.locale.Language language, com.vanniktech.locale.Country? country);
     method public com.vanniktech.locale.AppleAppStoreLocale? appleAppStoreLocale();
+    method public int compareTo(com.vanniktech.locale.Locale other);
     method public com.vanniktech.locale.Language component1();
     method public com.vanniktech.locale.Country? component2();
     method public com.vanniktech.locale.Locale copy(com.vanniktech.locale.Language language, com.vanniktech.locale.Country? country);
