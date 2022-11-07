@@ -1,0 +1,47 @@
+package com.vanniktech.locale
+
+/** All the locales supported by the Apple App Store. */
+enum class AppleAppStoreLocale {
+  ar_SA,
+  ca,
+  cs,
+  da,
+  de_DE,
+  el,
+  en_AU,
+  en_CA,
+  en_GB,
+  en_US,
+  es_ES,
+  es_MX,
+  fi,
+  fr_CA,
+  fr_FR,
+  he,
+  hi,
+  hr,
+  hu,
+  id,
+  it,
+  ja,
+  ko,
+  ms,
+  nl_NL,
+  no,
+  pl,
+  pt_BR,
+  pt_PT,
+  ro,
+  ru,
+  sk,
+  sv,
+  th,
+  tr,
+  uk,
+  vi,
+  zh_Hans,
+  zh_Hant,
+  ;
+
+  override fun toString() = name.replace("_", "-")
+}

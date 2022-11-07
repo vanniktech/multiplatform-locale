@@ -1,0 +1,16 @@
+PODS:
+  - MultiplatformLocale (0.1.0)
+
+DEPENDENCIES:
+  - MultiplatformLocale (from `../multiplatform-locale`)
+
+EXTERNAL SOURCES:
+  MultiplatformLocale:
+    :path: "../multiplatform-locale"
+
+SPEC CHECKSUMS:
+  MultiplatformLocale: 05d1832da5166efee7fa4119293d3c9a12f2202c
+
+PODFILE CHECKSUM: b01388020c35fb53f191fb19fdf5459f1cd809b4
+
+COCOAPODS: 1.11.3
