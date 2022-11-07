@@ -132,4 +132,38 @@ class LocaleTest {
       actual = Language.values().flatMap { language -> (language.officialCountries + language.otherCountries).mapNotNull { Locale(language, it).appleAppStoreLocale() } },
     )
   }
+
+  @Test fun fromAndroidValuesDirectoryNameOrNull() {
+    listOf(
+      Triple(null, "values-foo", false),
+      Triple(Locale(Language.ENGLISH, null), "values", false),
+      Triple(Locale(Language.ARABIC, null), "values-ar", false),
+      Triple(Locale(Language.BULGARIAN, null), "values-bg", false),
+      Triple(Locale(Language.CZECH, null), "values-cs", false),
+      Triple(Locale(Language.GERMAN, null), "values-de", false),
+      Triple(Locale(Language.GREEK, null), "values-el", false),
+      Triple(Locale(Language.SPANISH, null), "values-es", false),
+      Triple(Locale(Language.FINISH, null), "values-fi", false),
+      Triple(Locale(Language.FRENCH, null), "values-fr", false),
+      Triple(Locale(Language.HUNGARIAN, null), "values-hu", false),
+      Triple(Locale(Language.INDONESIAN, null), "values-in", false),
+      Triple(Locale(Language.ITALIAN, null), "values-it", false),
+      Triple(Locale(Language.HEBREW, null), "values-iw", false),
+      Triple(Locale(Language.DUTCH, null), "values-nl", false),
+      Triple(Locale(Language.NORWEGIAN, null), "values-no", false),
+      Triple(Locale(Language.POLISH, null), "values-pl", false),
+      Triple(Locale(Language.PORTUGUESE, null), "values-pt", false),
+      Triple(Locale(Language.PORTUGUESE, Country.BRAZIL), "values-pt-rBR", false),
+      Triple(Locale(Language.ROMANIAN, null), "values-ro", false),
+      Triple(Locale(Language.RUSSIAN, null), "values-ru", false),
+      Triple(Locale(Language.SWEDISH, null), "values-sv", false),
+      Triple(Locale(Language.TURKISH, null), "values-tr", false),
+      Triple(Locale(Language.UKRAINIAN, null), "values-uk", false),
+      Triple(Locale(Language.VIETNAMESE, null), "values-vi", false),
+      Triple(Locale(Language.CHINESE, Country.CHINA), "values-zh-rCN", false),
+      Triple(Locale(Language.CHINESE, Country.TAIWAN), "values-zh-rTW", false),
+    ).forEach { (locale, localeString, inferDefaultCountry) ->
+      assertEquals(expected = locale, actual = Locale.fromAndroidValuesDirectoryNameOrNull(localeString, inferDefaultCountry = inferDefaultCountry))
+    }
+  }
 }
