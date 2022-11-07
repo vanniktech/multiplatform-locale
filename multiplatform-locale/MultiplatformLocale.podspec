@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
     spec.name                     = 'MultiplatformLocale'
-    spec.version                  = '0.1.0'
+    spec.version                  = '0.2.0-SNAPSHOT'
     spec.homepage                 = 'https://github.com/vanniktech/multiplatform-locale'
     spec.source                   = { :http=> ''}
     spec.authors                  = 'Niklas Baudy'

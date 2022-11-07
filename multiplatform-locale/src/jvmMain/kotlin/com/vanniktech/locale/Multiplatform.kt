@@ -3,14 +3,14 @@ package com.vanniktech.locale
 actual fun Language.displayName() = java.util.Locale(
   identifier,
   "",
-).displayLanguage.capitalize()
+).displayLanguage.capitalized()
 
 actual fun Country.displayName() = when (this) {
   Country.INTERNATIONAL_WATERS -> "International Waters"
   else -> java.util.Locale(
     java.util.Locale.getDefault().language,
     identifier,
-  ).displayCountry.capitalize()
+  ).displayCountry.capitalized()
 }
 
 fun Locale.toJavaLocale() = java.util.Locale(
