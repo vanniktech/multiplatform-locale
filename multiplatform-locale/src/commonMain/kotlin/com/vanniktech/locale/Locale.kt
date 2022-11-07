@@ -45,6 +45,16 @@ data class Locale(
         null
       }
     }
+
+    fun fromAndroidValuesDirectoryNameOrNull(androidValuesDirectoryName: String, inferDefaultCountry: Boolean): Locale? {
+      require(androidValuesDirectoryName.startsWith("values"))
+
+      val name = androidValuesDirectoryName.removePrefix("values").removePrefix("-")
+      return when (name.isBlank()) {
+        true -> Locale(Language.ENGLISH, null)
+        else -> fromOrNull(name.replace("-r", "-"), inferDefaultCountry = inferDefaultCountry)
+      }
+    }
   }
 }
 
