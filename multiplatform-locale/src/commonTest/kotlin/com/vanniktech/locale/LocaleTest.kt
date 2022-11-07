@@ -116,6 +116,11 @@ class LocaleTest {
       actual = Locale(Language.ITALIAN, Country.AUSTRIA).googlePlayStoreLocale(),
     )
 
+    assertEquals(
+      expected = GooglePlayStoreLocale.fr_FR,
+      actual = Locale(Language.FRENCH, null).googlePlayStoreLocale(),
+    )
+
     // English has many, so we'll try to be as close as possible.
     assertEquals(
       expected = GooglePlayStoreLocale.en_AU,
@@ -185,6 +190,11 @@ class LocaleTest {
     assertEquals(
       expected = AppleAppStoreLocale.it,
       actual = Locale(Language.ITALIAN, Country.AUSTRIA).appleAppStoreLocale(),
+    )
+
+    assertEquals(
+      expected = AppleAppStoreLocale.fr_FR,
+      actual = Locale(Language.FRENCH, null).appleAppStoreLocale(),
     )
 
     // English has many, so we'll try to be as close as possible.
