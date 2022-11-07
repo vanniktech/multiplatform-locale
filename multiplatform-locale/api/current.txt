@@ -446,6 +446,8 @@ package com.vanniktech.locale {
   }
 
   public static final class Language.Companion {
+    method public com.vanniktech.locale.Language from(String identifier);
+    method public com.vanniktech.locale.Language fromLocale(String locale);
     method public com.vanniktech.locale.Language? fromLocaleOrNull(String? locale);
     method public com.vanniktech.locale.Language? fromOrNull(String? identifier);
   }

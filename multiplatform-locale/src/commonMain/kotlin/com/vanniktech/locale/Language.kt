@@ -176,10 +176,16 @@ enum class Language(
   val defaultCountry = officialCountries.first()
 
   companion object {
-    fun fromOrNull(identifier: String?) =
+    fun from(identifier: String): Language =
+      requireNotNull(fromOrNull(identifier)) { "Can't get language from $identifier" }
+
+    fun fromOrNull(identifier: String?): Language? =
       values().firstOrNull { it.identifier.equals(identifier, ignoreCase = true) }
 
-    fun fromLocaleOrNull(locale: String?) =
+    fun fromLocale(locale: String): Language =
+      requireNotNull(fromLocaleOrNull(locale)) { "Can't get language from $locale" }
+
+    fun fromLocaleOrNull(locale: String?): Language? =
       fromOrNull(localeSplit(locale).getOrNull(0))
   }
 }
