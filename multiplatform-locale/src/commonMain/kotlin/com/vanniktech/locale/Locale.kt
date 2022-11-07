@@ -10,22 +10,30 @@ data class Locale(
   ).joinToString(separator = "-")
 
   /** Returns the optional [GooglePlayStoreLocale] that can be used for localizing the Google Play Store. */
-  fun googlePlayStoreLocale(): GooglePlayStoreLocale? = GooglePlayStoreLocale.values().firstNotNullOfOrNull { playStoreLocale ->
-    playStoreLocale.takeIf {
-      val isIndonesian = it.name == "id" && language == Language.INDONESIAN
-      fromOrNull(it.name, inferDefaultCountry = true) == this || isIndonesian
+  fun googlePlayStoreLocale(): GooglePlayStoreLocale? = GooglePlayStoreLocale.values()
+    .groupBy { Language.fromLocaleOrNull(it.toString()) }
+    .firstNotNullOfOrNull { (key, locales) ->
+      locales.firstNotNullOfOrNull { locale ->
+        locale.takeIf {
+          val isIndonesian = it.name == "id" && language == Language.INDONESIAN
+          fromOrNull(it.name, inferDefaultCountry = false) == this || isIndonesian
+        }
+      } ?: locales.firstNotNullOfOrNull { locale -> locale.takeIf { language == key } }
     }
-  }
 
   /** Returns the optional [AppleAppStoreLocale] that can be used for localizing the Apple App Store. */
-  fun appleAppStoreLocale(): AppleAppStoreLocale? = AppleAppStoreLocale.values().firstNotNullOfOrNull { appStoreLocale ->
-    appStoreLocale.takeIf {
-      val isIndonesian = it.name == "id" && language == Language.INDONESIAN
-      val isHebrew = it.name == "he" && language == Language.HEBREW
-      val isChineseTaiwan = it.name == "zh_Hant" && language == Language.CHINESE && country == Country.TAIWAN
-      fromOrNull(it.name, inferDefaultCountry = true) == this || isIndonesian || isHebrew || isChineseTaiwan
+  fun appleAppStoreLocale(): AppleAppStoreLocale? = AppleAppStoreLocale.values()
+    .groupBy { Language.fromLocaleOrNull(it.toString()) }
+    .firstNotNullOfOrNull { (key, locales) ->
+      locales.firstNotNullOfOrNull { locale ->
+        locale.takeIf {
+          val isIndonesian = it.name == "id" && language == Language.INDONESIAN
+          val isHebrew = it.name == "he" && language == Language.HEBREW
+          val isChineseTaiwan = it.name == "zh_Hant" && language == Language.CHINESE && country == Country.TAIWAN
+          fromOrNull(it.name, inferDefaultCountry = false) == this || isIndonesian || isHebrew || isChineseTaiwan
+        }
+      } ?: locales.firstNotNullOfOrNull { locale -> locale.takeIf { language == key } }
     }
-  }
 
   override fun compareTo(other: Locale): Int =
     compareValuesBy(this, other, { it.language }, { it.country })

@@ -55,7 +55,7 @@ class LocaleTest {
     }
   }
 
-  @Test fun googlePlayStoreLocaleString() {
+  @Test fun googlePlayStoreLocaleAllPossibilities() {
     assertEquals(
       expected = listOf(
         GooglePlayStoreLocale.ar,
@@ -100,11 +100,40 @@ class LocaleTest {
         GooglePlayStoreLocale.uk,
         GooglePlayStoreLocale.vi,
       ),
-      actual = Language.values().flatMap { language -> (language.officialCountries + language.otherCountries).mapNotNull { Locale(language, it).googlePlayStoreLocale() } },
+      actual = Language.values().flatMap { language -> (language.officialCountries + language.otherCountries).mapNotNull { Locale(language, it).googlePlayStoreLocale() } }.distinct(),
     )
   }
 
-  @Test fun appleAppStoreLocaleString() {
+  @Test fun googlePlayStoreLocaleLenient() {
+    // Italian only has one GooglePlayStoreLocale, so we'll match regardless of Country.
+    assertEquals(
+      expected = GooglePlayStoreLocale.it_IT,
+      actual = Locale(Language.ITALIAN, null).googlePlayStoreLocale(),
+    )
+
+    assertEquals(
+      expected = GooglePlayStoreLocale.it_IT,
+      actual = Locale(Language.ITALIAN, Country.AUSTRIA).googlePlayStoreLocale(),
+    )
+
+    // English has many, so we'll try to be as close as possible.
+    assertEquals(
+      expected = GooglePlayStoreLocale.en_AU,
+      actual = Locale(Language.ENGLISH, Country.AUSTRIA).googlePlayStoreLocale(),
+    )
+
+    assertEquals(
+      expected = GooglePlayStoreLocale.en_US,
+      actual = Locale(Language.ENGLISH, Country.USA).googlePlayStoreLocale(),
+    )
+
+    assertEquals(
+      expected = GooglePlayStoreLocale.en_CA,
+      actual = Locale(Language.ENGLISH, Country.CANADA).googlePlayStoreLocale(),
+    )
+  }
+
+  @Test fun appleAppStoreLocaleStringAllPossibilities() {
     assertEquals(
       expected = listOf(
         AppleAppStoreLocale.ar_SA,
@@ -142,7 +171,36 @@ class LocaleTest {
         AppleAppStoreLocale.uk,
         AppleAppStoreLocale.vi,
       ),
-      actual = Language.values().flatMap { language -> (language.officialCountries + language.otherCountries).mapNotNull { Locale(language, it).appleAppStoreLocale() } },
+      actual = Language.values().flatMap { language -> (language.officialCountries + language.otherCountries).mapNotNull { Locale(language, it).appleAppStoreLocale() } }.distinct(),
+    )
+  }
+
+  @Test fun appleAppStoreLocaleStringLenient() {
+    // Swedish only has one GooglePlayStoreLocale, so we'll match regardless of Country.
+    assertEquals(
+      expected = AppleAppStoreLocale.it,
+      actual = Locale(Language.ITALIAN, null).appleAppStoreLocale(),
+    )
+
+    assertEquals(
+      expected = AppleAppStoreLocale.it,
+      actual = Locale(Language.ITALIAN, Country.AUSTRIA).appleAppStoreLocale(),
+    )
+
+    // English has many, so we'll try to be as close as possible.
+    assertEquals(
+      expected = AppleAppStoreLocale.en_AU,
+      actual = Locale(Language.ENGLISH, Country.AUSTRIA).appleAppStoreLocale(),
+    )
+
+    assertEquals(
+      expected = AppleAppStoreLocale.en_US,
+      actual = Locale(Language.ENGLISH, Country.USA).appleAppStoreLocale(),
+    )
+
+    assertEquals(
+      expected = AppleAppStoreLocale.en_CA,
+      actual = Locale(Language.ENGLISH, Country.CANADA).appleAppStoreLocale(),
     )
   }
 
