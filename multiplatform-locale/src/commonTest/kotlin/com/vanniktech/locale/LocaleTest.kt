@@ -2,6 +2,7 @@ package com.vanniktech.locale
 
 import kotlin.test.Test
 import kotlin.test.assertEquals
+import kotlin.test.assertFailsWith
 
 class LocaleTest {
   @Test fun sorted() {
@@ -212,6 +213,14 @@ class LocaleTest {
       expected = AppleAppStoreLocale.en_CA,
       actual = Locale(Language.ENGLISH, Country.CANADA).appleAppStoreLocale(),
     )
+  }
+
+  @Test fun fromAndroidValuesDirectoryName() {
+    assertEquals(expected = Locale(Language.ENGLISH, null), actual = Locale.fromAndroidValuesDirectoryName("values", inferDefaultCountry = false))
+
+    assertFailsWith<IllegalArgumentException> {
+      Locale.fromAndroidValuesDirectoryName("es-EN", inferDefaultCountry = false)
+    }
   }
 
   @Test fun fromAndroidValuesDirectoryNameOrNull() {
