@@ -399,16 +399,16 @@ package com.vanniktech.locale {
   }
 
   public enum Language {
+    method public final String! getCode();
     method public final com.vanniktech.locale.Country getDefaultCountry();
-    method public final String! getIdentifier();
-    method public final String! getLegacyIdentifier();
+    method public final String! getLegacyCode();
     method public final java.util.List<com.vanniktech.locale.Country>! getOfficialCountries();
     method public final java.util.List<com.vanniktech.locale.Country>! getOtherCountries();
     method public static com.vanniktech.locale.Language valueOf(String name) throws java.lang.IllegalArgumentException;
     method public static com.vanniktech.locale.Language[] values();
+    property public final String! code;
     property public final com.vanniktech.locale.Country defaultCountry;
-    property public final String! identifier;
-    property public final String! legacyIdentifier;
+    property public final String! legacyCode;
     property public final java.util.List<com.vanniktech.locale.Country>! officialCountries;
     property public final java.util.List<com.vanniktech.locale.Country>! otherCountries;
     enum_constant public static final com.vanniktech.locale.Language ARABIC;

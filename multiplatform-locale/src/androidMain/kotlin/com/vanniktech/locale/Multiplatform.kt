@@ -1,7 +1,7 @@
 package com.vanniktech.locale
 
 actual fun Language.displayName() = java.util.Locale(
-  identifier,
+  code,
   "",
 ).displayLanguage.capitalized()
 
@@ -14,6 +14,6 @@ actual fun Country.displayName() = when (this) {
 }
 
 fun Locale.toJavaLocale() = java.util.Locale(
-  language.identifier,
+  language.code,
   country?.identifier.orEmpty(),
 )
