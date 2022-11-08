@@ -62,6 +62,9 @@ data class Locale(
       }
     }
 
+    fun fromAndroidValuesDirectoryName(androidValuesDirectoryName: String, inferDefaultCountry: Boolean) =
+      requireNotNull(fromAndroidValuesDirectoryNameOrNull(androidValuesDirectoryName, inferDefaultCountry)) { "Can't get locale for $androidValuesDirectoryName" }
+
     fun fromAndroidValuesDirectoryNameOrNull(androidValuesDirectoryName: String, inferDefaultCountry: Boolean): Locale? {
       val requiredPrefix = "values"
       require(androidValuesDirectoryName.startsWith(requiredPrefix)) { "$androidValuesDirectoryName does not start with $requiredPrefix" }
