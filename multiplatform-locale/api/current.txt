@@ -419,7 +419,7 @@ package com.vanniktech.locale {
     enum_constant public static final com.vanniktech.locale.Language DUTCH;
     enum_constant public static final com.vanniktech.locale.Language ENGLISH;
     enum_constant public static final com.vanniktech.locale.Language ESTONIAN;
-    enum_constant public static final com.vanniktech.locale.Language FINISH;
+    enum_constant public static final com.vanniktech.locale.Language FINNISH;
     enum_constant public static final com.vanniktech.locale.Language FRENCH;
     enum_constant public static final com.vanniktech.locale.Language GERMAN;
     enum_constant public static final com.vanniktech.locale.Language GREEK;

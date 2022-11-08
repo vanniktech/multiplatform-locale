@@ -233,7 +233,7 @@ class LocaleTest {
       Triple(Locale(Language.GERMAN, null), "values-de", false),
       Triple(Locale(Language.GREEK, null), "values-el", false),
       Triple(Locale(Language.SPANISH, null), "values-es", false),
-      Triple(Locale(Language.FINISH, null), "values-fi", false),
+      Triple(Locale(Language.FINNISH, null), "values-fi", false),
       Triple(Locale(Language.FRENCH, null), "values-fr", false),
       Triple(Locale(Language.HUNGARIAN, null), "values-hu", false),
       Triple(Locale(Language.INDONESIAN, null), "values-in", false),

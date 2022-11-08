@@ -50,7 +50,7 @@ enum class Language(
     officialCountries = listOf(Country.ESTONIA),
     otherCountries = emptyList(),
   ),
-  FINISH(
+  FINNISH(
     identifier = "fi",
     officialCountries = listOf(Country.FINLAND, Country.SWEDEN),
     otherCountries = emptyList(),
