@@ -17,8 +17,7 @@ data class Locale(
       .firstNotNullOfOrNull { (key, locales) ->
         locales.firstNotNullOfOrNull { locale ->
           locale.takeIf {
-            val isIndonesian = it.name == "id" && language == Language.INDONESIAN
-            fromOrNull(it.name, inferDefaultCountry = false) == optimized || isIndonesian
+            fromOrNull(it.name, inferDefaultCountry = false) == optimized
           }
         } ?: locales.firstNotNullOfOrNull { locale -> locale.takeIf { language == key } }
       }
@@ -32,10 +31,8 @@ data class Locale(
       .firstNotNullOfOrNull { (key, locales) ->
         locales.firstNotNullOfOrNull { locale ->
           locale.takeIf {
-            val isIndonesian = it.name == "id" && language == Language.INDONESIAN
-            val isHebrew = it.name == "he" && language == Language.HEBREW
             val isChineseTaiwan = it.name == "zh_Hant" && language == Language.CHINESE && country == Country.TAIWAN
-            fromOrNull(it.name, inferDefaultCountry = false) == optimized || isIndonesian || isHebrew || isChineseTaiwan
+            fromOrNull(it.name, inferDefaultCountry = false) == optimized || isChineseTaiwan
           }
         } ?: locales.firstNotNullOfOrNull { locale -> locale.takeIf { language == key } }
       }
@@ -69,7 +66,9 @@ data class Locale(
       val requiredPrefix = "values"
       require(androidValuesDirectoryName.startsWith(requiredPrefix)) { "$androidValuesDirectoryName does not start with $requiredPrefix" }
 
-      val name = androidValuesDirectoryName.removePrefix(requiredPrefix).removePrefix("-")
+      val name = androidValuesDirectoryName
+        .removePrefix(requiredPrefix)
+        .removePrefix("-")
       return when (name.isBlank()) {
         true -> Locale(Language.ENGLISH, null)
         else -> fromOrNull(name.replace("-r", "-"), inferDefaultCountry = inferDefaultCountry)

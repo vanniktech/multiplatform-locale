@@ -6,10 +6,7 @@ import kotlin.test.assertFailsWith
 
 class LanguageTest {
   @Test fun from() {
-    assertEquals(
-      expected = Language.UKRAINIAN,
-      actual = Language.from("uk"),
-    )
+    assertEquals(expected = Language.UKRAINIAN, actual = Language.from("uk"))
 
     assertFailsWith<IllegalArgumentException> {
       Language.from("asdfa")
@@ -17,22 +14,13 @@ class LanguageTest {
   }
 
   @Test fun fromOrNull() {
-    assertEquals(
-      expected = Language.UKRAINIAN,
-      actual = Language.fromOrNull("uk"),
-    )
+    assertEquals(expected = Language.UKRAINIAN, actual = Language.fromOrNull("uk"))
 
-    assertEquals(
-      expected = null,
-      actual = Language.fromOrNull("asdfa"),
-    )
+    assertEquals(expected = null, actual = Language.fromOrNull("asdfa"))
   }
 
   @Test fun fromLocale() {
-    assertEquals(
-      expected = Language.UKRAINIAN,
-      actual = Language.fromLocale("uk"),
-    )
+    assertEquals(expected = Language.UKRAINIAN, actual = Language.fromLocale("uk"))
 
     assertFailsWith<IllegalArgumentException> {
       Language.fromLocale("asdfa")
@@ -40,14 +28,16 @@ class LanguageTest {
   }
 
   @Test fun fromLocaleOrNull() {
-    assertEquals(
-      expected = Language.UKRAINIAN,
-      actual = Language.fromLocaleOrNull("uk-UA"),
-    )
+    assertEquals(expected = Language.UKRAINIAN, actual = Language.fromLocaleOrNull("uk-UA"))
 
-    assertEquals(
-      expected = null,
-      actual = Language.fromLocaleOrNull("asdfa"),
-    )
+    assertEquals(expected = null, actual = Language.fromLocaleOrNull("asdfa"))
+  }
+
+  @Test fun legacyIdentifier() {
+    assertEquals(expected = Language.HEBREW, actual = Language.from("he"))
+    assertEquals(expected = Language.HEBREW, actual = Language.from("iw"))
+
+    assertEquals(expected = Language.INDONESIAN, actual = Language.from("id"))
+    assertEquals(expected = Language.INDONESIAN, actual = Language.from("in"))
   }
 }

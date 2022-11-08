@@ -1,9 +1,13 @@
 package com.vanniktech.locale
 
-/** https://stackoverflow.com/questions/7973023/what-is-the-list-of-supported-languages-locales-on-android */
 enum class Language(
+  /** ISO 639-1 code - https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes */
   val identifier: String,
+  /** [HEBREW] & [INDONESIAN] changed their identifier. We are backwards compatible and support both. */
+  val legacyIdentifier: String? = null,
+  /** Countries, where this language is officially spoken in. */
   val officialCountries: List<Country>,
+  /** Countries, where this language is spoken in. */
   val otherCountries: List<Country>,
 ) {
   ARABIC(
@@ -67,7 +71,8 @@ enum class Language(
     otherCountries = emptyList(),
   ),
   HEBREW(
-    identifier = "iw",
+    identifier = "he",
+    legacyIdentifier = "iw",
     officialCountries = listOf(Country.ISRAEL),
     otherCountries = emptyList(),
   ),
@@ -77,7 +82,8 @@ enum class Language(
     otherCountries = listOf(Country.ROMANIA, Country.SLOVAKIA, Country.SERBIA, Country.AUSTRIA, Country.SLOVENIA),
   ),
   INDONESIAN(
-    identifier = "in",
+    identifier = "id",
+    legacyIdentifier = "in",
     officialCountries = listOf(Country.INDONESIA),
     otherCountries = emptyList(),
   ),
@@ -180,7 +186,7 @@ enum class Language(
       requireNotNull(fromOrNull(identifier)) { "Can't get language from $identifier" }
 
     fun fromOrNull(identifier: String?): Language? =
-      values().firstOrNull { it.identifier.equals(identifier, ignoreCase = true) }
+      values().firstOrNull { it.identifier.equals(identifier, ignoreCase = true) || it.legacyIdentifier?.equals(identifier, ignoreCase = true) == true }
 
     fun fromLocale(locale: String): Language =
       requireNotNull(fromLocaleOrNull(locale)) { "Can't get language from $locale" }
