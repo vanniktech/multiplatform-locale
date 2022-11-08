@@ -16,7 +16,7 @@ kotlin {
   sourceSets {
     val commonMain by getting {
       dependencies {
-        implementation("com.vanniktech:multiplatform-locale:0.1.0")
+        implementation("com.vanniktech:multiplatform-locale:0.2.0")
       }
     }
   }
@@ -27,14 +27,14 @@ From Android / JVM Multiplatform:
 
 ```groovy
 dependencies {
-  implementation("com.vanniktech:multiplatform-locale:0.1.0")
+  implementation("com.vanniktech:multiplatform-locale:0.2.0")
 }
 ```
 
 From iOS:
 
 ```ruby
-pod 'MultiplatformLocale', :git => 'https://github.com/vanniktech/multiplatform-locale', :tag => "0.1.0"
+pod 'MultiplatformLocale', :git => 'https://github.com/vanniktech/multiplatform-locale', :tag => "0.2.0"
 ```
 
 # API
