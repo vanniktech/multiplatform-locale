@@ -16,7 +16,7 @@ struct ContentView: View {
             let currentLocaleString = Locales.shared.currentLocaleString()
             Text("Current Locale: \(currentLocaleString)")
 
-            if let locale = multiplatform_locale.Locale.Companion.shared.fromOrNull(locale: currentLocaleString, inferDefaultCountry: true) {
+            if let locale = multiplatform_locale.Locale.Companion.shared.fromOrNull(locale: currentLocaleString) {
                 Text("Google Play Store Locale: \(locale.googlePlayStoreLocale()?.description() ?? "/")")
                 Text("Apple App Store Locale: \(locale.appleAppStoreLocale()?.description() ?? "/")")
             }

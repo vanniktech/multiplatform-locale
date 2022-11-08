@@ -20,39 +20,37 @@ class LocaleTest {
 
   @Test fun fromOrNull() {
     listOf(
-      Triple(Locale(Language.ENGLISH, country = null), "en", false),
-      Triple(Locale(Language.GERMAN, country = null), "de", false),
-      Triple(Locale(Language.ENGLISH, country = Country.USA), "en", true),
-      Triple(Locale(Language.GERMAN, country = Country.GERMANY), "de", true),
-      Triple(Locale(Language.ENGLISH, Country.ENGLAND), "en-GB", false),
-      Triple(Locale(Language.ENGLISH, Country.USA), "en-US", false),
-      Triple(Locale(Language.ENGLISH, Country.USA), "en_US", false),
-      Triple(Locale(Language.DUTCH, Country.NETHERLANDS), "nl-NL", false),
-      Triple(Locale(Language.DUTCH, Country.NETHERLANDS), "nl_NL", false),
-      Triple(Locale(Language.ITALIAN, Country.ITALY), "it-IT", false),
-      Triple(Locale(Language.ITALIAN, Country.ITALY), "it_IT", false),
-      Triple(Locale(Language.GERMAN, Country.USA), "de-US", false),
-      Triple(Locale(Language.GERMAN, Country.USA), "de_US", false),
-      Triple(Locale(Language.DANISH, Country.DENMARK), "da-DK", false),
-      Triple(Locale(Language.DANISH, Country.DENMARK), "da_DK", false),
-      Triple(Locale(Language.KOREAN, Country.SOUTH_KOREA), "ko_KR", false),
-      Triple(Locale(Language.KOREAN, Country.SOUTH_KOREA), "ko-KR", false),
-      Triple(Locale(Language.KOREAN, Country.NORTH_KOREA), "ko_KP", false),
-      Triple(Locale(Language.KOREAN, Country.NORTH_KOREA), "ko-KP", false),
-      Triple(Locale(Language.JAPANESE, Country.JAPAN), "ja-JP", false),
-      Triple(Locale(Language.JAPANESE, Country.JAPAN), "ja_JP", false),
-      Triple(Locale(Language.PORTUGUESE, Country.PORTUGAL), "pt-PT", false),
-      Triple(Locale(Language.PORTUGUESE, Country.PORTUGAL), "pt_PT", false),
-      Triple(Locale(Language.PORTUGUESE, Country.BRAZIL), "pt-BR", false),
-      Triple(Locale(Language.PORTUGUESE, Country.BRAZIL), "pt_BR", false),
-      Triple(Locale(Language.CHINESE, Country.CHINA), "zh-CN", false),
-      Triple(Locale(Language.CHINESE, Country.CHINA), "zh_CN_#Hans", false),
-      Triple(Locale(Language.SERBIAN, Country.SERBIA), "sr-RS", false),
-      Triple(Locale(Language.SERBIAN, Country.SERBIA), "sr_RS_#Latn", false),
-      Triple(Locale(Language.SLOVAK, Country.SLOVAKIA), "sk-SK", false),
-      Triple(Locale(Language.SLOVAK, Country.SLOVAKIA), "sk_SK", false),
-    ).forEach { (locale, localeString, inferDefaultCountry) ->
-      assertEquals(expected = locale, actual = Locale.fromOrNull(localeString, inferDefaultCountry = inferDefaultCountry))
+      Pair(Locale(Language.ENGLISH, country = null), "en"),
+      Pair(Locale(Language.GERMAN, country = null), "de"),
+      Pair(Locale(Language.ENGLISH, Country.ENGLAND), "en-GB"),
+      Pair(Locale(Language.ENGLISH, Country.USA), "en-US"),
+      Pair(Locale(Language.ENGLISH, Country.USA), "en_US"),
+      Pair(Locale(Language.DUTCH, Country.NETHERLANDS), "nl-NL"),
+      Pair(Locale(Language.DUTCH, Country.NETHERLANDS), "nl_NL"),
+      Pair(Locale(Language.ITALIAN, Country.ITALY), "it-IT"),
+      Pair(Locale(Language.ITALIAN, Country.ITALY), "it_IT"),
+      Pair(Locale(Language.GERMAN, Country.USA), "de-US"),
+      Pair(Locale(Language.GERMAN, Country.USA), "de_US"),
+      Pair(Locale(Language.DANISH, Country.DENMARK), "da-DK"),
+      Pair(Locale(Language.DANISH, Country.DENMARK), "da_DK"),
+      Pair(Locale(Language.KOREAN, Country.SOUTH_KOREA), "ko_KR"),
+      Pair(Locale(Language.KOREAN, Country.SOUTH_KOREA), "ko-KR"),
+      Pair(Locale(Language.KOREAN, Country.NORTH_KOREA), "ko_KP"),
+      Pair(Locale(Language.KOREAN, Country.NORTH_KOREA), "ko-KP"),
+      Pair(Locale(Language.JAPANESE, Country.JAPAN), "ja-JP"),
+      Pair(Locale(Language.JAPANESE, Country.JAPAN), "ja_JP"),
+      Pair(Locale(Language.PORTUGUESE, Country.PORTUGAL), "pt-PT"),
+      Pair(Locale(Language.PORTUGUESE, Country.PORTUGAL), "pt_PT"),
+      Pair(Locale(Language.PORTUGUESE, Country.BRAZIL), "pt-BR"),
+      Pair(Locale(Language.PORTUGUESE, Country.BRAZIL), "pt_BR"),
+      Pair(Locale(Language.CHINESE, Country.CHINA), "zh-CN"),
+      Pair(Locale(Language.CHINESE, Country.CHINA), "zh_CN_#Hans"),
+      Pair(Locale(Language.SERBIAN, Country.SERBIA), "sr-RS"),
+      Pair(Locale(Language.SERBIAN, Country.SERBIA), "sr_RS_#Latn"),
+      Pair(Locale(Language.SLOVAK, Country.SLOVAKIA), "sk-SK"),
+      Pair(Locale(Language.SLOVAK, Country.SLOVAKIA), "sk_SK"),
+    ).forEach { (locale, localeString) ->
+      assertEquals(expected = locale, actual = Locale.fromOrNull(localeString))
     }
   }
 
@@ -216,44 +214,44 @@ class LocaleTest {
   }
 
   @Test fun fromAndroidValuesDirectoryName() {
-    assertEquals(expected = Locale(Language.ENGLISH, null), actual = Locale.fromAndroidValuesDirectoryName("values", inferDefaultCountry = false))
+    assertEquals(expected = Locale(Language.ENGLISH, null), actual = Locale.fromAndroidValuesDirectoryName("values"))
 
     assertFailsWith<IllegalArgumentException> {
-      Locale.fromAndroidValuesDirectoryName("es-EN", inferDefaultCountry = false)
+      Locale.fromAndroidValuesDirectoryName("es-EN")
     }
   }
 
   @Test fun fromAndroidValuesDirectoryNameOrNull() {
     listOf(
-      Triple(null, "values-foo", false),
-      Triple(Locale(Language.ENGLISH, null), "values", false),
-      Triple(Locale(Language.ARABIC, null), "values-ar", false),
-      Triple(Locale(Language.BULGARIAN, null), "values-bg", false),
-      Triple(Locale(Language.CZECH, null), "values-cs", false),
-      Triple(Locale(Language.GERMAN, null), "values-de", false),
-      Triple(Locale(Language.GREEK, null), "values-el", false),
-      Triple(Locale(Language.SPANISH, null), "values-es", false),
-      Triple(Locale(Language.FINNISH, null), "values-fi", false),
-      Triple(Locale(Language.FRENCH, null), "values-fr", false),
-      Triple(Locale(Language.HUNGARIAN, null), "values-hu", false),
-      Triple(Locale(Language.INDONESIAN, null), "values-in", false),
-      Triple(Locale(Language.ITALIAN, null), "values-it", false),
-      Triple(Locale(Language.HEBREW, null), "values-iw", false),
-      Triple(Locale(Language.DUTCH, null), "values-nl", false),
-      Triple(Locale(Language.NORWEGIAN, null), "values-no", false),
-      Triple(Locale(Language.POLISH, null), "values-pl", false),
-      Triple(Locale(Language.PORTUGUESE, null), "values-pt", false),
-      Triple(Locale(Language.PORTUGUESE, Country.BRAZIL), "values-pt-rBR", false),
-      Triple(Locale(Language.ROMANIAN, null), "values-ro", false),
-      Triple(Locale(Language.RUSSIAN, null), "values-ru", false),
-      Triple(Locale(Language.SWEDISH, null), "values-sv", false),
-      Triple(Locale(Language.TURKISH, null), "values-tr", false),
-      Triple(Locale(Language.UKRAINIAN, null), "values-uk", false),
-      Triple(Locale(Language.VIETNAMESE, null), "values-vi", false),
-      Triple(Locale(Language.CHINESE, Country.CHINA), "values-zh-rCN", false),
-      Triple(Locale(Language.CHINESE, Country.TAIWAN), "values-zh-rTW", false),
-    ).forEach { (locale, localeString, inferDefaultCountry) ->
-      assertEquals(expected = locale, actual = Locale.fromAndroidValuesDirectoryNameOrNull(localeString, inferDefaultCountry = inferDefaultCountry))
+      Pair(null, "values-foo"),
+      Pair(Locale(Language.ENGLISH, null), "values"),
+      Pair(Locale(Language.ARABIC, null), "values-ar"),
+      Pair(Locale(Language.BULGARIAN, null), "values-bg"),
+      Pair(Locale(Language.CZECH, null), "values-cs"),
+      Pair(Locale(Language.GERMAN, null), "values-de"),
+      Pair(Locale(Language.GREEK, null), "values-el"),
+      Pair(Locale(Language.SPANISH, null), "values-es"),
+      Pair(Locale(Language.FINNISH, null), "values-fi"),
+      Pair(Locale(Language.FRENCH, null), "values-fr"),
+      Pair(Locale(Language.HUNGARIAN, null), "values-hu"),
+      Pair(Locale(Language.INDONESIAN, null), "values-in"),
+      Pair(Locale(Language.ITALIAN, null), "values-it"),
+      Pair(Locale(Language.HEBREW, null), "values-iw"),
+      Pair(Locale(Language.DUTCH, null), "values-nl"),
+      Pair(Locale(Language.NORWEGIAN, null), "values-no"),
+      Pair(Locale(Language.POLISH, null), "values-pl"),
+      Pair(Locale(Language.PORTUGUESE, null), "values-pt"),
+      Pair(Locale(Language.PORTUGUESE, Country.BRAZIL), "values-pt-rBR"),
+      Pair(Locale(Language.ROMANIAN, null), "values-ro"),
+      Pair(Locale(Language.RUSSIAN, null), "values-ru"),
+      Pair(Locale(Language.SWEDISH, null), "values-sv"),
+      Pair(Locale(Language.TURKISH, null), "values-tr"),
+      Pair(Locale(Language.UKRAINIAN, null), "values-uk"),
+      Pair(Locale(Language.VIETNAMESE, null), "values-vi"),
+      Pair(Locale(Language.CHINESE, Country.CHINA), "values-zh-rCN"),
+      Pair(Locale(Language.CHINESE, Country.TAIWAN), "values-zh-rTW"),
+    ).forEach { (locale, localeString) ->
+      assertEquals(expected = locale, actual = Locale.fromAndroidValuesDirectoryNameOrNull(localeString))
     }
   }
 }
