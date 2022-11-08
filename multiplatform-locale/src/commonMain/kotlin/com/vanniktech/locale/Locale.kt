@@ -5,7 +5,7 @@ data class Locale(
   val country: Country?,
 ) : Comparable<Locale> {
   override fun toString() = listOfNotNull(
-    language.identifier,
+    language.code,
     country?.identifier,
   ).joinToString(separator = "-")
 

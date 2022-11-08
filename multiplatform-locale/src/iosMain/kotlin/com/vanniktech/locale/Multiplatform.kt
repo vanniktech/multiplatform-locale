@@ -6,7 +6,7 @@ import platform.Foundation.localizedStringForCountryCode
 import platform.Foundation.localizedStringForLanguageCode
 
 actual fun Language.displayName(): String =
-  NSLocale.currentLocale.localizedStringForLanguageCode(identifier).orEmpty().capitalized()
+  NSLocale.currentLocale.localizedStringForLanguageCode(code).orEmpty().capitalized()
 
 actual fun Country.displayName() = when (this) {
   Country.INTERNATIONAL_WATERS -> "International Waters"
