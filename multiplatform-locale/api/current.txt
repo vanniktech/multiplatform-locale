@@ -401,12 +401,14 @@ package com.vanniktech.locale {
   public enum Language {
     method public final com.vanniktech.locale.Country getDefaultCountry();
     method public final String! getIdentifier();
+    method public final String! getLegacyIdentifier();
     method public final java.util.List<com.vanniktech.locale.Country>! getOfficialCountries();
     method public final java.util.List<com.vanniktech.locale.Country>! getOtherCountries();
     method public static com.vanniktech.locale.Language valueOf(String name) throws java.lang.IllegalArgumentException;
     method public static com.vanniktech.locale.Language[] values();
     property public final com.vanniktech.locale.Country defaultCountry;
     property public final String! identifier;
+    property public final String! legacyIdentifier;
     property public final java.util.List<com.vanniktech.locale.Country>! officialCountries;
     property public final java.util.List<com.vanniktech.locale.Country>! otherCountries;
     enum_constant public static final com.vanniktech.locale.Language ARABIC;
@@ -417,7 +419,7 @@ package com.vanniktech.locale {
     enum_constant public static final com.vanniktech.locale.Language DUTCH;
     enum_constant public static final com.vanniktech.locale.Language ENGLISH;
     enum_constant public static final com.vanniktech.locale.Language ESTONIAN;
-    enum_constant public static final com.vanniktech.locale.Language FINISH;
+    enum_constant public static final com.vanniktech.locale.Language FINNISH;
     enum_constant public static final com.vanniktech.locale.Language FRENCH;
     enum_constant public static final com.vanniktech.locale.Language GERMAN;
     enum_constant public static final com.vanniktech.locale.Language GREEK;
