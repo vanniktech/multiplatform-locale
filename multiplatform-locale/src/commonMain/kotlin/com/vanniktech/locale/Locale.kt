@@ -6,7 +6,7 @@ data class Locale(
 ) : Comparable<Locale> {
   override fun toString() = listOfNotNull(
     language.code,
-    country?.identifier,
+    country?.code,
   ).joinToString(separator = "-")
 
   /** Returns the optional [GooglePlayStoreLocale] that can be used for localizing the Google Play Store. */

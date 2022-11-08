@@ -10,5 +10,5 @@ actual fun Language.displayName(): String =
 
 actual fun Country.displayName() = when (this) {
   Country.INTERNATIONAL_WATERS -> "International Waters"
-  else -> NSLocale.currentLocale.localizedStringForCountryCode(identifier).orEmpty().capitalized()
+  else -> NSLocale.currentLocale.localizedStringForCountryCode(code).orEmpty().capitalized()
 }

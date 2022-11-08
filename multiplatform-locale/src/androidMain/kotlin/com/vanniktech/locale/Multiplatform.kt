@@ -9,11 +9,11 @@ actual fun Country.displayName() = when (this) {
   Country.INTERNATIONAL_WATERS -> "International Waters"
   else -> java.util.Locale(
     java.util.Locale.getDefault().language,
-    identifier,
+    code,
   ).displayCountry.capitalized()
 }
 
 fun Locale.toJavaLocale() = java.util.Locale(
   language.code,
-  country?.identifier.orEmpty(),
+  country?.code.orEmpty(),
 )

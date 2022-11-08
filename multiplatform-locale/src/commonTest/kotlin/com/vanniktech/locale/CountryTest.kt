@@ -290,12 +290,12 @@ ZA-SOUTH_AFRICA
 ZM-ZAMBIA
 ZW-ZIMBABWE
       """.trimMargin(),
-      actual = Country.values().sortedBy { it.identifier }.joinToString(separator = "\n") { "${it.identifier}-${it.name}" },
+      actual = Country.values().sortedBy { it.code }.joinToString(separator = "\n") { "${it.code}-${it.name}" },
     )
   }
 
   @Test fun noDuplicates() {
-    val unique = Country.values().map { it.identifier }.toSet()
+    val unique = Country.values().map { it.code }.toSet()
     assertEquals(expected = Country.values().size, actual = unique.size)
   }
 }

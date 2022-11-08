@@ -49,12 +49,12 @@ package com.vanniktech.locale {
   }
 
   public enum Country {
+    method public final String! getCode();
     method public final String! getEmoji();
-    method public final String! getIdentifier();
     method public static com.vanniktech.locale.Country valueOf(String name) throws java.lang.IllegalArgumentException;
     method public static com.vanniktech.locale.Country[] values();
+    property public final String! code;
     property public final String! emoji;
-    property public final String! identifier;
     enum_constant public static final com.vanniktech.locale.Country AFGHANISTAN;
     enum_constant public static final com.vanniktech.locale.Country ALAND_ISLANDS;
     enum_constant public static final com.vanniktech.locale.Country ALBANIA;
