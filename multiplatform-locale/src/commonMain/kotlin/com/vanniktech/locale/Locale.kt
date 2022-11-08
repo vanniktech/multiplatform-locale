@@ -45,7 +45,9 @@ data class Locale(
     compareValuesBy(this, other, { it.language }, { it.country })
 
   companion object {
-    fun from(locale: String, inferDefaultCountry: Boolean) = fromOrNull(locale, inferDefaultCountry) ?: error("Can't get locale for $locale")
+    fun from(locale: String, inferDefaultCountry: Boolean) =
+      requireNotNull(fromOrNull(locale, inferDefaultCountry)) { "Can't get locale for $locale" }
+
     fun fromOrNull(locale: String?, inferDefaultCountry: Boolean): Locale? {
       val language = Language.fromLocaleOrNull(locale)
       val country = Country.fromLocaleOrNull(locale)
@@ -64,9 +66,10 @@ data class Locale(
     }
 
     fun fromAndroidValuesDirectoryNameOrNull(androidValuesDirectoryName: String, inferDefaultCountry: Boolean): Locale? {
-      require(androidValuesDirectoryName.startsWith("values"))
+      val requiredPrefix = "values"
+      require(androidValuesDirectoryName.startsWith(requiredPrefix)) { "$androidValuesDirectoryName does not start with $requiredPrefix" }
 
-      val name = androidValuesDirectoryName.removePrefix("values").removePrefix("-")
+      val name = androidValuesDirectoryName.removePrefix(requiredPrefix).removePrefix("-")
       return when (name.isBlank()) {
         true -> Locale(Language.ENGLISH, null)
         else -> fromOrNull(name.replace("-r", "-"), inferDefaultCountry = inferDefaultCountry)
