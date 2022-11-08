@@ -470,10 +470,10 @@ package com.vanniktech.locale {
   }
 
   public static final class Locale.Companion {
-    method public com.vanniktech.locale.Locale from(String locale, boolean inferDefaultCountry);
-    method public com.vanniktech.locale.Locale fromAndroidValuesDirectoryName(String androidValuesDirectoryName, boolean inferDefaultCountry);
-    method public com.vanniktech.locale.Locale? fromAndroidValuesDirectoryNameOrNull(String androidValuesDirectoryName, boolean inferDefaultCountry);
-    method public com.vanniktech.locale.Locale? fromOrNull(String? locale, boolean inferDefaultCountry);
+    method public com.vanniktech.locale.Locale from(String locale);
+    method public com.vanniktech.locale.Locale fromAndroidValuesDirectoryName(String androidValuesDirectoryName);
+    method public com.vanniktech.locale.Locale? fromAndroidValuesDirectoryNameOrNull(String androidValuesDirectoryName);
+    method public com.vanniktech.locale.Locale? fromOrNull(String? locale);
   }
 
   public final class LocaleKt {
