@@ -62,14 +62,12 @@ data class Locale(
       requireNotNull(fromAndroidValuesDirectoryNameOrNull(androidValuesDirectoryName)) { "Can't get locale for $androidValuesDirectoryName" }
 
     fun fromAndroidValuesDirectoryNameOrNull(androidValuesDirectoryName: String): Locale? {
-      val requiredPrefix = "values"
-      require(androidValuesDirectoryName.startsWith(requiredPrefix)) { "$androidValuesDirectoryName does not start with $requiredPrefix" }
-
       val name = androidValuesDirectoryName
-        .removePrefix(requiredPrefix)
+        .removePrefix("values")
         .removePrefix("-")
-      return when (name.isBlank()) {
-        true -> Locale(Language.ENGLISH, null)
+
+      return when (androidValuesDirectoryName) {
+        "values" -> Locale(Language.ENGLISH, null)
         else -> fromOrNull(name.replace("-r", "-"))
       }
     }

@@ -2,7 +2,6 @@ package com.vanniktech.locale
 
 import kotlin.test.Test
 import kotlin.test.assertEquals
-import kotlin.test.assertFailsWith
 
 class LocaleTest {
   @Test fun sorted() {
@@ -215,14 +214,11 @@ class LocaleTest {
 
   @Test fun fromAndroidValuesDirectoryName() {
     assertEquals(expected = Locale(Language.ENGLISH, null), actual = Locale.fromAndroidValuesDirectoryName("values"))
-
-    assertFailsWith<IllegalArgumentException> {
-      Locale.fromAndroidValuesDirectoryName("es-EN")
-    }
   }
 
   @Test fun fromAndroidValuesDirectoryNameOrNull() {
     listOf(
+      Pair(null, ""),
       Pair(null, "values-foo"),
       Pair(Locale(Language.ENGLISH, null), "values"),
       Pair(Locale(Language.ARABIC, null), "values-ar"),
@@ -250,6 +246,7 @@ class LocaleTest {
       Pair(Locale(Language.VIETNAMESE, null), "values-vi"),
       Pair(Locale(Language.CHINESE, Country.CHINA), "values-zh-rCN"),
       Pair(Locale(Language.CHINESE, Country.TAIWAN), "values-zh-rTW"),
+      Pair(Locale(Language.CHINESE, Country.TAIWAN), "zh-rTW"),
     ).forEach { (locale, localeString) ->
       assertEquals(expected = locale, actual = Locale.fromAndroidValuesDirectoryNameOrNull(localeString))
     }
