@@ -76,7 +76,7 @@ data class Locale(
 
 internal fun localeSplit(locale: String?) = when {
   locale == null -> emptyList()
-  locale.contains("-") -> locale.split("-")
   locale.contains("_") -> locale.split("_")
+  locale.contains("-") -> locale.split("-")
   else -> listOf(locale)
 }
