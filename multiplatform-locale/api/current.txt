@@ -48,6 +48,21 @@ package com.vanniktech.locale {
   public final class CapitalizeKt {
   }
 
+  public final class Countries {
+    method public String? currentCountryCode();
+    field public static final com.vanniktech.locale.Countries INSTANCE;
+  }
+
+  public final class Countries {
+    method public String? currentCountryCode();
+    field public static final com.vanniktech.locale.Countries INSTANCE;
+  }
+
+  public final class Countries {
+    method public String? currentCountryCode();
+    field public static final com.vanniktech.locale.Countries INSTANCE;
+  }
+
   public enum Country {
     method public final String! getCode();
     method public final String! getEmoji();
