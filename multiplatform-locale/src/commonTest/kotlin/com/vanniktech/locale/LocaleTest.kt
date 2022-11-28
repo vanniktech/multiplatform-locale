@@ -49,8 +49,10 @@ class LocaleTest {
       Pair(Locale(Language.SLOVAK, Country.SLOVAKIA), "sk-SK"),
       Pair(Locale(Language.SLOVAK, Country.SLOVAKIA), "sk_SK"),
       Pair(Locale(Language.ARABIC, Country.EGYPT), "ar_EG_#u-nu-latn"),
+      Pair(Locale(Language.HINDI, Country.INDIA), "hi-IN"),
+      Pair(Locale(Language.GUJARATI, Country.INDIA), "gu-IN"),
     ).forEach { (locale, localeString) ->
-      assertEquals(expected = locale, actual = Locale.fromOrNull(localeString))
+      assertEquals(message = localeString, expected = locale, actual = Locale.fromOrNull(localeString))
     }
   }
 
@@ -75,7 +77,9 @@ class LocaleTest {
         GooglePlayStoreLocale.fr_CA,
         GooglePlayStoreLocale.de_DE,
         GooglePlayStoreLocale.el_GR,
+        GooglePlayStoreLocale.gu,
         GooglePlayStoreLocale.iw_IL,
+        GooglePlayStoreLocale.hi_IN,
         GooglePlayStoreLocale.hu_HU,
         GooglePlayStoreLocale.id,
         GooglePlayStoreLocale.it_IT,
@@ -156,6 +160,7 @@ class LocaleTest {
         AppleAppStoreLocale.de_DE,
         AppleAppStoreLocale.el,
         AppleAppStoreLocale.he,
+        AppleAppStoreLocale.hi,
         AppleAppStoreLocale.hu,
         AppleAppStoreLocale.id,
         AppleAppStoreLocale.it,
@@ -248,8 +253,8 @@ class LocaleTest {
       Pair(Locale(Language.CHINESE, Country.CHINA), "values-zh-rCN"),
       Pair(Locale(Language.CHINESE, Country.TAIWAN), "values-zh-rTW"),
       Pair(Locale(Language.CHINESE, Country.TAIWAN), "zh-rTW"),
-    ).forEach { (locale, localeString) ->
-      assertEquals(expected = locale, actual = Locale.fromAndroidValuesDirectoryNameOrNull(localeString))
+    ).forEach { (locale, androidValuesDirectoryName) ->
+      assertEquals(message = androidValuesDirectoryName, expected = locale, actual = Locale.fromAndroidValuesDirectoryNameOrNull(androidValuesDirectoryName))
     }
   }
 }
