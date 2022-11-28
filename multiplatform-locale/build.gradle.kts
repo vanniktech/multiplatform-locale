@@ -31,6 +31,7 @@ kotlin {
     publishLibraryVariants("release")
   }
   jvm()
+  jvmToolchain(11)
   listOf(
     iosX64(),
     iosArm64(),
