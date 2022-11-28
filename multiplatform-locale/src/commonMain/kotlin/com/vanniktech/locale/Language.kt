@@ -70,11 +70,21 @@ enum class Language(
     officialCountries = listOf(Country.GREECE, Country.CYPRUS),
     otherCountries = emptyList(),
   ),
+  GUJARATI(
+    code = "gu",
+    officialCountries = listOf(Country.INDIA, Country.SRI_LANKA, Country.SINGAPORE),
+    otherCountries = listOf(Country.MALAYSIA, Country.MAURITIUS, Country.FIJI, Country.SOUTH_AFRICA),
+  ),
   HEBREW(
     code = "he",
     legacyCode = "iw",
     officialCountries = listOf(Country.ISRAEL),
     otherCountries = emptyList(),
+  ),
+  HINDI(
+    code = "hi",
+    officialCountries = listOf(Country.INDIA),
+    otherCountries = listOf(Country.MAURITIUS, Country.FIJI, Country.SURINAME, Country.GUYANA, Country.TRINIDAD_AND_TOBAGO, Country.NEPAL),
   ),
   HUNGARIAN(
     code = "hu",
