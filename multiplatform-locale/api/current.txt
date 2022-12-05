@@ -448,6 +448,7 @@ package com.vanniktech.locale {
     enum_constant public static final com.vanniktech.locale.Language KOREAN;
     enum_constant public static final com.vanniktech.locale.Language LATVIAN;
     enum_constant public static final com.vanniktech.locale.Language LITHUANIAN;
+    enum_constant public static final com.vanniktech.locale.Language MALAY;
     enum_constant public static final com.vanniktech.locale.Language NORWEGIAN;
     enum_constant public static final com.vanniktech.locale.Language POLISH;
     enum_constant public static final com.vanniktech.locale.Language PORTUGUESE;
