@@ -427,8 +427,10 @@ package com.vanniktech.locale {
     property public final java.util.List<com.vanniktech.locale.Country>! officialCountries;
     property public final java.util.List<com.vanniktech.locale.Country>! otherCountries;
     enum_constant public static final com.vanniktech.locale.Language ARABIC;
+    enum_constant public static final com.vanniktech.locale.Language ARMENIAN;
     enum_constant public static final com.vanniktech.locale.Language BULGARIAN;
     enum_constant public static final com.vanniktech.locale.Language CHINESE;
+    enum_constant public static final com.vanniktech.locale.Language CROATIAN;
     enum_constant public static final com.vanniktech.locale.Language CZECH;
     enum_constant public static final com.vanniktech.locale.Language DANISH;
     enum_constant public static final com.vanniktech.locale.Language DUTCH;

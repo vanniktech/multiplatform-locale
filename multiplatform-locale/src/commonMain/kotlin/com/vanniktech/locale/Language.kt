@@ -35,6 +35,11 @@ enum class Language(
     officialCountries = listOf(Country.CZECHIA),
     otherCountries = listOf(Country.POLAND, Country.SERBIA, Country.UKRAINE, Country.SLOVAKIA, Country.BULGARIA, Country.AUSTRIA),
   ),
+  CROATIAN(
+    code = "hr",
+    officialCountries = listOf(Country.CROATIA),
+    otherCountries = listOf(Country.AUSTRIA, Country.ITALY, Country.SERBIA),
+  ),
   DANISH(
     code = "da",
     officialCountries = listOf(Country.DENMARK, Country.GREENLAND, Country.FAROE_ISLANDS),
