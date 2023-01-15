@@ -20,6 +20,11 @@ enum class Language(
     officialCountries = listOf(Country.ARMENIA),
     otherCountries = emptyList(),
   ),
+  AZERBAIJANI(
+    code = "az",
+    officialCountries = listOf(Country.AZERBAIJAN),
+    otherCountries = emptyList(),
+  ),
   BULGARIAN(
     code = "bg",
     officialCountries = listOf(Country.BULGARIA),
