@@ -30,6 +30,11 @@ enum class Language(
     officialCountries = listOf(Country.BULGARIA),
     otherCountries = listOf(Country.GREECE, Country.ROMANIA, Country.MOLDOVA, Country.UKRAINE),
   ),
+  BURMESE(
+    code = "my",
+    officialCountries = listOf(Country.MYANMAR),
+    otherCountries = listOf(),
+  ),
   CHINESE(
     code = "zh",
     officialCountries = listOf(Country.CHINA, Country.TAIWAN, Country.HONG_KONG, Country.SINGAPORE),
