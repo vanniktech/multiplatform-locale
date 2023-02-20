@@ -122,6 +122,11 @@ enum class Language(
     officialCountries = listOf(Country.INDONESIA),
     otherCountries = emptyList(),
   ),
+  IRISH(
+    code = "ga",
+    officialCountries = listOf(Country.IRELAND),
+    otherCountries = listOf(),
+  ),
   ITALIAN(
     code = "it",
     officialCountries = listOf(Country.ITALY, Country.SAN_MARINO, Country.SWITZERLAND, Country.VATICAN_CITY),
