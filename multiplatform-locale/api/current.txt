@@ -431,6 +431,7 @@ package com.vanniktech.locale {
     enum_constant public static final com.vanniktech.locale.Language AZERBAIJANI;
     enum_constant public static final com.vanniktech.locale.Language BULGARIAN;
     enum_constant public static final com.vanniktech.locale.Language BURMESE;
+    enum_constant public static final com.vanniktech.locale.Language CATALAN;
     enum_constant public static final com.vanniktech.locale.Language CHINESE;
     enum_constant public static final com.vanniktech.locale.Language CROATIAN;
     enum_constant public static final com.vanniktech.locale.Language CZECH;
@@ -468,6 +469,7 @@ package com.vanniktech.locale {
     enum_constant public static final com.vanniktech.locale.Language THAI;
     enum_constant public static final com.vanniktech.locale.Language TURKISH;
     enum_constant public static final com.vanniktech.locale.Language UKRAINIAN;
+    enum_constant public static final com.vanniktech.locale.Language UZBEK;
     enum_constant public static final com.vanniktech.locale.Language VIETNAMESE;
     field public static final com.vanniktech.locale.Language.Companion Companion;
   }

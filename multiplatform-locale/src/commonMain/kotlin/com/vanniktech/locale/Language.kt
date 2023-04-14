@@ -40,6 +40,11 @@ enum class Language(
     officialCountries = listOf(Country.CHINA, Country.TAIWAN, Country.HONG_KONG, Country.SINGAPORE),
     otherCountries = emptyList(),
   ),
+  CATALAN(
+    code = "ca",
+    officialCountries = listOf(Country.SPAIN), // Ish. Not really.
+    otherCountries = listOf(Country.ANDORRA),
+  ),
   CZECH(
     code = "cs",
     officialCountries = listOf(Country.CZECHIA),
