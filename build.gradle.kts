@@ -52,20 +52,6 @@ allprojects {
     mavenCentral()
     gradlePluginPortal()
   }
-
-  afterEvaluate {
-    // To avoid:
-    // The Kotlin source set androidAndroidTestRelease was configured but not added to any Kotlin compilation. You can add a source set to a target"s compilation by connecting it with the compilation"s default source set using "dependsOn".
-    // See https://kotlinlang.org/docs/reference/building-mpp-with-gradle.html#connecting-source-sets
-    project.extensions.findByType(org.jetbrains.kotlin.gradle.dsl.KotlinMultiplatformExtension::class)?.sourceSets?.removeAll {
-      setOf(
-        "androidAndroidTestRelease",
-        "androidTestFixtures",
-        "androidTestFixturesDebug",
-        "androidTestFixturesRelease"
-      ).contains(it.name)
-    }
-  }
 }
 
 subprojects {
