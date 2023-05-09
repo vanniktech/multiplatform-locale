@@ -64,10 +64,12 @@ package com.vanniktech.locale {
   }
 
   public enum Country {
+    method public final java.util.List<java.lang.String>! getCallingCodes();
     method public final String! getCode();
     method public final String! getEmoji();
     method public static com.vanniktech.locale.Country valueOf(String name) throws java.lang.IllegalArgumentException;
     method public static com.vanniktech.locale.Country[] values();
+    property public final java.util.List<java.lang.String>! callingCodes;
     property public final String! code;
     property public final String! emoji;
     enum_constant public static final com.vanniktech.locale.Country AFGHANISTAN;
@@ -257,8 +259,11 @@ package com.vanniktech.locale {
     enum_constant public static final com.vanniktech.locale.Country RWANDA;
     enum_constant public static final com.vanniktech.locale.Country SAHRAWI_ARAB_DEMOCRATIC_REPUBLIC;
     enum_constant public static final com.vanniktech.locale.Country SAINT_BARTS;
+    enum_constant public static final com.vanniktech.locale.Country SAINT_HELENA_ASCENSION_AND_TRISTAN_DA_CUNHA;
     enum_constant public static final com.vanniktech.locale.Country SAINT_KITTS_AND_NEVIS;
     enum_constant public static final com.vanniktech.locale.Country SAINT_LUCIA;
+    enum_constant public static final com.vanniktech.locale.Country SAINT_MARTIN;
+    enum_constant public static final com.vanniktech.locale.Country SAINT_PIERRE_AND_MIQUELON;
     enum_constant public static final com.vanniktech.locale.Country SAINT_VINCENT_AND_THE_GRENADINES;
     enum_constant public static final com.vanniktech.locale.Country SAMOA;
     enum_constant public static final com.vanniktech.locale.Country SAN_MARINO;
@@ -275,12 +280,14 @@ package com.vanniktech.locale {
     enum_constant public static final com.vanniktech.locale.Country SOLOMON_ISLANDS;
     enum_constant public static final com.vanniktech.locale.Country SOMALIA;
     enum_constant public static final com.vanniktech.locale.Country SOUTH_AFRICA;
+    enum_constant public static final com.vanniktech.locale.Country SOUTH_GEORGIA_AND_THE_SOUTH_SANDWICH_ISLANDS;
     enum_constant public static final com.vanniktech.locale.Country SOUTH_KOREA;
     enum_constant public static final com.vanniktech.locale.Country SOUTH_SUDAN;
     enum_constant public static final com.vanniktech.locale.Country SPAIN;
     enum_constant public static final com.vanniktech.locale.Country SRI_LANKA;
     enum_constant public static final com.vanniktech.locale.Country SUDAN;
     enum_constant public static final com.vanniktech.locale.Country SURINAME;
+    enum_constant public static final com.vanniktech.locale.Country SVALBARD_AND_JAN_MAYEN;
     enum_constant public static final com.vanniktech.locale.Country SWEDEN;
     enum_constant public static final com.vanniktech.locale.Country SWITZERLAND;
     enum_constant public static final com.vanniktech.locale.Country SYRIA;

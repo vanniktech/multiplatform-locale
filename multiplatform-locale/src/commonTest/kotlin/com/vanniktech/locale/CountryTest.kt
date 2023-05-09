@@ -4,6 +4,13 @@ import kotlin.test.Test
 import kotlin.test.assertEquals
 
 class CountryTest {
+  @Test fun callingCodesAreSorted() {
+    Country.values()
+      .forEach {
+        assertEquals(expected = it.callingCodes.sorted(), actual = it.callingCodes, message = "Dial codes not sorted for $it")
+      }
+  }
+
   @Test fun displayName() {
     assertEquals(expected = "United Kingdom", actual = Country.ENGLAND.displayName())
     assertEquals(expected = "Germany", actual = Country.GERMANY.displayName())
