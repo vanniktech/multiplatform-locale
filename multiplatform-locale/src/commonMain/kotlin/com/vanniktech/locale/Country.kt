@@ -8,7 +8,7 @@ enum class Country(
   /**
    * The calling code that can be used for calling.
    * May contain more than one entry for some rarities.
-   * Note that there are also a few countries which you can't call.
+   * Note that [INTERNATIONAL_WATERS] does not have any calling codes.
    * Table overview: https://en.wikipedia.org/wiki/List_of_country_calling_codes
    */
   val callingCodes: List<String>,
@@ -53,7 +53,7 @@ enum class Country(
   CAMBODIA(code = "KH", emoji = """🇰🇭""", listOf("+855")),
   CAMEROON(code = "CM", emoji = """🇨🇲""", listOf("+237")),
   CANADA(code = "CA", emoji = """🇨🇦""", listOf("+1")),
-  CANARY_ISLANDS(code = "IC", emoji = """🇮🇨""", emptyList()),
+  CANARY_ISLANDS(code = "IC", emoji = """🇮🇨""", listOf("+34")),
   CAPE_VERDE(code = "CV", emoji = """🇨🇻""", listOf("+238")),
   CAYMAN_ISLANDS(code = "KY", emoji = """🇰🇾""", listOf("+345")),
   CENTRAL_AFRICAN_REPUBLIC(code = "CF", emoji = """🇨🇫""", listOf("+236")),
