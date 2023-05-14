@@ -1,7 +1,19 @@
 # Change Log
 
-Version 0.4.0 *(In development)*
---------------------------------
+Version 0.4.0 *(2022-05-14)*
+----------------------------
+
+- API: Add missing countries \(SH, MF, PM, GS & SJ\) [\#71](https://github.com/vanniktech/multiplatform-locale/pull/71) ([vanniktech](https://github.com/vanniktech))
+- API: Country - add calling codes list. [\#72](https://github.com/vanniktech/multiplatform-locale/pull/72) ([vanniktech](https://github.com/vanniktech))
+- Kotlin: Use Android Source Set Layout Version 2. [\#63](https://github.com/vanniktech/multiplatform-locale/pull/63) ([vanniktech](https://github.com/vanniktech))
+- Language: Add Armenian. [\#30](https://github.com/vanniktech/multiplatform-locale/pull/30) ([vanniktech](https://github.com/vanniktech))
+- Language: Add Azerbaijani. [\#39](https://github.com/vanniktech/multiplatform-locale/pull/39) ([vanniktech](https://github.com/vanniktech))
+- Language: Add Bokmal. [\#68](https://github.com/vanniktech/multiplatform-locale/pull/68) ([vanniktech](https://github.com/vanniktech))
+- Language: Add Burmese. [\#49](https://github.com/vanniktech/multiplatform-locale/pull/49) ([vanniktech](https://github.com/vanniktech))
+- Language: Add Catalan. [\#62](https://github.com/vanniktech/multiplatform-locale/pull/62) ([vanniktech](https://github.com/vanniktech))
+- Language: Add Croatian. [\#32](https://github.com/vanniktech/multiplatform-locale/pull/32) ([vanniktech](https://github.com/vanniktech))
+- Language: Add Irish. [\#53](https://github.com/vanniktech/multiplatform-locale/pull/53) ([vanniktech](https://github.com/vanniktech))
+- Language: Add Uzbek. [\#58](https://github.com/vanniktech/multiplatform-locale/pull/58) ([vanniktech](https://github.com/vanniktech))
 
 Version 0.3.0 *(2022-12-20)*
 ----------------------------
@@ -13,7 +25,6 @@ Version 0.3.0 *(2022-12-20)*
 - Language: Add Thai. [\#25](https://github.com/vanniktech/multiplatform-locale/pull/25) ([vanniktech](https://github.com/vanniktech))
 - Language: Add Hindi & Gujarati. [\#22](https://github.com/vanniktech/multiplatform-locale/pull/22) ([vanniktech](https://github.com/vanniktech))
 - Gradle: Set Jvm Toolchain to 11. [\#21](https://github.com/vanniktech/multiplatform-locale/pull/21) ([vanniktech](https://github.com/vanniktech))
-- Update dependency gradle to v7.6 [\#20](https://github.com/vanniktech/multiplatform-locale/pull/20) ([renovate[bot]](https://github.com/apps/renovate))
 - API: Languages\#currentLanguageCode which returns the current ISO 639-1 language code. [\#19](https://github.com/vanniktech/multiplatform-locale/pull/19) ([vanniktech](https://github.com/vanniktech))
 - API: Countries\#currentCountryCode which returns the current optional ISO 3166-1 alpha-2 country code. [\#18](https://github.com/vanniktech/multiplatform-locale/pull/18) ([vanniktech](https://github.com/vanniktech))
 - Locale: Fix parsing of strings like 'ar\_EG\_\#u-nu-latn' [\#14](https://github.com/vanniktech/multiplatform-locale/pull/14) ([vanniktech](https://github.com/vanniktech))
