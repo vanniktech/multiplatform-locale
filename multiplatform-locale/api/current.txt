@@ -436,6 +436,7 @@ package com.vanniktech.locale {
     enum_constant public static final com.vanniktech.locale.Language ARABIC;
     enum_constant public static final com.vanniktech.locale.Language ARMENIAN;
     enum_constant public static final com.vanniktech.locale.Language AZERBAIJANI;
+    enum_constant public static final com.vanniktech.locale.Language BELARUSIAN;
     enum_constant public static final com.vanniktech.locale.Language BOKMAL;
     enum_constant public static final com.vanniktech.locale.Language BULGARIAN;
     enum_constant public static final com.vanniktech.locale.Language BURMESE;
