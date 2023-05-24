@@ -73,6 +73,7 @@ class LocaleTest {
         GooglePlayStoreLocale.ar,
         GooglePlayStoreLocale.hy_AM,
         GooglePlayStoreLocale.az_AZ,
+        GooglePlayStoreLocale.be,
         GooglePlayStoreLocale.bg,
         GooglePlayStoreLocale.my_MM,
         GooglePlayStoreLocale.zh_CN,
@@ -279,6 +280,8 @@ class LocaleTest {
       Pair(Locale(Language.CHINESE, Country.CHINA), "values-zh-rCN"),
       Pair(Locale(Language.CHINESE, Country.TAIWAN), "values-zh-rTW"),
       Pair(Locale(Language.CHINESE, Country.TAIWAN), "zh-rTW"),
+      Pair(Locale(Language.AZERBAIJANI, Country.AZERBAIJAN), "az_AZ_#Latn"),
+      Pair(Locale(Language.BELARUSIAN, Country.BELARUS), "be-BY"),
     ).forEach { (locale, androidValuesDirectoryName) ->
       assertEquals(message = androidValuesDirectoryName, expected = locale, actual = Locale.fromAndroidValuesDirectoryNameOrNull(androidValuesDirectoryName))
     }
