@@ -172,6 +172,11 @@ enum class Language(
     officialCountries = listOf(Country.MALAYSIA, Country.BRUNEI, Country.INDONESIA, Country.SINGAPORE),
     otherCountries = emptyList(),
   ),
+  MALAYALAM(
+    code = "ml",
+    officialCountries = listOf(Country.INDIA),
+    otherCountries = emptyList(),
+  ),
   NORWEGIAN(
     code = "no",
     officialCountries = listOf(Country.NORWAY),
