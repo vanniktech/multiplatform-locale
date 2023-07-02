@@ -3,6 +3,10 @@ plugins {
   id("org.jetbrains.kotlin.android")
 }
 
+kotlin {
+  jvmToolchain(11)
+}
+
 android {
   namespace = "com.vanniktech.locale.sample.android"
 
@@ -19,6 +23,11 @@ android {
     vectorDrawables.useSupportLibrary = true
 
     testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+  }
+
+  compileOptions {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
   }
 
   buildFeatures {

@@ -119,5 +119,10 @@ android {
     minSdk = libs.versions.minSdk.get().toInt()
   }
 
+  compileOptions {
+    sourceCompatibility = JavaVersion.VERSION_11
+    targetCompatibility = JavaVersion.VERSION_11
+  }
+
   resourcePrefix = "locale_"
 }
