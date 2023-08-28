@@ -1,5 +1,5 @@
 PODS:
-  - MultiplatformLocale (0.5.0)
+  - MultiplatformLocale (0.6.0-SNAPSHOT)
 
 DEPENDENCIES:
   - MultiplatformLocale (from `../multiplatform-locale`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../multiplatform-locale"
 
 SPEC CHECKSUMS:
-  MultiplatformLocale: 5059caf878f0e5960fe28419d2ac952010737eaf
+  MultiplatformLocale: 2821b6b20e075ce06d4b4c14df3f564aea35605e
 
 PODFILE CHECKSUM: b01388020c35fb53f191fb19fdf5459f1cd809b4
 
