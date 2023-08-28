@@ -18,12 +18,13 @@ class CountryTest {
   }
 
   @Test fun fromOrNull() {
-    assertEquals(expected = null, actual = Country.fromOrNull("xxx"))
     assertEquals(expected = null, actual = Country.fromOrNull(null))
+    assertEquals(expected = null, actual = Country.fromOrNull(""))
+    assertEquals(expected = null, actual = Country.fromOrNull("xxx"))
     assertEquals(expected = Country.ARMENIA, actual = Country.fromOrNull("AM"))
     assertEquals(expected = Country.ARMENIA, actual = Country.fromOrNull("am"))
     assertEquals(expected = Country.USA, actual = Country.fromOrNull("US"))
-    assertEquals(expected = null, actual = Country.fromOrNull("USA"))
+    assertEquals(expected = Country.USA, actual = Country.fromOrNull("USA"))
   }
 
   @Test fun fromLocaleOrNull() {

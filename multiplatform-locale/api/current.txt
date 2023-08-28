@@ -66,11 +66,13 @@ package com.vanniktech.locale {
   public enum Country {
     method public final java.util.List<java.lang.String>! getCallingCodes();
     method public final String! getCode();
+    method public final String! getCode3();
     method public final String! getEmoji();
     method public static com.vanniktech.locale.Country valueOf(String name) throws java.lang.IllegalArgumentException;
     method public static com.vanniktech.locale.Country[] values();
     property public final java.util.List<java.lang.String>! callingCodes;
     property public final String! code;
+    property public final String! code3;
     property public final String! emoji;
     enum_constant public static final com.vanniktech.locale.Country AFGHANISTAN;
     enum_constant public static final com.vanniktech.locale.Country ALAND_ISLANDS;
