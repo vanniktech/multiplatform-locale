@@ -154,6 +154,7 @@ package com.vanniktech.locale {
     enum_constant public static final com.vanniktech.locale.Country FRANCE;
     enum_constant public static final com.vanniktech.locale.Country FRENCH_GUIANA;
     enum_constant public static final com.vanniktech.locale.Country FRENCH_POLYNESIA;
+    enum_constant public static final com.vanniktech.locale.Country FRENCH_SOUTHERN_AND_ANTARCTIC_LANDS;
     enum_constant public static final com.vanniktech.locale.Country GABON;
     enum_constant public static final com.vanniktech.locale.Country GAMBIA;
     enum_constant public static final com.vanniktech.locale.Country GEORGIA;
