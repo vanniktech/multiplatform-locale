@@ -95,6 +95,7 @@ enum class Country(
   FRANCE(code = "FR", code3 = "FRA", emoji = """🇫🇷""", listOf("+33")),
   FRENCH_GUIANA(code = "GF", code3 = "GUF", emoji = """🇬🇫""", listOf("+594")),
   FRENCH_POLYNESIA(code = "PF", code3 = "PYF", emoji = """🇵🇫""", listOf("+689")),
+  FRENCH_SOUTHERN_AND_ANTARCTIC_LANDS(code = "TF", code3 = "ATF", emoji = """🇹🇫""", listOf("+33")),
   GABON(code = "GA", code3 = "GAB", emoji = """🇬🇦""", listOf("+241")),
   GAMBIA(code = "GM", code3 = "GMB", emoji = """🇬🇲""", listOf("+220")),
   GEORGIA(code = "GE", code3 = "GEO", emoji = """🇬🇪""", listOf("+995")),
