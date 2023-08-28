@@ -112,6 +112,7 @@ enum class Country(
   GUINEA_BISSAU(code = "GW", code3 = "GNB", emoji = """🇬🇼""", listOf("+245")),
   GUYANA(code = "GY", code3 = "GUY", emoji = """🇬🇾""", listOf("+592")),
   HAITI(code = "HT", code3 = "HTI", emoji = """🇭🇹""", listOf("+509")),
+  HEARD_ISLAND_AND_MCDONALD_ISLANDS(code = "HM", code3 = "HMD", emoji = """🇭🇲""", listOf("+672")),
   HONDURAS(code = "HN", code3 = "HND", emoji = """🇭🇳""", listOf("+504")),
   HONG_KONG(code = "HK", code3 = "HKG", emoji = """🇭🇰""", listOf("+852")),
   HUNGARY(code = "HU", code3 = "HUN", emoji = """🇭🇺""", listOf("+36")),

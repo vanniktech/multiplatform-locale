@@ -171,6 +171,7 @@ package com.vanniktech.locale {
     enum_constant public static final com.vanniktech.locale.Country GUINEA_BISSAU;
     enum_constant public static final com.vanniktech.locale.Country GUYANA;
     enum_constant public static final com.vanniktech.locale.Country HAITI;
+    enum_constant public static final com.vanniktech.locale.Country HEARD_ISLAND_AND_MCDONALD_ISLANDS;
     enum_constant public static final com.vanniktech.locale.Country HONDURAS;
     enum_constant public static final com.vanniktech.locale.Country HONG_KONG;
     enum_constant public static final com.vanniktech.locale.Country HUNGARY;
