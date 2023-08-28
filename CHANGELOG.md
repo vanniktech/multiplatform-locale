@@ -1,7 +1,14 @@
 # Change Log
 
-Version 0.5.0 *(In development)*
---------------------------------
+Version 0.5.0 *(2023-08-28)*
+----------------------------
+
+- API: Country add French Southern and Antartic Islands. [\#100](https://github.com/vanniktech/multiplatform-locale/pull/100) ([vanniktech](https://github.com/vanniktech))
+- API: Country add Heard Island and McDonald Islands. [\#101](https://github.com/vanniktech/multiplatform-locale/pull/101) ([vanniktech](https://github.com/vanniktech))
+- API: Country gets code3 property \(ISO 3166-1 alpha-3 code\) [\#99](https://github.com/vanniktech/multiplatform-locale/pull/99) ([vanniktech](https://github.com/vanniktech))
+- API: Language add Belarusian. [\#76](https://github.com/vanniktech/multiplatform-locale/pull/76) ([vanniktech](https://github.com/vanniktech))
+- API: Language add Malayalam. [\#79](https://github.com/vanniktech/multiplatform-locale/pull/79) ([vanniktech](https://github.com/vanniktech))
+- API: Language add Tagalog. [\#102](https://github.com/vanniktech/multiplatform-locale/pull/102) ([vanniktech](https://github.com/vanniktech))
 
 Version 0.4.0 *(2022-05-14)*
 ----------------------------
