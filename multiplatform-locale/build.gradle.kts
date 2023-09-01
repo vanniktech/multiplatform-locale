@@ -1,5 +1,7 @@
-import org.jetbrains.kotlin.gradle.plugin.mpp.BitcodeEmbeddingMode
-import org.jetbrains.kotlin.gradle.plugin.mpp.Framework
+
+import org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootExtension
+import org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsRootPlugin
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
   id("org.jetbrains.dokka")
@@ -26,19 +28,26 @@ kotlin {
     publishLibraryVariants("release")
   }
   jvm()
-  jvmToolchain(11)
-  listOf(
-    iosX64(),
-    iosArm64(),
-    iosSimulatorArm64(),
-  ).forEach {
-    it.binaries.all {
-      if (this is Framework) {
-        isStatic = true
-        embedBitcode(if ("YES" == System.getenv("ENABLE_BITCODE")) BitcodeEmbeddingMode.BITCODE else BitcodeEmbeddingMode.MARKER)
-      }
-    }
-  }
+  iosArm32()
+  iosArm64()
+  iosX64()
+  iosSimulatorArm64()
+  js().nodejs()
+  linuxArm64()
+  linuxX64()
+  macosX64()
+  macosArm64()
+  mingwX64()
+  tvosArm64()
+  tvosX64()
+  tvosSimulatorArm64()
+  wasm().nodejs()
+  watchosArm32()
+  watchosArm64()
+  watchosDeviceArm64()
+  watchosX86()
+  watchosX64()
+  watchosSimulatorArm64()
 
   targets.withType<org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget> {
     compilations["main"].kotlinOptions.freeCompilerArgs += "-Xexport-kdoc"
@@ -52,51 +61,8 @@ kotlin {
 
     val commonTest by getting {
       dependencies {
-        implementation(libs.kotlin.test.common)
-        implementation(libs.kotlin.test.annotations.common)
+        implementation(libs.kotlin.test)
       }
-    }
-
-    val androidMain by getting {
-      dependencies {
-      }
-    }
-
-    val androidUnitTest by getting {
-      dependencies {
-        implementation(libs.kotlin.test.junit)
-      }
-    }
-
-    val jvmMain by getting {
-      dependencies {
-      }
-    }
-
-    val jvmTest by getting {
-      dependencies {
-        implementation(libs.kotlin.test.junit)
-      }
-    }
-
-    val iosX64Main by getting
-    val iosArm64Main by getting
-    val iosSimulatorArm64Main by getting
-    val iosMain by creating {
-      dependsOn(commonMain)
-      iosX64Main.dependsOn(this)
-      iosArm64Main.dependsOn(this)
-      iosSimulatorArm64Main.dependsOn(this)
-    }
-
-    val iosX64Test by getting
-    val iosArm64Test by getting
-    val iosSimulatorArm64Test by getting
-    val iosTest by creating {
-      dependsOn(commonTest)
-      iosX64Test.dependsOn(this)
-      iosArm64Test.dependsOn(this)
-      iosSimulatorArm64Test.dependsOn(this)
     }
   }
 
@@ -110,6 +76,20 @@ kotlin {
   }
 }
 
+tasks.withType(KotlinCompile::class.java).configureEach {
+  kotlinOptions.jvmTarget = JavaVersion.VERSION_1_8.toString()
+  kotlinOptions.freeCompilerArgs += listOf("-progressive", "-Xjvm-default=all")
+}
+
+tasks.withType(JavaCompile::class.java).configureEach {
+  sourceCompatibility = JavaVersion.VERSION_1_8.toString()
+  targetCompatibility = JavaVersion.VERSION_1_8.toString()
+}
+
+plugins.withType(NodeJsRootPlugin::class.java).configureEach {
+  extensions.getByType(NodeJsRootExtension::class.java).nodeVersion = "20.0.0"
+}
+
 android {
   namespace = "com.vanniktech.locale"
 
@@ -120,8 +100,8 @@ android {
   }
 
   compileOptions {
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
   }
 
   resourcePrefix = "locale_"

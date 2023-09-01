@@ -4,15 +4,11 @@ plugins {
 }
 
 kotlin {
-  jvmToolchain(11)
+  jvmToolchain(8)
 }
 
 dependencies {
   implementation(project(":multiplatform-locale"))
-}
-
-dependencies {
-  testImplementation(libs.kotlin.test.junit)
 }
 
 application {
