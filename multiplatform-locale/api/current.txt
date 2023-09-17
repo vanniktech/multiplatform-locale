@@ -480,9 +480,11 @@ package com.vanniktech.locale {
     enum_constant public static final com.vanniktech.locale.Language SLOVENIAN;
     enum_constant public static final com.vanniktech.locale.Language SPANISH;
     enum_constant public static final com.vanniktech.locale.Language SWEDISH;
+    enum_constant public static final com.vanniktech.locale.Language TAGALOG;
     enum_constant public static final com.vanniktech.locale.Language THAI;
     enum_constant public static final com.vanniktech.locale.Language TURKISH;
     enum_constant public static final com.vanniktech.locale.Language UKRAINIAN;
+    enum_constant public static final com.vanniktech.locale.Language URDU;
     enum_constant public static final com.vanniktech.locale.Language UZBEK;
     enum_constant public static final com.vanniktech.locale.Language VIETNAMESE;
     field public static final com.vanniktech.locale.Language.Companion Companion;

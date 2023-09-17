@@ -247,6 +247,11 @@ enum class Language(
     officialCountries = listOf(Country.UKRAINE),
     otherCountries = listOf(Country.KAZAKHSTAN, Country.MOLDOVA, Country.POLAND, Country.ROMANIA, Country.LITHUANIA, Country.SLOVAKIA),
   ),
+  URDU(
+    code = "ur",
+    officialCountries = listOf(Country.PAKISTAN),
+    otherCountries = listOf(),
+  ),
   UZBEK(
     code = "uz",
     officialCountries = listOf(Country.UZBEKISTAN),
