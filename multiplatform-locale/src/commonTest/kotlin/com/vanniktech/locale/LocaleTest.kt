@@ -112,6 +112,7 @@ class LocaleTest {
         GooglePlayStoreLocale.lt,
         GooglePlayStoreLocale.ms_MY,
         GooglePlayStoreLocale.ml_IN,
+        GooglePlayStoreLocale.mr_IN,
         GooglePlayStoreLocale.no_NO,
         GooglePlayStoreLocale.pl_PL,
         GooglePlayStoreLocale.pt_PT,
@@ -288,6 +289,7 @@ class LocaleTest {
       Pair(Locale(Language.AZERBAIJANI, Country.AZERBAIJAN), "az_AZ_#Latn"),
       Pair(Locale(Language.BELARUSIAN, Country.BELARUS), "be-BY"),
       Pair(Locale(Language.TAMIL, Country.INDIA), "ta-IN"),
+      Pair(Locale(Language.MARATHI, Country.INDIA), "mr-IN"),
     ).forEach { (locale, androidValuesDirectoryName) ->
       assertEquals(message = androidValuesDirectoryName, expected = locale, actual = Locale.fromAndroidValuesDirectoryNameOrNull(androidValuesDirectoryName))
     }

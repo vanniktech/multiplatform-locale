@@ -177,6 +177,11 @@ enum class Language(
     officialCountries = listOf(Country.INDIA),
     otherCountries = emptyList(),
   ),
+  MARATHI(
+    code = "mr",
+    officialCountries = listOf(Country.INDIA),
+    otherCountries = emptyList(),
+  ),
   NORWEGIAN(
     code = "no",
     officialCountries = listOf(Country.NORWAY),
