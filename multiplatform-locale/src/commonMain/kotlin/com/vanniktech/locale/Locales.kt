@@ -1,5 +1,6 @@
 package com.vanniktech.locale
 
+@Suppress("EXPECT_ACTUAL_CLASSIFIERS_ARE_IN_BETA_WARNING")
 expect object Locales {
   /** Returns the current locale. */
   fun currentLocaleString(): String

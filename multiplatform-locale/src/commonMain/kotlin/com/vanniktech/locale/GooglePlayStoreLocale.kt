@@ -1,7 +1,7 @@
 package com.vanniktech.locale
 
 /** All the locales supported by the Google Play Store. */
-enum class GooglePlayStoreLocale {
+@Suppress("ktlint:standard:enum-entry-name-case") enum class GooglePlayStoreLocale {
   af,
   sq,
   am,
