@@ -22,7 +22,7 @@ jobs:
           java-version: 17
 
       - name: Setup gradle
-        uses: gradle/gradle-build-action@v2.8.1
+        uses: gradle/gradle-build-action@v2.10.0
 
       - name: Publish release
         run: ./gradlew publishAllPublicationsToMavenCentralRepository
