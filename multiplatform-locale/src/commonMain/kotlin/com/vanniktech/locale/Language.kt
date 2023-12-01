@@ -45,6 +45,11 @@ enum class Language(
     officialCountries = listOf(Country.MYANMAR),
     otherCountries = listOf(),
   ),
+  CENTRAL_KMHER(
+    code = "km",
+    officialCountries = listOf(Country.CAMBODIA),
+    otherCountries = emptyList(),
+  ),
   CHINESE(
     code = "zh",
     officialCountries = listOf(Country.CHINA, Country.TAIWAN, Country.HONG_KONG, Country.SINGAPORE),
