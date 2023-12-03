@@ -64,6 +64,7 @@ class LocaleTest {
       Pair(Locale(Language.BOKMAL, Country.NORWAY), "nb_NO"),
       Pair(Locale(Language.MALAYALAM, Country.INDIA), "ml-IN"),
       Pair(Locale(Language.URDU, Country.PAKISTAN), "ur_PK"),
+      Pair(Locale(Language.CENTRAL_KMHER, Country.ENGLAND), "km-GB"),
     ).forEach { (locale, localeString) ->
       assertEquals(message = localeString, expected = locale, actual = Locale.fromOrNull(localeString))
     }
@@ -78,6 +79,7 @@ class LocaleTest {
         GooglePlayStoreLocale.be,
         GooglePlayStoreLocale.bg,
         GooglePlayStoreLocale.my_MM,
+        GooglePlayStoreLocale.km_KH,
         GooglePlayStoreLocale.zh_CN,
         GooglePlayStoreLocale.zh_TW,
         GooglePlayStoreLocale.zh_HK,
