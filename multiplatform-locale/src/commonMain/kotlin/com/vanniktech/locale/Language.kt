@@ -57,7 +57,7 @@ enum class Language(
   ),
   CATALAN(
     code = "ca",
-    officialCountries = listOf(Country.SPAIN), // Ish. Not really.
+    officialCountries = listOf(Country.SPAIN),
     otherCountries = listOf(Country.ANDORRA),
   ),
   CZECH(
