@@ -2,7 +2,7 @@
 package com.vanniktech.locale {
 
   public enum AppleAppStoreLocale {
-    method public static com.vanniktech.locale.AppleAppStoreLocale valueOf(String name) throws java.lang.IllegalArgumentException;
+    method public static com.vanniktech.locale.AppleAppStoreLocale valueOf(String value) throws java.lang.IllegalArgumentException, java.lang.NullPointerException;
     method public static com.vanniktech.locale.AppleAppStoreLocale[] values();
     enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale ar_SA;
     enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale ca;
@@ -45,9 +45,6 @@ package com.vanniktech.locale {
     enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale zh_Hant;
   }
 
-  public final class CapitalizeKt {
-  }
-
   public final class Countries {
     method public String? currentCountryCode();
     field public static final com.vanniktech.locale.Countries INSTANCE;
@@ -68,7 +65,7 @@ package com.vanniktech.locale {
     method public final String! getCode();
     method public final String! getCode3();
     method public final String! getEmoji();
-    method public static com.vanniktech.locale.Country valueOf(String name) throws java.lang.IllegalArgumentException;
+    method public static com.vanniktech.locale.Country valueOf(String value) throws java.lang.IllegalArgumentException, java.lang.NullPointerException;
     method public static com.vanniktech.locale.Country[] values();
     property public final java.util.List<java.lang.String>! callingCodes;
     property public final String! code;
@@ -334,7 +331,7 @@ package com.vanniktech.locale {
   }
 
   public enum GooglePlayStoreLocale {
-    method public static com.vanniktech.locale.GooglePlayStoreLocale valueOf(String name) throws java.lang.IllegalArgumentException;
+    method public static com.vanniktech.locale.GooglePlayStoreLocale valueOf(String value) throws java.lang.IllegalArgumentException, java.lang.NullPointerException;
     method public static com.vanniktech.locale.GooglePlayStoreLocale[] values();
     enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale af;
     enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale am;
@@ -430,13 +427,14 @@ package com.vanniktech.locale {
     method public final String! getLegacyCode();
     method public final java.util.List<com.vanniktech.locale.Country>! getOfficialCountries();
     method public final java.util.List<com.vanniktech.locale.Country>! getOtherCountries();
-    method public static com.vanniktech.locale.Language valueOf(String name) throws java.lang.IllegalArgumentException;
+    method public static com.vanniktech.locale.Language valueOf(String value) throws java.lang.IllegalArgumentException, java.lang.NullPointerException;
     method public static com.vanniktech.locale.Language[] values();
     property public final String! code;
     property public final com.vanniktech.locale.Country defaultCountry;
     property public final String! legacyCode;
     property public final java.util.List<com.vanniktech.locale.Country>! officialCountries;
     property public final java.util.List<com.vanniktech.locale.Country>! otherCountries;
+    enum_constant public static final com.vanniktech.locale.Language AMHARIC;
     enum_constant public static final com.vanniktech.locale.Language ARABIC;
     enum_constant public static final com.vanniktech.locale.Language ARMENIAN;
     enum_constant public static final com.vanniktech.locale.Language AZERBAIJANI;
@@ -445,6 +443,7 @@ package com.vanniktech.locale {
     enum_constant public static final com.vanniktech.locale.Language BULGARIAN;
     enum_constant public static final com.vanniktech.locale.Language BURMESE;
     enum_constant public static final com.vanniktech.locale.Language CATALAN;
+    enum_constant public static final com.vanniktech.locale.Language CENTRAL_KMHER;
     enum_constant public static final com.vanniktech.locale.Language CHINESE;
     enum_constant public static final com.vanniktech.locale.Language CROATIAN;
     enum_constant public static final com.vanniktech.locale.Language CZECH;
@@ -536,9 +535,6 @@ package com.vanniktech.locale {
     method public com.vanniktech.locale.Locale? fromOrNull(String? locale);
   }
 
-  public final class LocaleKt {
-  }
-
   public final class Locales {
     method public String currentLocaleString();
     method public java.util.List<java.lang.String> currentLocaleStrings();
@@ -558,35 +554,19 @@ package com.vanniktech.locale {
   }
 
   public final class MultiplatformKt {
-    method public static String displayName(com.vanniktech.locale.Language);
     method public static String displayName(com.vanniktech.locale.Country);
     method public static String displayName(com.vanniktech.locale.Language);
-    method public static String displayName(com.vanniktech.locale.Country);
-    method public static String displayName(com.vanniktech.locale.Language);
-    method public static String displayName(com.vanniktech.locale.Country);
-    method public static java.util.Locale toJavaLocale(com.vanniktech.locale.Locale);
     method public static java.util.Locale toJavaLocale(com.vanniktech.locale.Locale);
   }
 
   public final class MultiplatformKt {
-    method public static String displayName(com.vanniktech.locale.Language);
     method public static String displayName(com.vanniktech.locale.Country);
     method public static String displayName(com.vanniktech.locale.Language);
-    method public static String displayName(com.vanniktech.locale.Country);
-    method public static String displayName(com.vanniktech.locale.Language);
-    method public static String displayName(com.vanniktech.locale.Country);
-    method public static java.util.Locale toJavaLocale(com.vanniktech.locale.Locale);
-    method public static java.util.Locale toJavaLocale(com.vanniktech.locale.Locale);
   }
 
   public final class MultiplatformKt {
-    method public static String displayName(com.vanniktech.locale.Language);
     method public static String displayName(com.vanniktech.locale.Country);
     method public static String displayName(com.vanniktech.locale.Language);
-    method public static String displayName(com.vanniktech.locale.Country);
-    method public static String displayName(com.vanniktech.locale.Language);
-    method public static String displayName(com.vanniktech.locale.Country);
-    method public static java.util.Locale toJavaLocale(com.vanniktech.locale.Locale);
     method public static java.util.Locale toJavaLocale(com.vanniktech.locale.Locale);
   }
 

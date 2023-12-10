@@ -1,7 +1,7 @@
 package com.vanniktech.locale
 
 /** All the locales supported by the Apple App Store. */
-enum class AppleAppStoreLocale {
+@Suppress("ktlint:standard:enum-entry-name-case") enum class AppleAppStoreLocale {
   ar_SA,
   ca,
   cs,

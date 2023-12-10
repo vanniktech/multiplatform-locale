@@ -15,6 +15,11 @@ enum class Language(
     officialCountries = listOf(Country.SAUDI_ARABIA, Country.ALGERIA, Country.BAHRAIN, Country.MALI, Country.NIGER, Country.SENEGAL, Country.CHAD, Country.COMOROS, Country.DJIBOUTI, Country.EGYPT, Country.IRAQ, Country.JORDAN, Country.KUWAIT, Country.LEBANON, Country.LIBYA, Country.MAURITANIA, Country.MOROCCO, Country.OMAN, Country.QATAR, Country.SOMALIA, Country.SUDAN, Country.SYRIA, Country.TUNISIA, Country.UNITED_ARAB_EMIRATES, Country.YEMEN),
     otherCountries = listOf(Country.PALESTINE, Country.SOMALIA, Country.SAHRAWI_ARAB_DEMOCRATIC_REPUBLIC, Country.TANZANIA),
   ),
+  AMHARIC(
+    code = "am",
+    officialCountries = listOf(Country.ETHIOPIA),
+    otherCountries = emptyList(),
+  ),
   ARMENIAN(
     code = "hy",
     officialCountries = listOf(Country.ARMENIA),
@@ -45,6 +50,11 @@ enum class Language(
     officialCountries = listOf(Country.MYANMAR),
     otherCountries = listOf(),
   ),
+  CENTRAL_KMHER(
+    code = "km",
+    officialCountries = listOf(Country.CAMBODIA),
+    otherCountries = emptyList(),
+  ),
   CHINESE(
     code = "zh",
     officialCountries = listOf(Country.CHINA, Country.TAIWAN, Country.HONG_KONG, Country.SINGAPORE),
@@ -52,7 +62,7 @@ enum class Language(
   ),
   CATALAN(
     code = "ca",
-    officialCountries = listOf(Country.SPAIN), // Ish. Not really.
+    officialCountries = listOf(Country.SPAIN),
     otherCountries = listOf(Country.ANDORRA),
   ),
   CZECH(
