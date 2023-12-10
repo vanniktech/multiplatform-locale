@@ -45,6 +45,18 @@ package com.vanniktech.locale {
     enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale zh_Hant;
   }
 
+  public enum Continent {
+    method public static com.vanniktech.locale.Continent valueOf(String value) throws java.lang.IllegalArgumentException, java.lang.NullPointerException;
+    method public static com.vanniktech.locale.Continent[] values();
+    enum_constant public static final com.vanniktech.locale.Continent AFRICA;
+    enum_constant public static final com.vanniktech.locale.Continent ANTARCTICA;
+    enum_constant public static final com.vanniktech.locale.Continent ASIA;
+    enum_constant public static final com.vanniktech.locale.Continent EUROPE;
+    enum_constant public static final com.vanniktech.locale.Continent NORTH_AMERICA;
+    enum_constant public static final com.vanniktech.locale.Continent OCEANIA;
+    enum_constant public static final com.vanniktech.locale.Continent SOUTH_AMERICA;
+  }
+
   public final class Countries {
     method public String? currentCountryCode();
     field public static final com.vanniktech.locale.Countries INSTANCE;
@@ -64,12 +76,14 @@ package com.vanniktech.locale {
     method public final java.util.List<java.lang.String>! getCallingCodes();
     method public final String! getCode();
     method public final String! getCode3();
+    method public final java.util.List<com.vanniktech.locale.Continent>! getContinents();
     method public final String! getEmoji();
     method public static com.vanniktech.locale.Country valueOf(String value) throws java.lang.IllegalArgumentException, java.lang.NullPointerException;
     method public static com.vanniktech.locale.Country[] values();
     property public final java.util.List<java.lang.String>! callingCodes;
     property public final String! code;
     property public final String! code3;
+    property public final java.util.List<com.vanniktech.locale.Continent>! continents;
     property public final String! emoji;
     enum_constant public static final com.vanniktech.locale.Country AFGHANISTAN;
     enum_constant public static final com.vanniktech.locale.Country ALAND_ISLANDS;
