@@ -1,7 +1,16 @@
 # Change Log
 
-Version 0.6.0 *(In development)*
---------------------------------
+Version 0.6.0 *(2023-12-11)*
+----------------------------
+
+- API: Add list of Continent\(s\) to each Country. [\#134](https://github.com/vanniktech/multiplatform-locale/pull/134) ([vanniktech](https://github.com/vanniktech))
+- API: Language add Amharic. [\#129](https://github.com/vanniktech/multiplatform-locale/pull/129) ([vanniktech](https://github.com/vanniktech))
+- API: Language add Central Kmher. [\#128](https://github.com/vanniktech/multiplatform-locale/pull/128) ([vanniktech](https://github.com/vanniktech))
+- API: Language add Marathi. [\#116](https://github.com/vanniktech/multiplatform-locale/pull/116) ([vanniktech](https://github.com/vanniktech))
+- API: Language add Tamil. [\#112](https://github.com/vanniktech/multiplatform-locale/pull/112) ([vanniktech](https://github.com/vanniktech))
+- API: Language add Urdu. [\#110](https://github.com/vanniktech/multiplatform-locale/pull/110) ([vanniktech](https://github.com/vanniktech))
+- Technical: Target Android 34. [\#133](https://github.com/vanniktech/multiplatform-locale/pull/133) ([vanniktech](https://github.com/vanniktech))
+- Technical: Update Kotlin to 1.9.20 & ktlint to 0.50.0 [\#103](https://github.com/vanniktech/multiplatform-locale/pull/103) ([vanniktech](https://github.com/vanniktech))
 
 Version 0.5.0 *(2023-08-28)*
 ----------------------------
