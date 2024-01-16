@@ -70,7 +70,7 @@ enum class Country(
   COMOROS(code = "KM", code3 = "COM", emoji = """🇰🇲""", callingCodes = listOf("+269"), continents = listOf(Continent.AFRICA)),
   COOK_ISLANDS(code = "CK", code3 = "COK", emoji = """🇨🇰""", callingCodes = listOf("+682"), continents = listOf(Continent.OCEANIA)),
   COSTA_RICA(code = "CR", code3 = "CRI", emoji = """🇨🇷""", callingCodes = listOf("+506"), continents = listOf(Continent.NORTH_AMERICA)),
-  COTE_DIVOIRE(code = "CI", code3 = "CIV", emoji = """🇫🇷""", callingCodes = listOf("+225"), continents = listOf(Continent.AFRICA)),
+  COTE_DIVOIRE(code = "CI", code3 = "CIV", emoji = """🇨🇮""", callingCodes = listOf("+225"), continents = listOf(Continent.AFRICA)),
   CROATIA(code = "HR", code3 = "HRV", emoji = """🇭🇷""", callingCodes = listOf("+385"), continents = listOf(Continent.EUROPE)),
   CUBA(code = "CU", code3 = "CUB", emoji = """🇨🇺""", callingCodes = listOf("+53"), continents = listOf(Continent.NORTH_AMERICA)),
   CURACAO(code = "CW", code3 = "CUW", emoji = """🇨🇼""", callingCodes = listOf("+599"), continents = listOf(Continent.SOUTH_AMERICA)),
