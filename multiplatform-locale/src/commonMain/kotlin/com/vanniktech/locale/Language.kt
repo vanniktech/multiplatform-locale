@@ -252,6 +252,11 @@ enum class Language(
     officialCountries = listOf(Country.PHILIPPINES),
     otherCountries = emptyList(),
   ),
+  TELUGU(
+    code = "te",
+    officialCountries = listOf(Country.INDIA),
+    otherCountries = emptyList(),
+  ),
   THAI(
     code = "th",
     officialCountries = listOf(Country.THAILAND),
