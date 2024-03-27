@@ -192,7 +192,7 @@ enum class Country(
   PANAMA(code = "PA", code3 = "PAN", emoji = """🇵🇦""", callingCodes = listOf("+507"), continents = listOf(Continent.NORTH_AMERICA)),
   PAPUA_NEW_GUINEA(code = "PG", code3 = "PNG", emoji = """🇵🇬""", callingCodes = listOf("+675"), continents = listOf(Continent.OCEANIA)),
   PARAGUAY(code = "PY", code3 = "PRY", emoji = """🇵🇾""", callingCodes = listOf("+595"), continents = listOf(Continent.SOUTH_AMERICA)),
-  PERU(code = "PE", code3 = "PER", emoji = """🇵🇾""", callingCodes = listOf("+51"), continents = listOf(Continent.SOUTH_AMERICA)),
+  PERU(code = "PE", code3 = "PER", emoji = """🇵🇪""", callingCodes = listOf("+51"), continents = listOf(Continent.SOUTH_AMERICA)),
   PHILIPPINES(code = "PH", code3 = "PHL", emoji = """🇵🇭""", callingCodes = listOf("+63"), continents = listOf(Continent.ASIA)),
   PITCAIRN_ISLANDS(code = "PN", code3 = "PCN", emoji = """🇵🇳""", callingCodes = listOf("+872"), continents = listOf(Continent.OCEANIA)),
   POLAND(code = "PL", code3 = "POL", emoji = """🇵🇱""", callingCodes = listOf("+48"), continents = listOf(Continent.EUROPE)),

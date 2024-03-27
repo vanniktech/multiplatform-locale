@@ -4,6 +4,13 @@ import kotlin.test.Test
 import kotlin.test.assertEquals
 
 class CountryTest {
+  @Test fun uniqueEmojis() {
+    val emojis = Country.entries.groupBy { it.emoji }
+    emojis.forEach { (emoji, countries) ->
+      assertEquals(message = "Emoji $emoji found multiple times: ${countries.joinToString { it.displayName() }}", expected = 1, actual = countries.size)
+    }
+  }
+
   @Test fun callingCodesAreSorted() {
     Country.values()
       .forEach {
