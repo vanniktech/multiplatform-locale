@@ -1,7 +1,12 @@
 # Change Log
 
-Version 0.7.0 *(In development)*
---------------------------------
+Version 0.7.0 *(2024-03-29)*
+----------------------------
+
+- API: Language add Telugu. [\#145](https://github.com/vanniktech/multiplatform-locale/pull/145) ([vanniktech](https://github.com/vanniktech))
+- Fix Emoji flag for Country.COTE\_DIVOIRE. [\#142](https://github.com/vanniktech/multiplatform-locale/pull/142) ([vanniktech](https://github.com/vanniktech))
+- Fix Emoji flag for Country.PERU [\#159](https://github.com/vanniktech/multiplatform-locale/pull/159) ([vanniktech](https://github.com/vanniktech))
+- Update kotlin monorepo to v1.9.23 [\#155](https://github.com/vanniktech/multiplatform-locale/pull/155) ([renovate[bot]](https://github.com/apps/renovate))
 
 Version 0.6.0 *(2023-12-11)*
 ----------------------------
