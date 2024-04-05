@@ -22,7 +22,7 @@ jobs:
           java-version: 17
 
       - name: Setup gradle
-        uses: gradle/gradle-build-action@v3.1.0
+        uses: gradle/gradle-build-action@v3.2.0
 
       - name: Retrieve version
         run: |
