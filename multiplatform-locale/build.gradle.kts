@@ -1,4 +1,6 @@
 import org.jetbrains.kotlin.gradle.plugin.mpp.BitcodeEmbeddingMode
+import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl
+import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackConfig
 
 plugins {
   id("org.jetbrains.dokka")
@@ -36,6 +38,17 @@ kotlin {
     compilations["main"].kotlinOptions.freeCompilerArgs += "-Xexport-kdoc"
   }
 
+  @OptIn(ExperimentalWasmDsl::class)
+  wasmJs {
+    moduleName = "multiplatform_locale"
+    browser {
+      commonWebpackConfig {
+        outputFileName = "multiplatform_locale.js"
+      }
+    }
+    binaries.executable()
+  }
+
   sourceSets {
     val commonMain by getting {
       dependencies {
@@ -68,6 +81,13 @@ kotlin {
     val jvmTest by getting {
       dependencies {
         implementation(libs.kotlin.test.junit)
+      }
+    }
+
+    val wasmJsMain by getting {
+      dependencies {
+        //implementation(npm("get-user-locale","2.3.2"))
+        implementation(npm("country-codes-list","1.6.11"))
       }
     }
   }
