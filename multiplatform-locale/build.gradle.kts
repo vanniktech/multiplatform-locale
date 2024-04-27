@@ -38,7 +38,8 @@ kotlin {
     compilations["main"].kotlinOptions.freeCompilerArgs += "-Xexport-kdoc"
   }
 
-  val kotlinJsConfiguration: KotlinJsTargetDsl.() -> Unit = {
+  @OptIn(ExperimentalWasmDsl::class)
+  wasmJs {
     moduleName = "multiplatform_locale"
     browser {
       commonWebpackConfig {
@@ -48,8 +49,6 @@ kotlin {
     binaries.executable()
   }
 
-  @OptIn(ExperimentalWasmDsl::class)
-  wasmJs(configure = kotlinJsConfiguration)
 
   sourceSets {
     val commonMain by getting {
