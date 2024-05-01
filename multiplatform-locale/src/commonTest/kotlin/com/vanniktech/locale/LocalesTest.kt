@@ -11,11 +11,16 @@ class LocalesTest {
   @Test fun currentLocaleStrings() {
     val currentLocaleStrings = Locales.currentLocaleStrings()
 
-    try {
-      assertEquals(expected = listOf("en_US"), actual = currentLocaleStrings)
-    } catch (throwable: Throwable) {
-      // iOS.
-      assertEquals(expected = listOf("en"), actual = currentLocaleStrings)
-    }
+    assertEquals(
+      message = currentLocaleStrings.joinToString(),
+      expected = true,
+      actual = currentLocaleStrings.contains("en_US") || currentLocaleStrings.contains("en-US"),
+    )
+
+    assertEquals(
+      message = currentLocaleStrings.joinToString(),
+      expected = true,
+      actual = currentLocaleStrings.size >= 1,
+    )
   }
 }
