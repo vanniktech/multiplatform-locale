@@ -1,6 +1,5 @@
 import org.jetbrains.kotlin.gradle.plugin.mpp.BitcodeEmbeddingMode
 import org.jetbrains.kotlin.gradle.targets.js.dsl.ExperimentalWasmDsl
-import org.jetbrains.kotlin.gradle.targets.js.dsl.KotlinJsTargetDsl
 
 plugins {
   id("org.jetbrains.dokka")
@@ -48,7 +47,6 @@ kotlin {
     }
     binaries.executable()
   }
-
 
   sourceSets {
     val commonMain by getting {
