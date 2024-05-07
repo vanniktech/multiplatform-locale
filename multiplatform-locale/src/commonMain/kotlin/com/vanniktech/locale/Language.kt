@@ -57,7 +57,7 @@ enum class Language(
   ),
   CHINESE(
     code = "zh",
-    officialCountries = listOf(Country.CHINA, Country.TAIWAN, Country.HONG_KONG, Country.SINGAPORE),
+    officialCountries = listOf(Country.CHINA, Country.TAIWAN, Country.HONG_KONG, Country.SINGAPORE, Country.MACAO),
     otherCountries = emptyList(),
   ),
   CATALAN(
