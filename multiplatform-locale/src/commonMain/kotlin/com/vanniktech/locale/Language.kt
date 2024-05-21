@@ -100,6 +100,11 @@ enum class Language(
     officialCountries = listOf(Country.IRAN),
     otherCountries = listOf(Country.AFGHANISTAN, Country.BAHRAIN, Country.IRAQ, Country.OMAN, Country.YEMEN, Country.UNITED_ARAB_EMIRATES),
   ),
+  FILIPINO(
+    code = "fil",
+    officialCountries = listOf(Country.PHILIPPINES),
+    otherCountries = emptyList(),
+  ),
   FINNISH(
     code = "fi",
     officialCountries = listOf(Country.FINLAND, Country.SWEDEN),
