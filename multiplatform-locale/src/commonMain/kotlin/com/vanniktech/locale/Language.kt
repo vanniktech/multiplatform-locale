@@ -136,6 +136,11 @@ enum class Language(
     officialCountries = listOf(Country.ISRAEL),
     otherCountries = emptyList(),
   ),
+  ICELANDIC(
+    code = "is",
+    officialCountries = listOf(Country.ICELAND),
+    otherCountries = emptyList(),
+  ),
   HINDI(
     code = "hi",
     officialCountries = listOf(Country.INDIA),
