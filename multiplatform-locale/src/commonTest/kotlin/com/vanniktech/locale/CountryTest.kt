@@ -12,7 +12,7 @@ class CountryTest {
   }
 
   @Test fun callingCodesAreSorted() {
-    Country.values()
+    Country.entries
       .forEach {
         assertEquals(expected = it.callingCodes.sorted(), actual = it.callingCodes, message = "Dial codes not sorted for $it")
       }
@@ -312,12 +312,12 @@ ZA-SOUTH_AFRICA
 ZM-ZAMBIA
 ZW-ZIMBABWE
       """.trimIndent(),
-      actual = Country.values().sortedBy { it.code }.joinToString(separator = "\n") { "${it.code}-${it.name}" },
+      actual = Country.entries.sortedBy { it.code }.joinToString(separator = "\n") { "${it.code}-${it.name}" },
     )
   }
 
   @Test fun noDuplicates() {
-    val unique = Country.values().map { it.code }.toSet()
-    assertEquals(expected = Country.values().size, actual = unique.size)
+    val unique = Country.entries.map { it.code }.toSet()
+    assertEquals(expected = Country.entries.size, actual = unique.size)
   }
 }

@@ -272,7 +272,7 @@ enum class Country(
   companion object {
     fun fromOrNull(identifier: String?) = when {
       identifier.isNullOrBlank() -> null
-      else -> values().firstOrNull { it.code.equals(identifier, ignoreCase = true) || it.code3.equals(identifier, ignoreCase = true) }
+      else -> entries.firstOrNull { it.code.equals(identifier, ignoreCase = true) || it.code3.equals(identifier, ignoreCase = true) }
     }
 
     fun fromLocaleOrNull(locale: String?): Country? {
@@ -281,7 +281,7 @@ enum class Country(
     }
 
     /** Tries every possible combination that I know to somehow get a meaningful country. */
-    fun fromLenientOrNull(string: String?) = values().firstOrNull { it.name.equals(string, ignoreCase = true) }
+    fun fromLenientOrNull(string: String?) = entries.firstOrNull { it.name.equals(string, ignoreCase = true) }
       ?: fromOrNull(string)
       ?: fromLocaleOrNull(string)
   }

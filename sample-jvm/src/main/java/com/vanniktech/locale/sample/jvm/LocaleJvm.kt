@@ -14,7 +14,7 @@ fun main() {
   println()
   println("Current Locale Strings: ${Locales.currentLocaleStrings().joinToString(separator = ", ")}")
   println()
-  println("All countries: ${Country.values().joinToString { it.displayName() } }")
+  println("All countries: ${Country.entries.joinToString { it.displayName() } }")
   println()
-  println("All languages: ${Language.values().joinToString { it.displayName() } }")
+  println("All languages: ${Language.entries.joinToString { it.displayName() } }")
 }

@@ -141,7 +141,7 @@ class LocaleTest {
         GooglePlayStoreLocale.ur,
         GooglePlayStoreLocale.vi,
       ),
-      actual = Language.values().flatMap { language -> (language.officialCountries + language.otherCountries).mapNotNull { Locale(language, it).googlePlayStoreLocale() } }.distinct(),
+      actual = Language.entries.flatMap { language -> (language.officialCountries + language.otherCountries).mapNotNull { Locale(language, it).googlePlayStoreLocale() } }.distinct(),
     )
   }
 
@@ -222,7 +222,7 @@ class LocaleTest {
         AppleAppStoreLocale.uk,
         AppleAppStoreLocale.vi,
       ),
-      actual = Language.values().flatMap { language -> (language.officialCountries + language.otherCountries).mapNotNull { Locale(language, it).appleAppStoreLocale() } }.distinct(),
+      actual = Language.entries.flatMap { language -> (language.officialCountries + language.otherCountries).mapNotNull { Locale(language, it).appleAppStoreLocale() } }.distinct(),
     )
   }
 

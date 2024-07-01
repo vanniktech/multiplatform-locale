@@ -23,7 +23,7 @@ class LocaleMainActivity : AppCompatActivity() {
     binding.googlePlayStoreLocale.text = "Google Play Store Locale: ${Locale.fromOrNull(currentLocaleString)?.googlePlayStoreLocale()?.toString() ?: "/"}"
     binding.appleAppStoreLocale.text = "Apple App Store Locale: ${Locale.fromOrNull(currentLocaleString)?.googlePlayStoreLocale()?.toString() ?: "/"}"
     binding.currentLocaleStrings.text = "Current Locale Strings: ${Locales.currentLocaleStrings().joinToString(separator = ", ")}"
-    binding.allCountries.text = "All countries: ${Country.values().joinToString { it.displayName() }}"
-    binding.allLanguages.text = "All languages: ${Language.values().joinToString { it.displayName() }}"
+    binding.allCountries.text = "All countries: ${Country.entries.joinToString { it.displayName() }}"
+    binding.allLanguages.text = "All languages: ${Language.entries.joinToString { it.displayName() }}"
   }
 }
