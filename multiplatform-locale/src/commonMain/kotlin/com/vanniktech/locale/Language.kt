@@ -306,7 +306,7 @@ enum class Language(
       requireNotNull(fromOrNull(identifier)) { "Can't get language from $identifier" }
 
     fun fromOrNull(identifier: String?): Language? =
-      values().firstOrNull { it.code.equals(identifier, ignoreCase = true) || it.legacyCode?.equals(identifier, ignoreCase = true) == true }
+      entries.firstOrNull { it.code.equals(identifier, ignoreCase = true) || it.legacyCode?.equals(identifier, ignoreCase = true) == true }
 
     fun fromLocale(locale: String): Language =
       requireNotNull(fromLocaleOrNull(locale)) { "Can't get language from $locale" }
