@@ -21,7 +21,6 @@ class CountryTest {
   @Test fun displayName() {
     assertEquals(expected = "United Kingdom", actual = Country.ENGLAND.displayName())
     assertEquals(expected = "Germany", actual = Country.GERMANY.displayName())
-    assertEquals(expected = "International Waters", actual = Country.INTERNATIONAL_WATERS.displayName())
   }
 
   @Test fun fromOrNull() {
@@ -160,7 +159,6 @@ HN-HONDURAS 🇭🇳
 HR-CROATIA 🇭🇷
 HT-HAITI 🇭🇹
 HU-HUNGARY 🇭🇺
-IC-CANARY_ISLANDS 🇮🇨
 ID-INDONESIA 🇮🇩
 IE-IRELAND 🇮🇪
 IL-ISRAEL 🇮🇱
@@ -305,7 +303,6 @@ VU-VANUATU 🇻🇺
 WF-WALLIS_AND_FUTUNA 🇼🇫
 WS-SAMOA 🇼🇸
 XK-KOSOVO 🇽🇰
-XZ-INTERNATIONAL_WATERS 🌊
 YE-YEMEN 🇾🇪
 YT-MAYOTTE 🇾🇹
 ZA-SOUTH_AFRICA 🇿🇦

@@ -7,20 +7,20 @@ class LocaleTest {
   @Test fun sorted() {
     assertEquals(
       expected = listOf(
-        Locale(Language.ENGLISH, country = Country.USA),
-        Locale(Language.GERMAN, country = Country.GERMANY),
+        Locale(Language.ENGLISH, territory = Country.USA),
+        Locale(Language.GERMAN, territory = Country.GERMANY),
       ),
       actual = listOf(
-        Locale(Language.GERMAN, country = Country.GERMANY),
-        Locale(Language.ENGLISH, country = Country.USA),
+        Locale(Language.GERMAN, territory = Country.GERMANY),
+        Locale(Language.ENGLISH, territory = Country.USA),
       ).sorted(),
     )
   }
 
   @Test fun fromOrNull() {
     listOf(
-      Pair(Locale(Language.ENGLISH, country = null), "en"),
-      Pair(Locale(Language.GERMAN, country = null), "de"),
+      Pair(Locale(Language.ENGLISH, territory = null), "en"),
+      Pair(Locale(Language.GERMAN, territory = null), "de"),
       Pair(Locale(Language.ENGLISH, Country.ENGLAND), "en-GB"),
       Pair(Locale(Language.ENGLISH, Country.USA), "en-US"),
       Pair(Locale(Language.ENGLISH, Country.USA), "en_US"),
@@ -68,8 +68,14 @@ class LocaleTest {
       Pair(Locale(Language.AMHARIC, Country.ETHIOPIA), "am-ET"),
       Pair(Locale(Language.FILIPINO, Country.PHILIPPINES), "fil-PH"),
       Pair(Locale(Language.ICELANDIC, Country.ICELAND), "is_IS"),
+      Pair(Locale(Language.SPANISH, Region.LATIN_AMERICA), "es-419"),
+      Pair(Locale(Language.SPANISH, Region.CANARY_ISLANDS), "es-IC"),
     ).forEach { (locale, localeString) ->
-      assertEquals(message = localeString, expected = locale, actual = Locale.fromOrNull(localeString))
+      assertEquals(
+        message = localeString,
+        expected = locale,
+        actual = Locale.fromOrNull(localeString),
+      )
     }
   }
 
@@ -131,6 +137,7 @@ class LocaleTest {
         GooglePlayStoreLocale.sk,
         GooglePlayStoreLocale.sl,
         GooglePlayStoreLocale.es_ES,
+        GooglePlayStoreLocale.es_419,
         GooglePlayStoreLocale.es_US,
         GooglePlayStoreLocale.sv_SE,
         GooglePlayStoreLocale.ta_IN,
@@ -141,7 +148,7 @@ class LocaleTest {
         GooglePlayStoreLocale.ur,
         GooglePlayStoreLocale.vi,
       ),
-      actual = Language.entries.flatMap { language -> (language.officialCountries + language.otherCountries).mapNotNull { Locale(language, it).googlePlayStoreLocale() } }.distinct(),
+      actual = Language.entries.flatMap { language -> (language.officialTerritories + language.otherTerritories).mapNotNull { Locale(language, it).googlePlayStoreLocale() } }.distinct(),
     )
   }
 
@@ -222,7 +229,7 @@ class LocaleTest {
         AppleAppStoreLocale.uk,
         AppleAppStoreLocale.vi,
       ),
-      actual = Language.entries.flatMap { language -> (language.officialCountries + language.otherCountries).mapNotNull { Locale(language, it).appleAppStoreLocale() } }.distinct(),
+      actual = Language.entries.flatMap { language -> (language.officialTerritories + language.otherTerritories).mapNotNull { Locale(language, it).appleAppStoreLocale() } }.distinct(),
     )
   }
 
