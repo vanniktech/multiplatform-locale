@@ -5,8 +5,8 @@ actual fun Language.displayName() = java.util.Locale(
   "",
 ).displayLanguage.capitalized()
 
-actual fun Country.displayName() = when (this) {
-  Country.INTERNATIONAL_WATERS -> "International Waters"
+actual fun Territory.displayName() = when (this) {
+  Region.INTERNATIONAL_WATERS -> "International Waters"
   else -> java.util.Locale(
     java.util.Locale.getDefault().language,
     code,
@@ -15,5 +15,5 @@ actual fun Country.displayName() = when (this) {
 
 fun Locale.toJavaLocale() = java.util.Locale(
   language.code,
-  country?.code.orEmpty(),
+  territory?.code.orEmpty(),
 )

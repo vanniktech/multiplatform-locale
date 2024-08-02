@@ -8,7 +8,7 @@ import platform.Foundation.localizedStringForLanguageCode
 actual fun Language.displayName(): String =
   NSLocale.currentLocale.localizedStringForLanguageCode(code).orEmpty().capitalized()
 
-actual fun Country.displayName() = when (this) {
-  Country.INTERNATIONAL_WATERS -> "International Waters"
+actual fun Territory.displayName() = when (this) {
+  Region.INTERNATIONAL_WATERS -> "International Waters"
   else -> NSLocale.currentLocale.localizedStringForCountryCode(code).orEmpty().capitalized()
 }

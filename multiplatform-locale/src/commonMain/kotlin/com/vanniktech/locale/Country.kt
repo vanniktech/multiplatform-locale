@@ -2,19 +2,18 @@ package com.vanniktech.locale
 
 enum class Country(
   /** ISO 3166-1 alpha-2 code - https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2 */
-  val code: String,
+  override val code: String,
   /** ISO 3166-1 alpha-3 code - https://en.wikipedia.org/wiki/ISO_3166-1_alpha-3 */
-  val code3: String,
+  override val code3: String,
   /**
    * The calling code that can be used for calling.
    * May contain more than one entry for some rarities.
-   * Note that [INTERNATIONAL_WATERS] does not have any calling codes.
    * Table overview: https://en.wikipedia.org/wiki/List_of_country_calling_codes
    */
   val callingCodes: List<String>,
   /** The [Continent]s it belongs to. Sometimes there can be more than one. */
-  val continents: List<Continent>,
-) {
+  override val continents: List<Continent>,
+) : Territory {
   AFGHANISTAN(code = "AF", code3 = "AFG", callingCodes = listOf("+93"), continents = listOf(Continent.ASIA)),
   ALAND_ISLANDS(code = "AX", code3 = "ALA", callingCodes = listOf("+358"), continents = listOf(Continent.EUROPE)),
   ALBANIA(code = "AL", code3 = "ALB", callingCodes = listOf("+355"), continents = listOf(Continent.EUROPE)),
@@ -55,7 +54,6 @@ enum class Country(
   CAMBODIA(code = "KH", code3 = "KHM", callingCodes = listOf("+855"), continents = listOf(Continent.ASIA)),
   CAMEROON(code = "CM", code3 = "CMR", callingCodes = listOf("+237"), continents = listOf(Continent.AFRICA)),
   CANADA(code = "CA", code3 = "CAN", callingCodes = listOf("+1"), continents = listOf(Continent.NORTH_AMERICA)),
-  CANARY_ISLANDS(code = "IC", code3 = "", callingCodes = listOf("+34"), continents = listOf(Continent.EUROPE)),
   CAPE_VERDE(code = "CV", code3 = "CPV", callingCodes = listOf("+238"), continents = listOf(Continent.AFRICA)),
   CAYMAN_ISLANDS(code = "KY", code3 = "CYM", callingCodes = listOf("+345"), continents = listOf(Continent.NORTH_AMERICA)),
   CENTRAL_AFRICAN_REPUBLIC(code = "CF", code3 = "CAF", callingCodes = listOf("+236"), continents = listOf(Continent.AFRICA)),
@@ -120,7 +118,6 @@ enum class Country(
   ICELAND(code = "IS", code3 = "ISL", callingCodes = listOf("+354"), continents = listOf(Continent.EUROPE)),
   INDIA(code = "IN", code3 = "IND", callingCodes = listOf("+91"), continents = listOf(Continent.ASIA)),
   INDONESIA(code = "ID", code3 = "IDN", callingCodes = listOf("+62"), continents = listOf(Continent.ASIA)),
-  INTERNATIONAL_WATERS(code = "XZ", code3 = "XZZ", callingCodes = listOf(), continents = listOf()), // https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#User-assigned_code_elemen
   IRAN(code = "IR", code3 = "IRN", callingCodes = listOf("+98"), continents = listOf(Continent.ASIA)),
   IRAQ(code = "IQ", code3 = "IRQ", callingCodes = listOf("+964"), continents = listOf(Continent.ASIA)),
   IRELAND(code = "IE", code3 = "IRL", callingCodes = listOf("+353"), continents = listOf(Continent.EUROPE)),
@@ -268,11 +265,8 @@ enum class Country(
   ;
 
   /** The flag as an Emoji. */
-  val emoji: String get() =
-    when (this) {
-      INTERNATIONAL_WATERS -> """🌊"""
-      else -> code.map { "${0xD83C.toChar()}${(0xDDA5 + it.code).toChar()}" }.joinToString("")
-    }
+  override val emoji: String get() =
+    code.map { "${0xD83C.toChar()}${(0xDDA5 + it.code).toChar()}" }.joinToString("")
 
   companion object {
     fun fromOrNull(identifier: String?) = when {
@@ -291,6 +285,3 @@ enum class Country(
       ?: fromLocaleOrNull(string)
   }
 }
-
-/** Returns the display name of [Country] in the current language. */
-expect fun Country.displayName(): String

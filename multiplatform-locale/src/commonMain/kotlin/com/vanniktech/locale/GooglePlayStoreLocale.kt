@@ -78,6 +78,7 @@ package com.vanniktech.locale
   sl,
   es_ES,
   es_US,
+  es_419,
   sw,
   sv_SE,
   ta_IN,
