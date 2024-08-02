@@ -1,7 +1,15 @@
 # Change Log
 
-Version 0.8.0 *(In development)*
---------------------------------
+Version 0.8.0 *(2024-08-02)*
+----------------------------
+
+- API: Language add Filipino. [\#178](https://github.com/vanniktech/multiplatform-locale/pull/178) ([vanniktech](https://github.com/vanniktech))
+- API: Language add Icelandic. [\#191](https://github.com/vanniktech/multiplatform-locale/pull/191) ([vanniktech](https://github.com/vanniktech))
+- Breaking: Sealed Territory interface with a Country and Region implementation to support for instance European Union and have a better separation. [\#197](https://github.com/vanniktech/multiplatform-locale/pull/197) ([vanniktech](https://github.com/vanniktech))
+- Bug fix: In Macao Chinese is also spoken. [\#174](https://github.com/vanniktech/multiplatform-locale/pull/174) ([vanniktech](https://github.com/vanniktech))
+- Technical: Automatically generate Country\#emoji based on the country code. [\#193](https://github.com/vanniktech/multiplatform-locale/pull/193) ([vanniktech](https://github.com/vanniktech))
+- Technical: Use Kotlin's entries property on Enums. [\#192](https://github.com/vanniktech/multiplatform-locale/pull/192) ([vanniktech](https://github.com/vanniktech))
+- Update kotlin monorepo to v2 \(major\) [\#179](https://github.com/vanniktech/multiplatform-locale/pull/179) ([renovate[bot]](https://github.com/apps/renovate))
 
 Version 0.7.0 *(2024-03-29)*
 ----------------------------
