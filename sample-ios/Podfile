@@ -8,5 +8,5 @@ use_frameworks!
 target 'ios' do
   project 'ios'
 
-  pod "MultiplatformLocaleGooglePlayStore", :path => "../multiplatform-locale-google-play-store"
+  pod "MultiplatformLocaleAll", :path => "../multiplatform-locale-all"
 end

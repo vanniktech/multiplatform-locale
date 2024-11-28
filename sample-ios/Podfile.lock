@@ -1,16 +1,16 @@
 PODS:
-  - MultiplatformLocaleGooglePlayStore (0.9.0-SNAPSHOT)
+  - MultiplatformLocaleAll (0.9.0-SNAPSHOT)
 
 DEPENDENCIES:
-  - MultiplatformLocaleGooglePlayStore (from `../multiplatform-locale-google-play-store`)
+  - MultiplatformLocaleAll (from `../multiplatform-locale-all`)
 
 EXTERNAL SOURCES:
-  MultiplatformLocaleGooglePlayStore:
-    :path: "../multiplatform-locale-google-play-store"
+  MultiplatformLocaleAll:
+    :path: "../multiplatform-locale-all"
 
 SPEC CHECKSUMS:
-  MultiplatformLocaleGooglePlayStore: 656f89cac77948b61b26f0ef0880c6ef5a23fac7
+  MultiplatformLocaleAll: 7a8aa6addcfc6e2bcd5dc38d97dcade45fc67a54
 
-PODFILE CHECKSUM: 975a05527f8b1931eccaca8d9c39e415a33737df
+PODFILE CHECKSUM: 9ed168d98ea160d8c0c0865fb29f7c761bf8bdfe
 
 COCOAPODS: 1.16.2
