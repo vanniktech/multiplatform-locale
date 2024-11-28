@@ -30,21 +30,42 @@ kotlin {
   iosArm64()
   iosSimulatorArm64()
 
+  targets.withType<org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget> {
+    compilations["main"].kotlinOptions.freeCompilerArgs += "-Xexport-kdoc"
+  }
+
   sourceSets {
     val commonMain by getting {
       dependencies {
         api(project(":multiplatform-locale"))
-        api(project(":multiplatform-locale-apple-app-store"))
-        api(project(":multiplatform-locale-google-play-store"))
+      }
+    }
+
+    val commonTest by getting {
+      dependencies {
+        implementation(libs.kotlin.test.common)
+        implementation(libs.kotlin.test.annotations.common)
+      }
+    }
+
+    val androidUnitTest by getting {
+      dependencies {
+        implementation(libs.kotlin.test.junit)
+      }
+    }
+
+    val jvmTest by getting {
+      dependencies {
+        implementation(libs.kotlin.test.junit)
       }
     }
   }
 
   cocoapods {
-    summary = "Multiplatform Locale All for iOS, Android and JVM via Kotlin Multiplatform"
+    summary = "Multiplatform Locale Apple App Store for iOS, Android and JVM via Kotlin Multiplatform"
     homepage = "https://github.com/vanniktech/multiplatform-locale"
     license = "MIT"
-    name = "MultiplatformLocaleAll"
+    name = "MultiplatformLocaleAppleAppStore"
     authors = "Niklas Baudy"
     version = project.property("VERSION_NAME").toString()
 
@@ -52,14 +73,12 @@ kotlin {
       isStatic = true
       embedBitcode(if ("YES" == System.getenv("ENABLE_BITCODE")) BitcodeEmbeddingMode.BITCODE else BitcodeEmbeddingMode.DISABLE)
       export(project(":multiplatform-locale"))
-      export(project(":multiplatform-locale-apple-app-store"))
-      export(project(":multiplatform-locale-google-play-store"))
     }
   }
 }
 
 android {
-  namespace = "com.vanniktech.locale.all"
+  namespace = "com.vanniktech.locale.apple.app.store"
 
   compileSdk = libs.versions.compileSdk.get().toInt()
 
@@ -72,5 +91,5 @@ android {
     targetCompatibility = JavaVersion.VERSION_11
   }
 
-  resourcePrefix = "locale_all_"
+  resourcePrefix = "locale_apple_app_store_"
 }

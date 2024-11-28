@@ -9,24 +9,6 @@ data class Locale(
     territory?.code,
   ).joinToString(separator = "-")
 
-  /** Returns the optional [AppleAppStoreLocale] that can be used for localizing the Apple App Store. */
-  fun appleAppStoreLocale(): AppleAppStoreLocale? {
-    val optimized = Locale(
-      language = language,
-      territory = territory ?: language.defaultCountry,
-    )
-    return AppleAppStoreLocale.entries
-      .groupBy { Language.fromLocaleOrNull(it.toString()) }
-      .firstNotNullOfOrNull { (key, locales) ->
-        locales.firstNotNullOfOrNull { locale ->
-          locale.takeIf {
-            val isChineseTaiwan = it.name == "zh_Hant" && language == Language.CHINESE && territory == Country.TAIWAN
-            fromOrNull(it.name) == optimized || isChineseTaiwan
-          }
-        } ?: locales.firstNotNullOfOrNull { locale -> locale.takeIf { language == key } }
-      }
-  }
-
   override fun compareTo(other: Locale): Int =
     compareValuesBy(this, other, { it.language }, { it.territory as Comparable<*> })
 
