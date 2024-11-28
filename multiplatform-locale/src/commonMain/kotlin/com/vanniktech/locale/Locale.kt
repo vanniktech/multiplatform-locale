@@ -9,12 +9,10 @@ data class Locale(
     territory?.code,
   ).joinToString(separator = "-")
 
-  override fun compareTo(other: Locale): Int =
-    compareValuesBy(this, other, { it.language }, { it.territory as Comparable<*> })
+  override fun compareTo(other: Locale): Int = compareValuesBy(this, other, { it.language }, { it.territory as Comparable<*> })
 
   companion object {
-    fun from(locale: String) =
-      requireNotNull(fromOrNull(locale)) { "Can't get locale for $locale" }
+    fun from(locale: String) = requireNotNull(fromOrNull(locale)) { "Can't get locale for $locale" }
 
     fun fromOrNull(locale: String?): Locale? {
       val language = Language.fromLocaleOrNull(locale)
@@ -29,8 +27,7 @@ data class Locale(
       }
     }
 
-    fun fromAndroidValuesDirectoryName(androidValuesDirectoryName: String) =
-      requireNotNull(fromAndroidValuesDirectoryNameOrNull(androidValuesDirectoryName)) { "Can't get locale for $androidValuesDirectoryName" }
+    fun fromAndroidValuesDirectoryName(androidValuesDirectoryName: String) = requireNotNull(fromAndroidValuesDirectoryNameOrNull(androidValuesDirectoryName)) { "Can't get locale for $androidValuesDirectoryName" }
 
     fun fromAndroidValuesDirectoryNameOrNull(androidValuesDirectoryName: String): Locale? {
       val name = androidValuesDirectoryName
