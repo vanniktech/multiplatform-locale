@@ -1,0 +1,1 @@
+multiplatform-locale-google-play-store/MultiplatformLocaleGooglePlayStore.podspec

@@ -9,23 +9,6 @@ data class Locale(
     territory?.code,
   ).joinToString(separator = "-")
 
-  /** Returns the optional [GooglePlayStoreLocale] that can be used for localizing the Google Play Store. */
-  fun googlePlayStoreLocale(): GooglePlayStoreLocale? {
-    val optimized = Locale(
-      language = language,
-      territory = territory ?: language.defaultCountry,
-    )
-    return GooglePlayStoreLocale.entries
-      .groupBy { Language.fromLocaleOrNull(it.toString()) }
-      .firstNotNullOfOrNull { (key, locales) ->
-        locales.firstNotNullOfOrNull { locale ->
-          locale.takeIf {
-            fromOrNull(it.name) == optimized
-          }
-        } ?: locales.firstNotNullOfOrNull { locale -> locale.takeIf { language == key } }
-      }
-  }
-
   /** Returns the optional [AppleAppStoreLocale] that can be used for localizing the Apple App Store. */
   fun appleAppStoreLocale(): AppleAppStoreLocale? {
     val optimized = Locale(

@@ -7,6 +7,7 @@ import com.vanniktech.locale.Country
 import com.vanniktech.locale.Language
 import com.vanniktech.locale.Locale
 import com.vanniktech.locale.Locales
+import com.vanniktech.locale.google.play.store.googlePlayStoreLocale
 import com.vanniktech.locale.sample.android.databinding.ActivityMainBinding
 
 class LocaleMainActivity : AppCompatActivity() {
