@@ -427,6 +427,7 @@ package com.vanniktech.locale {
   }
 
   public enum Language {
+    method public error.NonExistentClass displayName();
     method public String getCode();
     method public com.vanniktech.locale.Territory getDefaultCountry();
     method public String? getLegacyCode();
@@ -559,20 +560,11 @@ package com.vanniktech.locale {
     field public static final com.vanniktech.locale.Locales INSTANCE;
   }
 
-  public final class MultiplatformKt {
-    method public static String displayName(com.vanniktech.locale.Language);
-    method public static String displayName(com.vanniktech.locale.Territory);
+  public final class Multiplatform_androidKt {
     method public static java.util.Locale toJavaLocale(com.vanniktech.locale.Locale);
   }
 
-  public final class MultiplatformKt {
-    method public static String displayName(com.vanniktech.locale.Language);
-    method public static String displayName(com.vanniktech.locale.Territory);
-  }
-
-  public final class MultiplatformKt {
-    method public static String displayName(com.vanniktech.locale.Language);
-    method public static String displayName(com.vanniktech.locale.Territory);
+  public final class Multiplatform_jvmKt {
     method public static java.util.Locale toJavaLocale(com.vanniktech.locale.Locale);
   }
 
@@ -599,6 +591,7 @@ package com.vanniktech.locale {
   }
 
   public sealed interface Territory {
+    method public default error.NonExistentClass displayName();
     method public String getCode();
     method public String getCode3();
     method public java.util.List<com.vanniktech.locale.Continent> getContinents();

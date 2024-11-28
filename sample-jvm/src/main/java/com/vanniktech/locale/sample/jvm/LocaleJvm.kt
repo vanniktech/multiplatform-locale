@@ -4,7 +4,6 @@ import com.vanniktech.locale.Country
 import com.vanniktech.locale.Language
 import com.vanniktech.locale.Locale
 import com.vanniktech.locale.Locales
-import com.vanniktech.locale.displayName
 
 fun main() {
   val currentLocaleString = Locales.currentLocaleString()

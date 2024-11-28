@@ -1,11 +1,11 @@
 package com.vanniktech.locale
 
-actual fun Language.displayName() = java.util.Locale(
+internal actual fun Language.commonDisplayName() = java.util.Locale(
   code,
   "",
 ).displayLanguage.capitalized()
 
-actual fun Territory.displayName() = when (this) {
+internal actual fun Territory.commonDisplayName() = when (this) {
   Region.INTERNATIONAL_WATERS -> "International Waters"
   else -> java.util.Locale(
     java.util.Locale.getDefault().language,

@@ -301,6 +301,8 @@ enum class Language(
 
   val defaultCountry = officialTerritories.first()
 
+  fun displayName() = commonDisplayName()
+
   companion object {
     fun from(identifier: String): Language =
       requireNotNull(fromOrNull(identifier)) { "Can't get language from $identifier" }
@@ -317,4 +319,4 @@ enum class Language(
 }
 
 /** Returns the display name of [Language] in the current language. */
-expect fun Language.displayName(): String
+internal expect fun Language.commonDisplayName(): String
