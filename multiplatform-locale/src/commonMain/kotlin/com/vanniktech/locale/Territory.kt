@@ -12,7 +12,9 @@ sealed interface Territory {
 
   /** Optional emoji. */
   val emoji: String?
+
+  fun displayName() = commonDisplayName()
 }
 
 /** Returns the display name of [Territory] in the current language. */
-expect fun Territory.displayName(): String
+internal expect fun Territory.commonDisplayName(): String

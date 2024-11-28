@@ -5,7 +5,6 @@ plugins {
   id("org.jetbrains.kotlin.multiplatform")
   id("org.jetbrains.kotlin.native.cocoapods")
   id("com.android.library")
-  id("org.jetbrains.kotlin.plugin.parcelize")
   id("me.tylerbwong.gradle.metalava")
   id("com.vanniktech.maven.publish")
   id("app.cash.licensee")
