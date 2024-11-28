@@ -1,0 +1,99 @@
+// Signature format: 4.0
+package com.vanniktech.locale.google.play.store {
+
+  public enum GooglePlayStoreLocale {
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale af;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale am;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale ar;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale az_AZ;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale be;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale bg;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale bn_BD;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale ca;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale cs_CZ;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale da_DK;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale de_DE;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale el_GR;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale en_AU;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale en_CA;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale en_GB;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale en_IN;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale en_SG;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale en_US;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale en_ZA;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale es_419;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale es_ES;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale es_US;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale et;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale eu_ES;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale fa;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale fa_AE;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale fa_AF;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale fa_IR;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale fi_FI;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale fil;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale fr_CA;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale fr_FR;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale gl_ES;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale gu;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale hi_IN;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale hr;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale hu_HU;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale hy_AM;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale id;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale is_IS;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale it_IT;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale iw_IL;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale ja_JP;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale ka_GE;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale kk;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale km_KH;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale kn_IN;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale ko_KR;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale ky_KG;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale lo_LA;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale lt;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale lv;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale mk_MK;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale ml_IN;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale mn_MN;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale mr_IN;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale ms;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale ms_MY;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale my_MM;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale ne_NP;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale nl_NL;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale no_NO;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale pa;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale pl_PL;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale pt_BR;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale pt_PT;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale rm;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale ro;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale ru_RU;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale si_LK;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale sk;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale sl;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale sq;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale sr;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale sv_SE;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale sw;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale ta_IN;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale te_IN;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale th;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale tr_TR;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale uk;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale ur;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale vi;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale zh_CN;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale zh_HK;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale zh_TW;
+    enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale zu;
+  }
+
+  public final class GooglePlayStoreLocaleKt {
+    method public static com.vanniktech.locale.google.play.store.GooglePlayStoreLocale? googlePlayStoreLocale(com.vanniktech.locale.Locale);
+  }
+
+}
+

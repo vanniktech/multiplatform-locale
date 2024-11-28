@@ -1,5 +1,5 @@
 import SwiftUI
-import multiplatform_locale
+import multiplatform_locale_google_play_store
 
 @main
 struct LocaleApp : App {
@@ -16,7 +16,7 @@ struct ContentView: View {
             let currentLocaleString = Locales.shared.currentLocaleString()
             Text("Current Locale: \(currentLocaleString)")
 
-            if let locale = multiplatform_locale.Locale.Companion.shared.fromOrNull(locale: currentLocaleString) {
+            if let locale = multiplatform_locale_google_play_store.Locale.Companion.shared.fromOrNull(locale: currentLocaleString) {
                 Text("Google Play Store Locale: \(locale.googlePlayStoreLocale()?.description() ?? "/")")
                 Text("Apple App Store Locale: \(locale.appleAppStoreLocale()?.description() ?? "/")")
             }
@@ -25,6 +25,7 @@ struct ContentView: View {
                 .padding()
 
             let countries = Country.values()
+
             Text("All countries: \((0..<countries.size).compactMap { countries.get(index: $0) }.map { $0.displayName() }.joined(separator: ", "))")
                 .padding()
 

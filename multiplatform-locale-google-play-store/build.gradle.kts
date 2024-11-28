@@ -35,6 +35,12 @@ kotlin {
   }
 
   sourceSets {
+    val commonMain by getting {
+      dependencies {
+        api(project(":multiplatform-locale"))
+      }
+    }
+
     val commonTest by getting {
       dependencies {
         implementation(libs.kotlin.test.common)
@@ -56,22 +62,23 @@ kotlin {
   }
 
   cocoapods {
-    summary = "Multiplatform Locale for iOS, Android and JVM via Kotlin Multiplatform"
+    summary = "Multiplatform Locale Google Play Store for iOS, Android and JVM via Kotlin Multiplatform"
     homepage = "https://github.com/vanniktech/multiplatform-locale"
     license = "MIT"
-    name = "MultiplatformLocale"
+    name = "MultiplatformLocaleGooglePlayStore"
     authors = "Niklas Baudy"
     version = project.property("VERSION_NAME").toString()
 
     framework {
       isStatic = true
       embedBitcode(if ("YES" == System.getenv("ENABLE_BITCODE")) BitcodeEmbeddingMode.BITCODE else BitcodeEmbeddingMode.DISABLE)
+      export(project(":multiplatform-locale"))
     }
   }
 }
 
 android {
-  namespace = "com.vanniktech.locale"
+  namespace = "com.vanniktech.locale.google.play.store"
 
   compileSdk = libs.versions.compileSdk.get().toInt()
 
@@ -84,5 +91,5 @@ android {
     targetCompatibility = JavaVersion.VERSION_11
   }
 
-  resourcePrefix = "locale_"
+  resourcePrefix = "locale_google_play_store_"
 }

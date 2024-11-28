@@ -1,4 +1,8 @@
-package com.vanniktech.locale
+package com.vanniktech.locale.google.play.store
+
+import com.vanniktech.locale.Language
+import com.vanniktech.locale.Locale
+import com.vanniktech.locale.Locale.Companion.fromOrNull
 
 /** All the locales supported by the Google Play Store. */
 @Suppress("ktlint:standard:enum-entry-name-case") enum class GooglePlayStoreLocale {
@@ -92,4 +96,21 @@ package com.vanniktech.locale
   ;
 
   override fun toString() = name.replace("_", "-")
+}
+
+/** Returns the optional [GooglePlayStoreLocale] that can be used for localizing the Google Play Store. */
+fun Locale.googlePlayStoreLocale(): GooglePlayStoreLocale? {
+  val optimized = Locale(
+    language = language,
+    territory = territory ?: language.defaultCountry,
+  )
+  return GooglePlayStoreLocale.entries
+    .groupBy { Language.fromLocaleOrNull(it.toString()) }
+    .firstNotNullOfOrNull { (key, locales) ->
+      locales.firstNotNullOfOrNull { locale ->
+        locale.takeIf {
+          fromOrNull(it.name) == optimized
+        }
+      } ?: locales.firstNotNullOfOrNull { locale -> locale.takeIf { language == key } }
+    }
 }

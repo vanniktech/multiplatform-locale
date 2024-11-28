@@ -45,6 +45,7 @@ android {
 
 dependencies {
   implementation(project(":multiplatform-locale"))
+  implementation(project(":multiplatform-locale-google-play-store"))
   implementation(libs.timber)
   implementation(libs.material)
 }
