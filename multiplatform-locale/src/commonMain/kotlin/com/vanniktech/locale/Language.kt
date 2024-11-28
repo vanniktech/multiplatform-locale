@@ -304,17 +304,13 @@ enum class Language(
   fun displayName() = commonDisplayName()
 
   companion object {
-    fun from(identifier: String): Language =
-      requireNotNull(fromOrNull(identifier)) { "Can't get language from $identifier" }
+    fun from(identifier: String): Language = requireNotNull(fromOrNull(identifier)) { "Can't get language from $identifier" }
 
-    fun fromOrNull(identifier: String?): Language? =
-      entries.firstOrNull { it.code.equals(identifier, ignoreCase = true) || it.legacyCode?.equals(identifier, ignoreCase = true) == true }
+    fun fromOrNull(identifier: String?): Language? = entries.firstOrNull { it.code.equals(identifier, ignoreCase = true) || it.legacyCode?.equals(identifier, ignoreCase = true) == true }
 
-    fun fromLocale(locale: String): Language =
-      requireNotNull(fromLocaleOrNull(locale)) { "Can't get language from $locale" }
+    fun fromLocale(locale: String): Language = requireNotNull(fromLocaleOrNull(locale)) { "Can't get language from $locale" }
 
-    fun fromLocaleOrNull(locale: String?): Language? =
-      fromOrNull(localeSplit(locale).getOrNull(0))
+    fun fromLocaleOrNull(locale: String?): Language? = fromOrNull(localeSplit(locale).getOrNull(0))
   }
 }
 
