@@ -1,48 +1,6 @@
 // Signature format: 4.0
 package com.vanniktech.locale {
 
-  public enum AppleAppStoreLocale {
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale ar_SA;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale ca;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale cs;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale da;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale de_DE;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale el;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale en_AU;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale en_CA;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale en_GB;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale en_US;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale es_ES;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale es_MX;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale fi;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale fr_CA;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale fr_FR;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale he;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale hi;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale hr;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale hu;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale id;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale it;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale ja;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale ko;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale ms;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale nl_NL;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale no;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale pl;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale pt_BR;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale pt_PT;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale ro;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale ru;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale sk;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale sv;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale th;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale tr;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale uk;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale vi;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale zh_Hans;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale zh_Hant;
-  }
-
   public enum Continent {
     enum_constant public static final com.vanniktech.locale.Continent AFRICA;
     enum_constant public static final com.vanniktech.locale.Continent ANTARCTICA;
@@ -432,7 +390,6 @@ package com.vanniktech.locale {
 
   public final class Locale implements java.lang.Comparable<com.vanniktech.locale.Locale> {
     ctor public Locale(com.vanniktech.locale.Language language, com.vanniktech.locale.Territory? territory);
-    method public com.vanniktech.locale.AppleAppStoreLocale? appleAppStoreLocale();
     method public int compareTo(com.vanniktech.locale.Locale other);
     method public com.vanniktech.locale.Language component1();
     method public com.vanniktech.locale.Territory? component2();

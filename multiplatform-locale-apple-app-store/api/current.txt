@@ -1,0 +1,51 @@
+// Signature format: 4.0
+package com.vanniktech.locale.apple.app.store {
+
+  public enum AppleAppStoreLocale {
+    enum_constant public static final com.vanniktech.locale.apple.app.store.AppleAppStoreLocale ar_SA;
+    enum_constant public static final com.vanniktech.locale.apple.app.store.AppleAppStoreLocale ca;
+    enum_constant public static final com.vanniktech.locale.apple.app.store.AppleAppStoreLocale cs;
+    enum_constant public static final com.vanniktech.locale.apple.app.store.AppleAppStoreLocale da;
+    enum_constant public static final com.vanniktech.locale.apple.app.store.AppleAppStoreLocale de_DE;
+    enum_constant public static final com.vanniktech.locale.apple.app.store.AppleAppStoreLocale el;
+    enum_constant public static final com.vanniktech.locale.apple.app.store.AppleAppStoreLocale en_AU;
+    enum_constant public static final com.vanniktech.locale.apple.app.store.AppleAppStoreLocale en_CA;
+    enum_constant public static final com.vanniktech.locale.apple.app.store.AppleAppStoreLocale en_GB;
+    enum_constant public static final com.vanniktech.locale.apple.app.store.AppleAppStoreLocale en_US;
+    enum_constant public static final com.vanniktech.locale.apple.app.store.AppleAppStoreLocale es_ES;
+    enum_constant public static final com.vanniktech.locale.apple.app.store.AppleAppStoreLocale es_MX;
+    enum_constant public static final com.vanniktech.locale.apple.app.store.AppleAppStoreLocale fi;
+    enum_constant public static final com.vanniktech.locale.apple.app.store.AppleAppStoreLocale fr_CA;
+    enum_constant public static final com.vanniktech.locale.apple.app.store.AppleAppStoreLocale fr_FR;
+    enum_constant public static final com.vanniktech.locale.apple.app.store.AppleAppStoreLocale he;
+    enum_constant public static final com.vanniktech.locale.apple.app.store.AppleAppStoreLocale hi;
+    enum_constant public static final com.vanniktech.locale.apple.app.store.AppleAppStoreLocale hr;
+    enum_constant public static final com.vanniktech.locale.apple.app.store.AppleAppStoreLocale hu;
+    enum_constant public static final com.vanniktech.locale.apple.app.store.AppleAppStoreLocale id;
+    enum_constant public static final com.vanniktech.locale.apple.app.store.AppleAppStoreLocale it;
+    enum_constant public static final com.vanniktech.locale.apple.app.store.AppleAppStoreLocale ja;
+    enum_constant public static final com.vanniktech.locale.apple.app.store.AppleAppStoreLocale ko;
+    enum_constant public static final com.vanniktech.locale.apple.app.store.AppleAppStoreLocale ms;
+    enum_constant public static final com.vanniktech.locale.apple.app.store.AppleAppStoreLocale nl_NL;
+    enum_constant public static final com.vanniktech.locale.apple.app.store.AppleAppStoreLocale no;
+    enum_constant public static final com.vanniktech.locale.apple.app.store.AppleAppStoreLocale pl;
+    enum_constant public static final com.vanniktech.locale.apple.app.store.AppleAppStoreLocale pt_BR;
+    enum_constant public static final com.vanniktech.locale.apple.app.store.AppleAppStoreLocale pt_PT;
+    enum_constant public static final com.vanniktech.locale.apple.app.store.AppleAppStoreLocale ro;
+    enum_constant public static final com.vanniktech.locale.apple.app.store.AppleAppStoreLocale ru;
+    enum_constant public static final com.vanniktech.locale.apple.app.store.AppleAppStoreLocale sk;
+    enum_constant public static final com.vanniktech.locale.apple.app.store.AppleAppStoreLocale sv;
+    enum_constant public static final com.vanniktech.locale.apple.app.store.AppleAppStoreLocale th;
+    enum_constant public static final com.vanniktech.locale.apple.app.store.AppleAppStoreLocale tr;
+    enum_constant public static final com.vanniktech.locale.apple.app.store.AppleAppStoreLocale uk;
+    enum_constant public static final com.vanniktech.locale.apple.app.store.AppleAppStoreLocale vi;
+    enum_constant public static final com.vanniktech.locale.apple.app.store.AppleAppStoreLocale zh_Hans;
+    enum_constant public static final com.vanniktech.locale.apple.app.store.AppleAppStoreLocale zh_Hant;
+  }
+
+  public final class AppleAppStoreLocaleKt {
+    method public static com.vanniktech.locale.apple.app.store.AppleAppStoreLocale? appleAppStoreLocale(com.vanniktech.locale.Locale);
+  }
+
+}
+
