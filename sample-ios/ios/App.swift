@@ -1,5 +1,5 @@
 import SwiftUI
-import multiplatform_locale_google_play_store
+import multiplatform_locale_all
 
 @main
 struct LocaleApp : App {
@@ -16,7 +16,7 @@ struct ContentView: View {
             let currentLocaleString = Locales.shared.currentLocaleString()
             Text("Current Locale: \(currentLocaleString)")
 
-            if let locale = multiplatform_locale_google_play_store.Locale.Companion.shared.fromOrNull(locale: currentLocaleString) {
+            if let locale = multiplatform_locale_all.Locale.Companion.shared.fromOrNull(locale: currentLocaleString) {
                 Text("Google Play Store Locale: \(locale.googlePlayStoreLocale()?.description() ?? "/")")
                 Text("Apple App Store Locale: \(locale.appleAppStoreLocale()?.description() ?? "/")")
             }

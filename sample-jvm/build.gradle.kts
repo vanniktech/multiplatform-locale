@@ -8,7 +8,7 @@ kotlin {
 }
 
 dependencies {
-  implementation(project(":multiplatform-locale-google-play-store"))
+  implementation(project(":multiplatform-locale-all"))
 }
 
 dependencies {
