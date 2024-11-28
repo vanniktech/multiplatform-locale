@@ -2,8 +2,6 @@
 package com.vanniktech.locale {
 
   public enum AppleAppStoreLocale {
-    method public static com.vanniktech.locale.AppleAppStoreLocale valueOf(String value) throws java.lang.IllegalArgumentException, java.lang.NullPointerException;
-    method public static com.vanniktech.locale.AppleAppStoreLocale[] values();
     enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale ar_SA;
     enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale ca;
     enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale cs;
@@ -46,8 +44,6 @@ package com.vanniktech.locale {
   }
 
   public enum Continent {
-    method public static com.vanniktech.locale.Continent valueOf(String value) throws java.lang.IllegalArgumentException, java.lang.NullPointerException;
-    method public static com.vanniktech.locale.Continent[] values();
     enum_constant public static final com.vanniktech.locale.Continent AFRICA;
     enum_constant public static final com.vanniktech.locale.Continent ANTARCTICA;
     enum_constant public static final com.vanniktech.locale.Continent ASIA;
@@ -73,17 +69,15 @@ package com.vanniktech.locale {
   }
 
   public enum Country implements com.vanniktech.locale.Territory {
-    method public final java.util.List<java.lang.String>! getCallingCodes();
-    method public String! getCode();
-    method public String! getCode3();
-    method public java.util.List<com.vanniktech.locale.Continent>! getContinents();
+    method public java.util.List<java.lang.String> getCallingCodes();
+    method public String getCode();
+    method public String getCode3();
+    method public java.util.List<com.vanniktech.locale.Continent> getContinents();
     method public String getEmoji();
-    method public static com.vanniktech.locale.Country valueOf(String value) throws java.lang.IllegalArgumentException, java.lang.NullPointerException;
-    method public static com.vanniktech.locale.Country[] values();
-    property public final java.util.List<java.lang.String>! callingCodes;
-    property public String! code;
-    property public String! code3;
-    property public java.util.List<com.vanniktech.locale.Continent>! continents;
+    property public final java.util.List<java.lang.String> callingCodes;
+    property public String code;
+    property public String code3;
+    property public java.util.List<com.vanniktech.locale.Continent> continents;
     property public String emoji;
     enum_constant public static final com.vanniktech.locale.Country AFGHANISTAN;
     enum_constant public static final com.vanniktech.locale.Country ALAND_ISLANDS;
@@ -343,8 +337,6 @@ package com.vanniktech.locale {
   }
 
   public enum GooglePlayStoreLocale {
-    method public static com.vanniktech.locale.GooglePlayStoreLocale valueOf(String value) throws java.lang.IllegalArgumentException, java.lang.NullPointerException;
-    method public static com.vanniktech.locale.GooglePlayStoreLocale[] values();
     enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale af;
     enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale am;
     enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale ar;
@@ -435,18 +427,16 @@ package com.vanniktech.locale {
   }
 
   public enum Language {
-    method public final String! getCode();
-    method public final com.vanniktech.locale.Territory getDefaultCountry();
-    method public final String! getLegacyCode();
-    method public final java.util.List<com.vanniktech.locale.Territory>! getOfficialTerritories();
-    method public final java.util.List<com.vanniktech.locale.Territory>! getOtherTerritories();
-    method public static com.vanniktech.locale.Language valueOf(String value) throws java.lang.IllegalArgumentException, java.lang.NullPointerException;
-    method public static com.vanniktech.locale.Language[] values();
-    property public final String! code;
+    method public String getCode();
+    method public com.vanniktech.locale.Territory getDefaultCountry();
+    method public String? getLegacyCode();
+    method public java.util.List<com.vanniktech.locale.Territory> getOfficialTerritories();
+    method public java.util.List<com.vanniktech.locale.Territory> getOtherTerritories();
+    property public final String code;
     property public final com.vanniktech.locale.Territory defaultCountry;
-    property public final String! legacyCode;
-    property public final java.util.List<com.vanniktech.locale.Territory>! officialTerritories;
-    property public final java.util.List<com.vanniktech.locale.Territory>! otherTerritories;
+    property public final String? legacyCode;
+    property public final java.util.List<com.vanniktech.locale.Territory> officialTerritories;
+    property public final java.util.List<com.vanniktech.locale.Territory> otherTerritories;
     enum_constant public static final com.vanniktech.locale.Language AMHARIC;
     enum_constant public static final com.vanniktech.locale.Language ARABIC;
     enum_constant public static final com.vanniktech.locale.Language ARMENIAN;
@@ -520,7 +510,7 @@ package com.vanniktech.locale {
   }
 
   public final class Languages {
-    method public error.NonExistentClass! currentLanguageCode();
+    method public error.NonExistentClass currentLanguageCode();
     field public static final com.vanniktech.locale.Languages INSTANCE;
   }
 
@@ -558,8 +548,8 @@ package com.vanniktech.locale {
   }
 
   public final class Locales {
-    method public error.NonExistentClass! currentLocaleString();
-    method public error.NonExistentClass! currentLocaleStrings();
+    method public error.NonExistentClass currentLocaleString();
+    method public error.NonExistentClass currentLocaleStrings();
     field public static final com.vanniktech.locale.Locales INSTANCE;
   }
 
@@ -587,15 +577,13 @@ package com.vanniktech.locale {
   }
 
   public enum Region implements com.vanniktech.locale.Territory {
-    method public String! getCode();
-    method public String! getCode3();
-    method public java.util.List<com.vanniktech.locale.Continent>! getContinents();
+    method public String getCode();
+    method public String getCode3();
+    method public java.util.List<com.vanniktech.locale.Continent> getContinents();
     method public String? getEmoji();
-    method public static com.vanniktech.locale.Region valueOf(String value) throws java.lang.IllegalArgumentException, java.lang.NullPointerException;
-    method public static com.vanniktech.locale.Region[] values();
-    property public String! code;
-    property public String! code3;
-    property public java.util.List<com.vanniktech.locale.Continent>! continents;
+    property public String code;
+    property public String code3;
+    property public java.util.List<com.vanniktech.locale.Continent> continents;
     property public String? emoji;
     enum_constant public static final com.vanniktech.locale.Region CANARY_ISLANDS;
     enum_constant public static final com.vanniktech.locale.Region EUROPEAN_UNION;
