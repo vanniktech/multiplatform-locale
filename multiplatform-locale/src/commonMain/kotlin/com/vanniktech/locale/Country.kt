@@ -96,7 +96,7 @@ enum class Country(
   FRENCH_SOUTHERN_AND_ANTARCTIC_LANDS(code = "TF", code3 = "ATF", callingCodes = listOf("+33"), continents = listOf(Continent.AFRICA, Continent.ANTARCTICA)),
   GABON(code = "GA", code3 = "GAB", callingCodes = listOf("+241"), continents = listOf(Continent.AFRICA)),
   GAMBIA(code = "GM", code3 = "GMB", callingCodes = listOf("+220"), continents = listOf(Continent.AFRICA)),
-  GEORGIA(code = "GE", code3 = "GEO", callingCodes = listOf("+995"), continents = listOf(Continent.EUROPE, Continent.ASIA)),
+  GEORGIA(code = "GE", code3 = "GEO", callingCodes = listOf("+995"), continents = listOf(Continent.ASIA)),
   GERMANY(code = "DE", code3 = "DEU", callingCodes = listOf("+49"), continents = listOf(Continent.EUROPE)),
   GHANA(code = "GH", code3 = "GHA", callingCodes = listOf("+233"), continents = listOf(Continent.AFRICA)),
   GIBRALTAR(code = "GI", code3 = "GIB", callingCodes = listOf("+350"), continents = listOf(Continent.EUROPE)),
