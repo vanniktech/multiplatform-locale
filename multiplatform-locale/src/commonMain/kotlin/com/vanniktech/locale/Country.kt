@@ -192,7 +192,7 @@ enum class Country(
   PITCAIRN_ISLANDS(code = "PN", code3 = "PCN", callingCodes = listOf("+64"), continents = listOf(Continent.OCEANIA)),
   POLAND(code = "PL", code3 = "POL", callingCodes = listOf("+48"), continents = listOf(Continent.EUROPE)),
   PORTUGAL(code = "PT", code3 = "PRT", callingCodes = listOf("+351"), continents = listOf(Continent.EUROPE)),
-  PUERTO_RICO(code = "PR", code3 = "PRI", callingCodes = listOf("+1787", "+1939"), continents = listOf(Continent.NORTH_AMERICA)),
+  PUERTO_RICO(code = "PR", code3 = "PRI", callingCodes = listOf("+1787"), continents = listOf(Continent.NORTH_AMERICA)),
   QATAR(code = "QA", code3 = "QAT", callingCodes = listOf("+974"), continents = listOf(Continent.ASIA)),
   REPUBLIC_OF_THE_CONGO(code = "CG", code3 = "COG", callingCodes = listOf("+242"), continents = listOf(Continent.AFRICA)),
   REUNION(code = "RE", code3 = "REU", callingCodes = listOf("+262"), continents = listOf(Continent.AFRICA)),
