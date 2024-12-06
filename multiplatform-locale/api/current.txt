@@ -67,6 +67,7 @@ package com.vanniktech.locale {
     enum_constant public static final com.vanniktech.locale.Country BONAIRE;
     enum_constant public static final com.vanniktech.locale.Country BOSNIA_AND_HERZEGOVINA;
     enum_constant public static final com.vanniktech.locale.Country BOTSWANA;
+    enum_constant public static final com.vanniktech.locale.Country BOUVET_ISLAND;
     enum_constant public static final com.vanniktech.locale.Country BRAZIL;
     enum_constant public static final com.vanniktech.locale.Country BRITISH_INDIAN_OCEAN_TERRITORY;
     enum_constant public static final com.vanniktech.locale.Country BRITISH_VIRGIN_ISLANDS;
