@@ -44,6 +44,7 @@ enum class Country(
   BONAIRE(code = "BQ", code3 = "BES", callingCodes = listOf("+599"), continents = listOf(Continent.NORTH_AMERICA)),
   BOSNIA_AND_HERZEGOVINA(code = "BA", code3 = "BIH", callingCodes = listOf("+387"), continents = listOf(Continent.EUROPE)),
   BOTSWANA(code = "BW", code3 = "BWA", callingCodes = listOf("+267"), continents = listOf(Continent.AFRICA)),
+  BOUVET_ISLAND(code = "BV", code3 = "BVT", callingCodes = listOf("+47"), continents = listOf(Continent.ANTARCTICA)),
   BRAZIL(code = "BR", code3 = "BRA", callingCodes = listOf("+55"), continents = listOf(Continent.SOUTH_AMERICA)),
   BRITISH_INDIAN_OCEAN_TERRITORY(code = "IO", code3 = "IOT", callingCodes = listOf("+246"), continents = listOf(Continent.ASIA)),
   BRITISH_VIRGIN_ISLANDS(code = "VG", code3 = "VGB", callingCodes = listOf("+1284"), continents = listOf(Continent.NORTH_AMERICA)),
