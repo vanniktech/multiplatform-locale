@@ -26,7 +26,7 @@ enum class Country(
   ANTIGUA_AND_BARBUDA(code = "AG", code3 = "ATG", callingCodes = listOf("+1268"), continents = listOf(Continent.NORTH_AMERICA)),
   ARGENTINA(code = "AR", code3 = "ARG", callingCodes = listOf("+54"), continents = listOf(Continent.SOUTH_AMERICA)),
   ARMENIA(code = "AM", code3 = "ARM", callingCodes = listOf("+374"), continents = listOf(Continent.ASIA)),
-  ARUBA(code = "AW", code3 = "ABW", callingCodes = listOf("+297"), continents = listOf(Continent.SOUTH_AMERICA)),
+  ARUBA(code = "AW", code3 = "ABW", callingCodes = listOf("+297"), continents = listOf(Continent.NORTH_AMERICA)),
   AUSTRALIA(code = "AU", code3 = "AUS", callingCodes = listOf("+61"), continents = listOf(Continent.OCEANIA)),
   AUSTRIA(code = "AT", code3 = "AUT", callingCodes = listOf("+43"), continents = listOf(Continent.EUROPE)),
   AZERBAIJAN(code = "AZ", code3 = "AZE", callingCodes = listOf("+994"), continents = listOf(Continent.ASIA, Continent.EUROPE)),
