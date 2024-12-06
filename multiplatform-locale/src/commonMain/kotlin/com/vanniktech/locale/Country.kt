@@ -29,7 +29,7 @@ enum class Country(
   ARUBA(code = "AW", code3 = "ABW", callingCodes = listOf("+297"), continents = listOf(Continent.NORTH_AMERICA)),
   AUSTRALIA(code = "AU", code3 = "AUS", callingCodes = listOf("+61"), continents = listOf(Continent.OCEANIA)),
   AUSTRIA(code = "AT", code3 = "AUT", callingCodes = listOf("+43"), continents = listOf(Continent.EUROPE)),
-  AZERBAIJAN(code = "AZ", code3 = "AZE", callingCodes = listOf("+994"), continents = listOf(Continent.ASIA, Continent.EUROPE)),
+  AZERBAIJAN(code = "AZ", code3 = "AZE", callingCodes = listOf("+994"), continents = listOf(Continent.ASIA)),
   BAHAMAS(code = "BS", code3 = "BHS", callingCodes = listOf("+1242"), continents = listOf(Continent.NORTH_AMERICA)),
   BAHRAIN(code = "BH", code3 = "BHR", callingCodes = listOf("+973"), continents = listOf(Continent.ASIA)),
   BANGLADESH(code = "BD", code3 = "BGD", callingCodes = listOf("+880"), continents = listOf(Continent.ASIA)),
