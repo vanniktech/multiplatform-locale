@@ -250,6 +250,7 @@ enum class Country(
   UGANDA(code = "UG", code3 = "UGA", callingCodes = listOf("+256"), continents = listOf(Continent.AFRICA)),
   UKRAINE(code = "UA", code3 = "UKR", callingCodes = listOf("+380"), continents = listOf(Continent.EUROPE)),
   UNITED_ARAB_EMIRATES(code = "AE", code3 = "ARE", callingCodes = listOf("+971"), continents = listOf(Continent.ASIA)),
+  UNITED_STATES_MINOR_OUTLYING_ISLANDS(code = "UM", code3 = "UMI", callingCodes = listOf("+246"), continents = listOf(Continent.OCEANIA)),
   URUGUAY(code = "UY", code3 = "URY", callingCodes = listOf("+598"), continents = listOf(Continent.SOUTH_AMERICA)),
   USA(code = "US", code3 = "USA", callingCodes = listOf("+1"), continents = listOf(Continent.NORTH_AMERICA)),
   US_VIRGIN_ISLANDS(code = "VI", code3 = "VIR", callingCodes = listOf("+1340"), continents = listOf(Continent.NORTH_AMERICA)),
