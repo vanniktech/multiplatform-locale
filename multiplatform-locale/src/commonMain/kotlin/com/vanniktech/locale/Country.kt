@@ -197,7 +197,7 @@ enum class Country(
   REPUBLIC_OF_THE_CONGO(code = "CG", code3 = "COG", callingCodes = listOf("+242"), continents = listOf(Continent.AFRICA)),
   REUNION(code = "RE", code3 = "REU", callingCodes = listOf("+262"), continents = listOf(Continent.AFRICA)),
   ROMANIA(code = "RO", code3 = "ROU", callingCodes = listOf("+40"), continents = listOf(Continent.EUROPE)),
-  RUSSIA(code = "RU", code3 = "RUS", callingCodes = listOf("+7"), continents = listOf(Continent.EUROPE, Continent.ASIA)),
+  RUSSIA(code = "RU", code3 = "RUS", callingCodes = listOf("+7"), continents = listOf(Continent.EUROPE)),
   RWANDA(code = "RW", code3 = "RWA", callingCodes = listOf("+250"), continents = listOf(Continent.AFRICA)),
   SAHRAWI_ARAB_DEMOCRATIC_REPUBLIC(code = "EH", code3 = "ESH", callingCodes = listOf("+212"), continents = listOf(Continent.AFRICA)),
   SAINT_BARTS(code = "BL", code3 = "BLM", callingCodes = listOf("+590"), continents = listOf(Continent.NORTH_AMERICA)),
