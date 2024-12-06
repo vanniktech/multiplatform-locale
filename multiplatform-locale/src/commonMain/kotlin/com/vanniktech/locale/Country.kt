@@ -189,7 +189,7 @@ enum class Country(
   PARAGUAY(code = "PY", code3 = "PRY", callingCodes = listOf("+595"), continents = listOf(Continent.SOUTH_AMERICA)),
   PERU(code = "PE", code3 = "PER", callingCodes = listOf("+51"), continents = listOf(Continent.SOUTH_AMERICA)),
   PHILIPPINES(code = "PH", code3 = "PHL", callingCodes = listOf("+63"), continents = listOf(Continent.ASIA)),
-  PITCAIRN_ISLANDS(code = "PN", code3 = "PCN", callingCodes = listOf("+872"), continents = listOf(Continent.OCEANIA)),
+  PITCAIRN_ISLANDS(code = "PN", code3 = "PCN", callingCodes = listOf("+64"), continents = listOf(Continent.OCEANIA)),
   POLAND(code = "PL", code3 = "POL", callingCodes = listOf("+48"), continents = listOf(Continent.EUROPE)),
   PORTUGAL(code = "PT", code3 = "PRT", callingCodes = listOf("+351"), continents = listOf(Continent.EUROPE)),
   PUERTO_RICO(code = "PR", code3 = "PRI", callingCodes = listOf("+1787", "+1939"), continents = listOf(Continent.NORTH_AMERICA)),
