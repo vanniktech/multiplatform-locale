@@ -124,7 +124,7 @@ enum class Country(
   ISLE_OF_MAN(code = "IM", code3 = "IMN", callingCodes = listOf("+44"), continents = listOf(Continent.EUROPE)),
   ISRAEL(code = "IL", code3 = "ISR", callingCodes = listOf("+972"), continents = listOf(Continent.ASIA)),
   ITALY(code = "IT", code3 = "ITA", callingCodes = listOf("+39"), continents = listOf(Continent.EUROPE)),
-  JAMAICA(code = "JM", code3 = "JAM", callingCodes = listOf("+1658", "+1876"), continents = listOf(Continent.NORTH_AMERICA)),
+  JAMAICA(code = "JM", code3 = "JAM", callingCodes = listOf("+1876"), continents = listOf(Continent.NORTH_AMERICA)),
   JAPAN(code = "JP", code3 = "JPN", callingCodes = listOf("+81"), continents = listOf(Continent.ASIA)),
   JERSEY(code = "JE", code3 = "JEY", callingCodes = listOf("+44"), continents = listOf(Continent.EUROPE)),
   JORDAN(code = "JO", code3 = "JOR", callingCodes = listOf("+962"), continents = listOf(Continent.ASIA)),
