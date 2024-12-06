@@ -93,7 +93,7 @@ enum class Country(
   FRANCE(code = "FR", code3 = "FRA", callingCodes = listOf("+33"), continents = listOf(Continent.EUROPE)),
   FRENCH_GUIANA(code = "GF", code3 = "GUF", callingCodes = listOf("+594"), continents = listOf(Continent.SOUTH_AMERICA)),
   FRENCH_POLYNESIA(code = "PF", code3 = "PYF", callingCodes = listOf("+689"), continents = listOf(Continent.OCEANIA)),
-  FRENCH_SOUTHERN_AND_ANTARCTIC_LANDS(code = "TF", code3 = "ATF", callingCodes = listOf("+33"), continents = listOf(Continent.AFRICA, Continent.ANTARCTICA)),
+  FRENCH_SOUTHERN_AND_ANTARCTIC_LANDS(code = "TF", code3 = "ATF", callingCodes = listOf("+262"), continents = listOf(Continent.AFRICA, Continent.ANTARCTICA)),
   GABON(code = "GA", code3 = "GAB", callingCodes = listOf("+241"), continents = listOf(Continent.AFRICA)),
   GAMBIA(code = "GM", code3 = "GMB", callingCodes = listOf("+220"), continents = listOf(Continent.AFRICA)),
   GEORGIA(code = "GE", code3 = "GEO", callingCodes = listOf("+995"), continents = listOf(Continent.EUROPE, Continent.ASIA)),
