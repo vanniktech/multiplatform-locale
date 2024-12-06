@@ -70,7 +70,7 @@ enum class Country(
   CROATIA(code = "HR", code3 = "HRV", callingCodes = listOf("+385"), continents = listOf(Continent.EUROPE)),
   CUBA(code = "CU", code3 = "CUB", callingCodes = listOf("+53"), continents = listOf(Continent.NORTH_AMERICA)),
   CURACAO(code = "CW", code3 = "CUW", callingCodes = listOf("+599"), continents = listOf(Continent.NORTH_AMERICA)),
-  CYPRUS(code = "CY", code3 = "CYP", callingCodes = listOf("+357"), continents = listOf(Continent.EUROPE, Continent.ASIA)),
+  CYPRUS(code = "CY", code3 = "CYP", callingCodes = listOf("+357"), continents = listOf(Continent.ASIA)),
   CZECHIA(code = "CZ", code3 = "CZE", callingCodes = listOf("+420"), continents = listOf(Continent.EUROPE)),
   DEMOCRATIC_REPUBLIC_OF_CONGO(code = "CD", code3 = "COD", callingCodes = listOf("+243"), continents = listOf(Continent.AFRICA)),
   DENMARK(code = "DK", code3 = "DNK", callingCodes = listOf("+45"), continents = listOf(Continent.EUROPE)),
