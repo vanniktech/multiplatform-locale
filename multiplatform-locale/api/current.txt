@@ -274,6 +274,7 @@ package com.vanniktech.locale {
     enum_constant public static final com.vanniktech.locale.Country UGANDA;
     enum_constant public static final com.vanniktech.locale.Country UKRAINE;
     enum_constant public static final com.vanniktech.locale.Country UNITED_ARAB_EMIRATES;
+    enum_constant public static final com.vanniktech.locale.Country UNITED_STATES_MINOR_OUTLYING_ISLANDS;
     enum_constant public static final com.vanniktech.locale.Country URUGUAY;
     enum_constant public static final com.vanniktech.locale.Country USA;
     enum_constant public static final com.vanniktech.locale.Country US_VIRGIN_ISLANDS;
