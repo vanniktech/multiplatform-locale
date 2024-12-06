@@ -55,7 +55,7 @@ enum class Country(
   CAMEROON(code = "CM", code3 = "CMR", callingCodes = listOf("+237"), continents = listOf(Continent.AFRICA)),
   CANADA(code = "CA", code3 = "CAN", callingCodes = listOf("+1"), continents = listOf(Continent.NORTH_AMERICA)),
   CAPE_VERDE(code = "CV", code3 = "CPV", callingCodes = listOf("+238"), continents = listOf(Continent.AFRICA)),
-  CAYMAN_ISLANDS(code = "KY", code3 = "CYM", callingCodes = listOf("+345"), continents = listOf(Continent.NORTH_AMERICA)),
+  CAYMAN_ISLANDS(code = "KY", code3 = "CYM", callingCodes = listOf("+1345"), continents = listOf(Continent.NORTH_AMERICA)),
   CENTRAL_AFRICAN_REPUBLIC(code = "CF", code3 = "CAF", callingCodes = listOf("+236"), continents = listOf(Continent.AFRICA)),
   CHAD(code = "TD", code3 = "TCD", callingCodes = listOf("+235"), continents = listOf(Continent.AFRICA)),
   CHILE(code = "CL", code3 = "CHL", callingCodes = listOf("+56"), continents = listOf(Continent.SOUTH_AMERICA)),
