@@ -216,7 +216,7 @@ enum class Country(
   SEYCHELLES(code = "SC", code3 = "SYC", callingCodes = listOf("+248"), continents = listOf(Continent.AFRICA)),
   SIERRA_LEONE(code = "SL", code3 = "SLE", callingCodes = listOf("+232"), continents = listOf(Continent.AFRICA)),
   SINGAPORE(code = "SG", code3 = "SGP", callingCodes = listOf("+65"), continents = listOf(Continent.ASIA)),
-  SINT_MAARTEN(code = "SX", code3 = "SXM", callingCodes = listOf("+721"), continents = listOf(Continent.NORTH_AMERICA)),
+  SINT_MAARTEN(code = "SX", code3 = "SXM", callingCodes = listOf("+1721"), continents = listOf(Continent.NORTH_AMERICA)),
   SLOVAKIA(code = "SK", code3 = "SVK", callingCodes = listOf("+421"), continents = listOf(Continent.EUROPE)),
   SLOVENIA(code = "SI", code3 = "SVN", callingCodes = listOf("+386"), continents = listOf(Continent.EUROPE)),
   SOLOMON_ISLANDS(code = "SB", code3 = "SLB", callingCodes = listOf("+677"), continents = listOf(Continent.OCEANIA)),
