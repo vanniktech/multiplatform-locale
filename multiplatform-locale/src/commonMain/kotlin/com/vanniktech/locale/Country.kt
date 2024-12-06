@@ -241,7 +241,7 @@ enum class Country(
   TOGO(code = "TG", code3 = "TGO", callingCodes = listOf("+228"), continents = listOf(Continent.AFRICA)),
   TOKELAU(code = "TK", code3 = "TKL", callingCodes = listOf("+690"), continents = listOf(Continent.OCEANIA)),
   TONGA(code = "TO", code3 = "TON", callingCodes = listOf("+676"), continents = listOf(Continent.OCEANIA)),
-  TRINIDAD_AND_TOBAGO(code = "TT", code3 = "TTO", callingCodes = listOf("+1868"), continents = listOf(Continent.SOUTH_AMERICA)),
+  TRINIDAD_AND_TOBAGO(code = "TT", code3 = "TTO", callingCodes = listOf("+1868"), continents = listOf(Continent.NORTH_AMERICA)),
   TUNISIA(code = "TN", code3 = "TUN", callingCodes = listOf("+216"), continents = listOf(Continent.AFRICA)),
   TURKEY(code = "TR", code3 = "TUR", callingCodes = listOf("+90"), continents = listOf(Continent.EUROPE)),
   TURKMENISTAN(code = "TM", code3 = "TKM", callingCodes = listOf("+993"), continents = listOf(Continent.ASIA)),
