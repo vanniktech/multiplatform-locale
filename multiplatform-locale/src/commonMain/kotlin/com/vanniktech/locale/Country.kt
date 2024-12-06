@@ -76,7 +76,7 @@ enum class Country(
   DENMARK(code = "DK", code3 = "DNK", callingCodes = listOf("+45"), continents = listOf(Continent.EUROPE)),
   DJIBOUTI(code = "DJ", code3 = "DJI", callingCodes = listOf("+253"), continents = listOf(Continent.AFRICA)),
   DOMINICA(code = "DM", code3 = "DMA", callingCodes = listOf("+1767"), continents = listOf(Continent.NORTH_AMERICA)),
-  DOMINICAN_REPUBLIC(code = "DO", code3 = "DOM", callingCodes = listOf("+1809", "+1829", "+1849"), continents = listOf(Continent.NORTH_AMERICA)),
+  DOMINICAN_REPUBLIC(code = "DO", code3 = "DOM", callingCodes = listOf("+1809"), continents = listOf(Continent.NORTH_AMERICA)),
   ECUADOR(code = "EC", code3 = "ECU", callingCodes = listOf("+593"), continents = listOf(Continent.SOUTH_AMERICA)),
   EGYPT(code = "EG", code3 = "EGY", callingCodes = listOf("+20"), continents = listOf(Continent.AFRICA)),
   EL_SALVADOR(code = "SV", code3 = "SLV", callingCodes = listOf("+503"), continents = listOf(Continent.NORTH_AMERICA)),
