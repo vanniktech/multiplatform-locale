@@ -154,7 +154,7 @@ enum class Country(
   MARTINIQUE(code = "MQ", code3 = "MTQ", callingCodes = listOf("+596"), continents = listOf(Continent.NORTH_AMERICA)),
   MAURITANIA(code = "MR", code3 = "MRT", callingCodes = listOf("+222"), continents = listOf(Continent.AFRICA)),
   MAURITIUS(code = "MU", code3 = "MUS", callingCodes = listOf("+230"), continents = listOf(Continent.AFRICA)),
-  MAYOTTE(code = "YT", code3 = "MYT", callingCodes = listOf("+262"), continents = listOf(Continent.ASIA)),
+  MAYOTTE(code = "YT", code3 = "MYT", callingCodes = listOf("+262"), continents = listOf(Continent.AFRICA)),
   MEXICO(code = "MX", code3 = "MEX", callingCodes = listOf("+52"), continents = listOf(Continent.NORTH_AMERICA)),
   MICRONESIA(code = "FM", code3 = "FSM", callingCodes = listOf("+691"), continents = listOf(Continent.OCEANIA)),
   MOLDOVA(code = "MD", code3 = "MDA", callingCodes = listOf("+373"), continents = listOf(Continent.EUROPE)),
