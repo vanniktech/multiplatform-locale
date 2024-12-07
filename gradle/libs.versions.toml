@@ -8,21 +8,23 @@ kotlin = "2.1.0"
 ktlint = "1.4.1"
 
 [libraries]
-androidx-appcompat = { module = "androidx.appcompat:appcompat", version = "1.7.0" }
+kaml = "com.charleskorn.kaml:kaml:0.66.0"
 kotlin-test-annotations-common = { module = "org.jetbrains.kotlin:kotlin-test-annotations-common", version.ref = "kotlin" }
 kotlin-test-common = { module = "org.jetbrains.kotlin:kotlin-test-common", version.ref = "kotlin" }
 kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
-leakcanary-android = { module = "com.squareup.leakcanary:leakcanary-android", version = "2.14" }
-material = { module = "com.google.android.material:material", version = "1.12.0" }
-plugin-android-cache-fix = { module = "org.gradle.android.cache-fix:org.gradle.android.cache-fix.gradle.plugin", version = "3.0.1" }
+leakcanary-android = "com.squareup.leakcanary:leakcanary-android:2.14"
+material = "com.google.android.material:material:1.12.0"
+okio = "com.squareup.okio:okio:3.9.1"
+plugin-android-cache-fix = "org.gradle.android.cache-fix:org.gradle.android.cache-fix.gradle.plugin:3.0.1"
 plugin-androidgradleplugin = { module = "com.android.tools.build:gradle", version.ref = "androidgradleplugin" }
-plugin-dokka = { module = "org.jetbrains.dokka:dokka-gradle-plugin", version = "1.9.20" }
+plugin-dokka = "org.jetbrains.dokka:dokka-gradle-plugin:1.9.20"
 plugin-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
-plugin-licensee = { module = "app.cash.licensee:licensee-gradle-plugin", version = "1.12.0" }
-plugin-metalava = { module = "me.tylerbwong.gradle.metalava:plugin", version = "0.4.0-alpha03" }
-plugin-publish = { module = "com.vanniktech:gradle-maven-publish-plugin", version = "0.30.0" }
-timber = { module = "com.jakewharton.timber:timber", version = "5.0.1" }
+plugin-licensee = "app.cash.licensee:licensee-gradle-plugin:1.12.0"
+plugin-metalava = "me.tylerbwong.gradle.metalava:plugin:0.4.0-alpha03"
+plugin-publish = "com.vanniktech:gradle-maven-publish-plugin:0.30.0"
+timber = "com.jakewharton.timber:timber:5.0.1"
 
 [plugins]
 codequalitytools = { id = "com.vanniktech.code.quality.tools", version = "0.24.0" }
 dependencygraphgenerator = { id = "com.vanniktech.dependency.graph.generator", version = "0.8.0" }
+kotlinSerialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
