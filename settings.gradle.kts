@@ -8,6 +8,7 @@ pluginManagement {
   }
 }
 
+include(":generator")
 include(":multiplatform-locale")
 include(":multiplatform-locale-all")
 include(":multiplatform-locale-apple-app-store")

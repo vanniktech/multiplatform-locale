@@ -18,6 +18,7 @@ buildscript {
 plugins {
   alias(libs.plugins.codequalitytools)
   alias(libs.plugins.dependencygraphgenerator)
+  alias(libs.plugins.kotlinSerialization) apply false
 }
 
 codeQualityTools {
