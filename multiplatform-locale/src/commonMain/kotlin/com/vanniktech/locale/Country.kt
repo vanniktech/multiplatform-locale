@@ -132,7 +132,7 @@ enum class Country(
   KAZAKHSTAN(code = "KZ", code3 = "KAZ", callingCodes = listOf("+7"), continents = listOf(Continent.ASIA)),
   KENYA(code = "KE", code3 = "KEN", callingCodes = listOf("+254"), continents = listOf(Continent.AFRICA)),
   KIRIBATI(code = "KI", code3 = "KIR", callingCodes = listOf("+686"), continents = listOf(Continent.OCEANIA)),
-  KOSOVO(code = "XK", code3 = "UNK", callingCodes = listOf("+383"), continents = listOf(Continent.EUROPE)),
+  KOSOVO(code = "XK", code3 = "XKX", callingCodes = listOf("+383"), continents = listOf(Continent.EUROPE)),
   KUWAIT(code = "KW", code3 = "KWT", callingCodes = listOf("+965"), continents = listOf(Continent.ASIA)),
   KYRGYZSTAN(code = "KG", code3 = "KGZ", callingCodes = listOf("+996"), continents = listOf(Continent.ASIA)),
   LAOS(code = "LA", code3 = "LAO", callingCodes = listOf("+856"), continents = listOf(Continent.ASIA)),
