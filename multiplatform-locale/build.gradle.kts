@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.gradle.plugin.mpp.BitcodeEmbeddingMode
-
 plugins {
   id("org.jetbrains.dokka")
   id("org.jetbrains.kotlin.multiplatform")
@@ -65,7 +63,6 @@ kotlin {
 
     framework {
       isStatic = true
-      embedBitcode(if ("YES" == System.getenv("ENABLE_BITCODE")) BitcodeEmbeddingMode.BITCODE else BitcodeEmbeddingMode.DISABLE)
     }
   }
 }
