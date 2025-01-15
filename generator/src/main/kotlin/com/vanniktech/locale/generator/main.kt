@@ -97,7 +97,7 @@ fun main() {
         .replace(" ", "_")
         .replace("AUSTRALIA", "OCEANIA")
 
-      "$name(code = \"${it.alpha2}\", code3 = \"${it.alpha3}\", callingCodes = listOf(\"+$callingCode\"), continents = listOf(Continent.$continent)),"
+      "$name(code = \"${it.alpha2}\", code3 = \"${it.alpha3}\", callingCodes = listOf(\"+$callingCode\"), continent = Continent.$continent),"
     }
     .sorted()
 
