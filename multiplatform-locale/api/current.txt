@@ -30,12 +30,12 @@ package com.vanniktech.locale {
     method public java.util.List<java.lang.String> getCallingCodes();
     method public String getCode();
     method public String getCode3();
-    method public java.util.List<com.vanniktech.locale.Continent> getContinents();
+    method public com.vanniktech.locale.Continent getContinent();
     method public String getEmoji();
     property public final java.util.List<java.lang.String> callingCodes;
     property public String code;
     property public String code3;
-    property public java.util.List<com.vanniktech.locale.Continent> continents;
+    property public final com.vanniktech.locale.Continent continent;
     property public String emoji;
     enum_constant public static final com.vanniktech.locale.Country AFGHANISTAN;
     enum_constant public static final com.vanniktech.locale.Country ALAND_ISLANDS;
@@ -439,11 +439,9 @@ package com.vanniktech.locale {
   public enum Region implements com.vanniktech.locale.Territory {
     method public String getCode();
     method public String getCode3();
-    method public java.util.List<com.vanniktech.locale.Continent> getContinents();
     method public String? getEmoji();
     property public String code;
     property public String code3;
-    property public java.util.List<com.vanniktech.locale.Continent> continents;
     property public String? emoji;
     enum_constant public static final com.vanniktech.locale.Region CANARY_ISLANDS;
     enum_constant public static final com.vanniktech.locale.Region EUROPEAN_UNION;
@@ -462,11 +460,9 @@ package com.vanniktech.locale {
     method public default error.NonExistentClass displayName();
     method public String getCode();
     method public String getCode3();
-    method public java.util.List<com.vanniktech.locale.Continent> getContinents();
     method public String? getEmoji();
     property public abstract String code;
     property public abstract String code3;
-    property public abstract java.util.List<com.vanniktech.locale.Continent> continents;
     property public abstract String? emoji;
   }
 
