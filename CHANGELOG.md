@@ -1,7 +1,51 @@
 # Change Log
 
-Version 0.8.0 *(In development)*
---------------------------------
+Version 0.9.0 *(2025-01-19)*
+----------------------------
+
+- API: Country Add BOUVET_ISLAND [\#243](https://github.com/vanniktech/multiplatform-locale/pull/243) ([vanniktech](https://github.com/vanniktech))
+- API: Country Add UNITED_STATES_MINOR_OUTLYING_ISLANDS [\#244](https://github.com/vanniktech/multiplatform-locale/pull/244) ([vanniktech](https://github.com/vanniktech))
+- API: Country.ARUBA Change Continent from SOUTH_AMERICA to NORTH_AMERICA [\#225](https://github.com/vanniktech/multiplatform-locale/pull/225) ([vanniktech](https://github.com/vanniktech))
+- API: Country.AZERBAIJAN remove EUROPE continent. [\#226](https://github.com/vanniktech/multiplatform-locale/pull/226) ([vanniktech](https://github.com/vanniktech))
+- API: Country.BONAIRE Change Continent from SOUTH_AMERICA to NORTH_AMERICA [\#227](https://github.com/vanniktech/multiplatform-locale/pull/227) ([vanniktech](https://github.com/vanniktech))
+- API: Country.CAYMAN_ISLANDS fix Calling Code. [\#228](https://github.com/vanniktech/multiplatform-locale/pull/228) ([vanniktech](https://github.com/vanniktech))
+- API: Country.CURACAO Change Continent from SOUTH_AMERICA to NORTH_AMERICA [\#232](https://github.com/vanniktech/multiplatform-locale/pull/232) ([vanniktech](https://github.com/vanniktech))
+- API: Country.CYPRUS remove EUROPE continent. [\#242](https://github.com/vanniktech/multiplatform-locale/pull/242) ([vanniktech](https://github.com/vanniktech))
+- API: Country.DOMINICAN_REPUBLIC fix Calling Code. [\#229](https://github.com/vanniktech/multiplatform-locale/pull/229) ([vanniktech](https://github.com/vanniktech))
+- API: Country.FRENCH_SOUTHERN_AND_ANTARCTIC_LANDS fix Calling Code. [\#241](https://github.com/vanniktech/multiplatform-locale/pull/241) ([vanniktech](https://github.com/vanniktech))
+- API: Country.FRENCH_SOUTHERN_AND_ANTARCTIC_LANDS remove ANTARCTICA continent. [\#246](https://github.com/vanniktech/multiplatform-locale/pull/246) ([vanniktech](https://github.com/vanniktech))
+- API: Country.GEORGIA remove EUROPE continent. [\#230](https://github.com/vanniktech/multiplatform-locale/pull/230) ([vanniktech](https://github.com/vanniktech))
+- API: Country.JAMAICA fix Calling Code. [\#231](https://github.com/vanniktech/multiplatform-locale/pull/231) ([vanniktech](https://github.com/vanniktech))
+- API: Country.KAZAKHSTAN fix Calling Code. [\#240](https://github.com/vanniktech/multiplatform-locale/pull/240) ([vanniktech](https://github.com/vanniktech))
+- API: Country.KAZAKHSTAN remove EUROPE continent. [\#245](https://github.com/vanniktech/multiplatform-locale/pull/245) ([vanniktech](https://github.com/vanniktech))
+- API: Country.KOSOVO fix code3. [\#248](https://github.com/vanniktech/multiplatform-locale/pull/248) ([vanniktech](https://github.com/vanniktech))
+- API: Country.MAYOTTE Change Continent from ASIA to AFRICA. [\#233](https://github.com/vanniktech/multiplatform-locale/pull/233) ([vanniktech](https://github.com/vanniktech))
+- API: Country.PITCAIRN_ISLANDS fix Calling Code. [\#234](https://github.com/vanniktech/multiplatform-locale/pull/234) ([vanniktech](https://github.com/vanniktech))
+- API: Country.PUERTO_RICO fix Calling Code. [\#235](https://github.com/vanniktech/multiplatform-locale/pull/235) ([vanniktech](https://github.com/vanniktech))
+- API: Country.RUSSIA remove ASIA continent. [\#236](https://github.com/vanniktech/multiplatform-locale/pull/236) ([vanniktech](https://github.com/vanniktech))
+- API: Country.SINT_MAARTEN fix Calling Code. [\#237](https://github.com/vanniktech/multiplatform-locale/pull/237) ([vanniktech](https://github.com/vanniktech))
+- API: Country.TRINIDAD_AND_TOBAGO Change Continent from SOUTH_AMERICA to NORTH_AMERICA [\#239](https://github.com/vanniktech/multiplatform-locale/pull/239) ([vanniktech](https://github.com/vanniktech))
+- API: Country.TURKEY remove ASIA continent. [\#238](https://github.com/vanniktech/multiplatform-locale/pull/238) ([vanniktech](https://github.com/vanniktech))
+- Breaking: Continent is only available on Country and limited to one. [\#256](https://github.com/vanniktech/multiplatform-locale/pull/256) ([vanniktech](https://github.com/vanniktech))
+- Breaking: Extract AppleAppStoreLocale into its own multiplatform-locale-apple-app-store module. [\#220](https://github.com/vanniktech/multiplatform-locale/pull/220) ([vanniktech](https://github.com/vanniktech))
+- Breaking: Extract GooglePlayStoreLocale into its own multiplatform-locale-google-play-store module. [\#218](https://github.com/vanniktech/multiplatform-locale/pull/218) ([vanniktech](https://github.com/vanniktech))
+- Breaking: Move displayName() extension function to Language/Territory type. [\#217](https://github.com/vanniktech/multiplatform-locale/pull/217) ([vanniktech](https://github.com/vanniktech))
+- Feature: New multiplatform-locale-all module that has all the modules bundled. [\#219](https://github.com/vanniktech/multiplatform-locale/pull/219) ([vanniktech](https://github.com/vanniktech))
+- Technical: Generate Country Enum entries based on https://github.com/countries/countries [\#249](https://github.com/vanniktech/multiplatform-locale/pull/249) ([vanniktech](https://github.com/vanniktech))
+- Technical: Kotlin remove deprecated Binary MemoryModel flags. [\#250](https://github.com/vanniktech/multiplatform-locale/pull/250) ([vanniktech](https://github.com/vanniktech))
+- Technical: Remove deprecated embedBitcode option. [\#247](https://github.com/vanniktech/multiplatform-locale/pull/247) ([vanniktech](https://github.com/vanniktech))
+- Technical: Update Kotlin to 2.1.0 [\#222](https://github.com/vanniktech/multiplatform-locale/pull/222) ([vanniktech](https://github.com/vanniktech))
+
+Version 0.8.0 *(2024-08-02)*
+----------------------------
+
+- API: Language add Filipino. [\#178](https://github.com/vanniktech/multiplatform-locale/pull/178) ([vanniktech](https://github.com/vanniktech))
+- API: Language add Icelandic. [\#191](https://github.com/vanniktech/multiplatform-locale/pull/191) ([vanniktech](https://github.com/vanniktech))
+- Breaking: Sealed Territory interface with a Country and Region implementation to support for instance European Union and have a better separation. [\#197](https://github.com/vanniktech/multiplatform-locale/pull/197) ([vanniktech](https://github.com/vanniktech))
+- Bug fix: In Macao Chinese is also spoken. [\#174](https://github.com/vanniktech/multiplatform-locale/pull/174) ([vanniktech](https://github.com/vanniktech))
+- Technical: Automatically generate Country\#emoji based on the country code. [\#193](https://github.com/vanniktech/multiplatform-locale/pull/193) ([vanniktech](https://github.com/vanniktech))
+- Technical: Use Kotlin's entries property on Enums. [\#192](https://github.com/vanniktech/multiplatform-locale/pull/192) ([vanniktech](https://github.com/vanniktech))
+- Update kotlin monorepo to v2 \(major\) [\#179](https://github.com/vanniktech/multiplatform-locale/pull/179) ([renovate[bot]](https://github.com/apps/renovate))
 
 Version 0.7.0 *(2024-03-29)*
 ----------------------------

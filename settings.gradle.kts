@@ -1,3 +1,5 @@
+rootProject.name = "MultiplatformLocale"
+
 pluginManagement {
   repositories {
     mavenCentral()
@@ -6,6 +8,10 @@ pluginManagement {
   }
 }
 
+include(":generator")
 include(":multiplatform-locale")
+include(":multiplatform-locale-all")
+include(":multiplatform-locale-apple-app-store")
+include(":multiplatform-locale-google-play-store")
 include(":sample-android")
 include(":sample-jvm")

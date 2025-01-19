@@ -6,7 +6,6 @@ plugins {
   id("org.jetbrains.kotlin.multiplatform")
   id("org.jetbrains.kotlin.native.cocoapods")
   id("com.android.library")
-  id("org.jetbrains.kotlin.plugin.parcelize")
   id("me.tylerbwong.gradle.metalava")
   id("com.vanniktech.maven.publish")
   id("app.cash.licensee")
@@ -18,7 +17,6 @@ licensee {
 
 metalava {
   filename.set("api/current.txt")
-  sourcePaths.setFrom("src/commonMain", "src/androidMain", "src/iosMain", "src/jvmMain")
 }
 
 kotlin {
@@ -49,11 +47,6 @@ kotlin {
   }
 
   sourceSets {
-    val commonMain by getting {
-      dependencies {
-      }
-    }
-
     val commonTest by getting {
       dependencies {
         implementation(libs.kotlin.test.common)
@@ -61,19 +54,9 @@ kotlin {
       }
     }
 
-    val androidMain by getting {
-      dependencies {
-      }
-    }
-
     val androidUnitTest by getting {
       dependencies {
         implementation(libs.kotlin.test.junit)
-      }
-    }
-
-    val jvmMain by getting {
-      dependencies {
       }
     }
 
@@ -101,7 +84,6 @@ kotlin {
 
     framework {
       isStatic = true
-      embedBitcode(if ("YES" == System.getenv("ENABLE_BITCODE")) BitcodeEmbeddingMode.BITCODE else BitcodeEmbeddingMode.DISABLE)
     }
   }
 }

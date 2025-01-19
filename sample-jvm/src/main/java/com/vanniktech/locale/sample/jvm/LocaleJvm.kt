@@ -4,7 +4,7 @@ import com.vanniktech.locale.Country
 import com.vanniktech.locale.Language
 import com.vanniktech.locale.Locale
 import com.vanniktech.locale.Locales
-import com.vanniktech.locale.displayName
+import com.vanniktech.locale.google.play.store.googlePlayStoreLocale
 
 fun main() {
   val currentLocaleString = Locales.currentLocaleString()
@@ -14,7 +14,7 @@ fun main() {
   println()
   println("Current Locale Strings: ${Locales.currentLocaleStrings().joinToString(separator = ", ")}")
   println()
-  println("All countries: ${Country.values().joinToString { it.displayName() } }")
+  println("All countries: ${Country.entries.joinToString { it.displayName() } }")
   println()
-  println("All languages: ${Language.values().joinToString { it.displayName() } }")
+  println("All languages: ${Language.entries.joinToString { it.displayName() } }")
 }

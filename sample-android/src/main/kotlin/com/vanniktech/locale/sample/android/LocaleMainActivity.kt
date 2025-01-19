@@ -7,7 +7,8 @@ import com.vanniktech.locale.Country
 import com.vanniktech.locale.Language
 import com.vanniktech.locale.Locale
 import com.vanniktech.locale.Locales
-import com.vanniktech.locale.displayName
+import com.vanniktech.locale.apple.app.store.appleAppStoreLocale
+import com.vanniktech.locale.google.play.store.googlePlayStoreLocale
 import com.vanniktech.locale.sample.android.databinding.ActivityMainBinding
 
 class LocaleMainActivity : AppCompatActivity() {
@@ -21,9 +22,9 @@ class LocaleMainActivity : AppCompatActivity() {
     val currentLocaleString = Locales.currentLocaleString()
     binding.currentLocaleString.text = "Current Locale: $currentLocaleString"
     binding.googlePlayStoreLocale.text = "Google Play Store Locale: ${Locale.fromOrNull(currentLocaleString)?.googlePlayStoreLocale()?.toString() ?: "/"}"
-    binding.appleAppStoreLocale.text = "Apple App Store Locale: ${Locale.fromOrNull(currentLocaleString)?.googlePlayStoreLocale()?.toString() ?: "/"}"
+    binding.appleAppStoreLocale.text = "Apple App Store Locale: ${Locale.fromOrNull(currentLocaleString)?.appleAppStoreLocale()?.toString() ?: "/"}"
     binding.currentLocaleStrings.text = "Current Locale Strings: ${Locales.currentLocaleStrings().joinToString(separator = ", ")}"
-    binding.allCountries.text = "All countries: ${Country.values().joinToString { it.displayName() }}"
-    binding.allLanguages.text = "All languages: ${Language.values().joinToString { it.displayName() }}"
+    binding.allCountries.text = "All countries: ${Country.entries.joinToString { it.displayName() }}"
+    binding.allLanguages.text = "All languages: ${Language.entries.joinToString { it.displayName() }}"
   }
 }

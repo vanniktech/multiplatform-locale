@@ -1,53 +1,7 @@
 // Signature format: 4.0
 package com.vanniktech.locale {
 
-  public enum AppleAppStoreLocale {
-    method public static com.vanniktech.locale.AppleAppStoreLocale valueOf(String value) throws java.lang.IllegalArgumentException, java.lang.NullPointerException;
-    method public static com.vanniktech.locale.AppleAppStoreLocale[] values();
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale ar_SA;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale ca;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale cs;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale da;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale de_DE;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale el;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale en_AU;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale en_CA;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale en_GB;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale en_US;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale es_ES;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale es_MX;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale fi;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale fr_CA;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale fr_FR;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale he;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale hi;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale hr;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale hu;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale id;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale it;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale ja;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale ko;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale ms;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale nl_NL;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale no;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale pl;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale pt_BR;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale pt_PT;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale ro;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale ru;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale sk;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale sv;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale th;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale tr;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale uk;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale vi;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale zh_Hans;
-    enum_constant public static final com.vanniktech.locale.AppleAppStoreLocale zh_Hant;
-  }
-
   public enum Continent {
-    method public static com.vanniktech.locale.Continent valueOf(String value) throws java.lang.IllegalArgumentException, java.lang.NullPointerException;
-    method public static com.vanniktech.locale.Continent[] values();
     enum_constant public static final com.vanniktech.locale.Continent AFRICA;
     enum_constant public static final com.vanniktech.locale.Continent ANTARCTICA;
     enum_constant public static final com.vanniktech.locale.Continent ASIA;
@@ -72,19 +26,17 @@ package com.vanniktech.locale {
     field public static final com.vanniktech.locale.Countries INSTANCE;
   }
 
-  public enum Country {
-    method public final java.util.List<java.lang.String>! getCallingCodes();
-    method public final String! getCode();
-    method public final String! getCode3();
-    method public final java.util.List<com.vanniktech.locale.Continent>! getContinents();
-    method public final String! getEmoji();
-    method public static com.vanniktech.locale.Country valueOf(String value) throws java.lang.IllegalArgumentException, java.lang.NullPointerException;
-    method public static com.vanniktech.locale.Country[] values();
-    property public final java.util.List<java.lang.String>! callingCodes;
-    property public final String! code;
-    property public final String! code3;
-    property public final java.util.List<com.vanniktech.locale.Continent>! continents;
-    property public final String! emoji;
+  public enum Country implements com.vanniktech.locale.Territory {
+    method public java.util.List<java.lang.String> getCallingCodes();
+    method public String getCode();
+    method public String getCode3();
+    method public com.vanniktech.locale.Continent getContinent();
+    method public String getEmoji();
+    property public final java.util.List<java.lang.String> callingCodes;
+    property public String code;
+    property public String code3;
+    property public final com.vanniktech.locale.Continent continent;
+    property public String emoji;
     enum_constant public static final com.vanniktech.locale.Country AFGHANISTAN;
     enum_constant public static final com.vanniktech.locale.Country ALAND_ISLANDS;
     enum_constant public static final com.vanniktech.locale.Country ALBANIA;
@@ -115,6 +67,7 @@ package com.vanniktech.locale {
     enum_constant public static final com.vanniktech.locale.Country BONAIRE;
     enum_constant public static final com.vanniktech.locale.Country BOSNIA_AND_HERZEGOVINA;
     enum_constant public static final com.vanniktech.locale.Country BOTSWANA;
+    enum_constant public static final com.vanniktech.locale.Country BOUVET_ISLAND;
     enum_constant public static final com.vanniktech.locale.Country BRAZIL;
     enum_constant public static final com.vanniktech.locale.Country BRITISH_INDIAN_OCEAN_TERRITORY;
     enum_constant public static final com.vanniktech.locale.Country BRITISH_VIRGIN_ISLANDS;
@@ -125,7 +78,6 @@ package com.vanniktech.locale {
     enum_constant public static final com.vanniktech.locale.Country CAMBODIA;
     enum_constant public static final com.vanniktech.locale.Country CAMEROON;
     enum_constant public static final com.vanniktech.locale.Country CANADA;
-    enum_constant public static final com.vanniktech.locale.Country CANARY_ISLANDS;
     enum_constant public static final com.vanniktech.locale.Country CAPE_VERDE;
     enum_constant public static final com.vanniktech.locale.Country CAYMAN_ISLANDS;
     enum_constant public static final com.vanniktech.locale.Country CENTRAL_AFRICAN_REPUBLIC;
@@ -190,7 +142,6 @@ package com.vanniktech.locale {
     enum_constant public static final com.vanniktech.locale.Country ICELAND;
     enum_constant public static final com.vanniktech.locale.Country INDIA;
     enum_constant public static final com.vanniktech.locale.Country INDONESIA;
-    enum_constant public static final com.vanniktech.locale.Country INTERNATIONAL_WATERS;
     enum_constant public static final com.vanniktech.locale.Country IRAN;
     enum_constant public static final com.vanniktech.locale.Country IRAQ;
     enum_constant public static final com.vanniktech.locale.Country IRELAND;
@@ -323,6 +274,7 @@ package com.vanniktech.locale {
     enum_constant public static final com.vanniktech.locale.Country UGANDA;
     enum_constant public static final com.vanniktech.locale.Country UKRAINE;
     enum_constant public static final com.vanniktech.locale.Country UNITED_ARAB_EMIRATES;
+    enum_constant public static final com.vanniktech.locale.Country UNITED_STATES_MINOR_OUTLYING_ISLANDS;
     enum_constant public static final com.vanniktech.locale.Country URUGUAY;
     enum_constant public static final com.vanniktech.locale.Country USA;
     enum_constant public static final com.vanniktech.locale.Country US_VIRGIN_ISLANDS;
@@ -344,110 +296,18 @@ package com.vanniktech.locale {
     method public com.vanniktech.locale.Country? fromOrNull(String? identifier);
   }
 
-  public enum GooglePlayStoreLocale {
-    method public static com.vanniktech.locale.GooglePlayStoreLocale valueOf(String value) throws java.lang.IllegalArgumentException, java.lang.NullPointerException;
-    method public static com.vanniktech.locale.GooglePlayStoreLocale[] values();
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale af;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale am;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale ar;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale az_AZ;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale be;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale bg;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale bn_BD;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale ca;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale cs_CZ;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale da_DK;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale de_DE;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale el_GR;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale en_AU;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale en_CA;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale en_GB;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale en_IN;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale en_SG;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale en_US;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale en_ZA;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale es_ES;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale es_US;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale et;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale eu_ES;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale fa;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale fa_AE;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale fa_AF;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale fa_IR;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale fi_FI;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale fil;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale fr_CA;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale fr_FR;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale gl_ES;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale gu;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale hi_IN;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale hr;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale hu_HU;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale hy_AM;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale id;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale is_IS;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale it_IT;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale iw_IL;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale ja_JP;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale ka_GE;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale kk;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale km_KH;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale kn_IN;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale ko_KR;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale ky_KG;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale lo_LA;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale lt;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale lv;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale mk_MK;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale ml_IN;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale mn_MN;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale mr_IN;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale ms;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale ms_MY;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale my_MM;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale ne_NP;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale nl_NL;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale no_NO;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale pa;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale pl_PL;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale pt_BR;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale pt_PT;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale rm;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale ro;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale ru_RU;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale si_LK;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale sk;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale sl;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale sq;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale sr;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale sv_SE;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale sw;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale ta_IN;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale te_IN;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale th;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale tr_TR;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale uk;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale ur;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale vi;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale zh_CN;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale zh_HK;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale zh_TW;
-    enum_constant public static final com.vanniktech.locale.GooglePlayStoreLocale zu;
-  }
-
   public enum Language {
-    method public final String! getCode();
-    method public final com.vanniktech.locale.Country getDefaultCountry();
-    method public final String! getLegacyCode();
-    method public final java.util.List<com.vanniktech.locale.Country>! getOfficialCountries();
-    method public final java.util.List<com.vanniktech.locale.Country>! getOtherCountries();
-    method public static com.vanniktech.locale.Language valueOf(String value) throws java.lang.IllegalArgumentException, java.lang.NullPointerException;
-    method public static com.vanniktech.locale.Language[] values();
-    property public final String! code;
-    property public final com.vanniktech.locale.Country defaultCountry;
-    property public final String! legacyCode;
-    property public final java.util.List<com.vanniktech.locale.Country>! officialCountries;
-    property public final java.util.List<com.vanniktech.locale.Country>! otherCountries;
+    method public error.NonExistentClass displayName();
+    method public String getCode();
+    method public com.vanniktech.locale.Territory getDefaultCountry();
+    method public String? getLegacyCode();
+    method public java.util.List<com.vanniktech.locale.Territory> getOfficialTerritories();
+    method public java.util.List<com.vanniktech.locale.Territory> getOtherTerritories();
+    property public final String code;
+    property public final com.vanniktech.locale.Territory defaultCountry;
+    property public final String? legacyCode;
+    property public final java.util.List<com.vanniktech.locale.Territory> officialTerritories;
+    property public final java.util.List<com.vanniktech.locale.Territory> otherTerritories;
     enum_constant public static final com.vanniktech.locale.Language AMHARIC;
     enum_constant public static final com.vanniktech.locale.Language ARABIC;
     enum_constant public static final com.vanniktech.locale.Language ARMENIAN;
@@ -466,6 +326,7 @@ package com.vanniktech.locale {
     enum_constant public static final com.vanniktech.locale.Language ENGLISH;
     enum_constant public static final com.vanniktech.locale.Language ESTONIAN;
     enum_constant public static final com.vanniktech.locale.Language FARSI;
+    enum_constant public static final com.vanniktech.locale.Language FILIPINO;
     enum_constant public static final com.vanniktech.locale.Language FINNISH;
     enum_constant public static final com.vanniktech.locale.Language FRENCH;
     enum_constant public static final com.vanniktech.locale.Language GERMAN;
@@ -474,6 +335,7 @@ package com.vanniktech.locale {
     enum_constant public static final com.vanniktech.locale.Language HEBREW;
     enum_constant public static final com.vanniktech.locale.Language HINDI;
     enum_constant public static final com.vanniktech.locale.Language HUNGARIAN;
+    enum_constant public static final com.vanniktech.locale.Language ICELANDIC;
     enum_constant public static final com.vanniktech.locale.Language INDONESIAN;
     enum_constant public static final com.vanniktech.locale.Language IRISH;
     enum_constant public static final com.vanniktech.locale.Language ITALIAN;
@@ -519,7 +381,7 @@ package com.vanniktech.locale {
   }
 
   public final class Languages {
-    method public error.NonExistentClass! currentLanguageCode();
+    method public error.NonExistentClass currentLanguageCode();
     field public static final com.vanniktech.locale.Languages INSTANCE;
   }
 
@@ -529,17 +391,15 @@ package com.vanniktech.locale {
   }
 
   public final class Locale implements java.lang.Comparable<com.vanniktech.locale.Locale> {
-    ctor public Locale(com.vanniktech.locale.Language language, com.vanniktech.locale.Country? country);
-    method public com.vanniktech.locale.AppleAppStoreLocale? appleAppStoreLocale();
+    ctor public Locale(com.vanniktech.locale.Language language, com.vanniktech.locale.Territory? territory);
     method public int compareTo(com.vanniktech.locale.Locale other);
     method public com.vanniktech.locale.Language component1();
-    method public com.vanniktech.locale.Country? component2();
-    method public com.vanniktech.locale.Locale copy(com.vanniktech.locale.Language language, com.vanniktech.locale.Country? country);
-    method public com.vanniktech.locale.Country? getCountry();
+    method public com.vanniktech.locale.Territory? component2();
+    method public com.vanniktech.locale.Locale copy(com.vanniktech.locale.Language language, com.vanniktech.locale.Territory? territory);
     method public com.vanniktech.locale.Language getLanguage();
-    method public com.vanniktech.locale.GooglePlayStoreLocale? googlePlayStoreLocale();
-    property public final com.vanniktech.locale.Country? country;
+    method public com.vanniktech.locale.Territory? getTerritory();
     property public final com.vanniktech.locale.Language language;
+    property public final com.vanniktech.locale.Territory? territory;
     field public static final com.vanniktech.locale.Locale.Companion Companion;
   }
 
@@ -557,8 +417,8 @@ package com.vanniktech.locale {
   }
 
   public final class Locales {
-    method public error.NonExistentClass! currentLocaleString();
-    method public error.NonExistentClass! currentLocaleStrings();
+    method public error.NonExistentClass currentLocaleString();
+    method public error.NonExistentClass currentLocaleStrings();
     field public static final com.vanniktech.locale.Locales INSTANCE;
   }
 
@@ -568,21 +428,42 @@ package com.vanniktech.locale {
     field public static final com.vanniktech.locale.Locales INSTANCE;
   }
 
-  public final class MultiplatformKt {
-    method public static String displayName(com.vanniktech.locale.Country);
-    method public static String displayName(com.vanniktech.locale.Language);
+  public final class Multiplatform_androidKt {
     method public static java.util.Locale toJavaLocale(com.vanniktech.locale.Locale);
   }
 
-  public final class MultiplatformKt {
-    method public static String displayName(com.vanniktech.locale.Country);
-    method public static String displayName(com.vanniktech.locale.Language);
+  public final class Multiplatform_jvmKt {
+    method public static java.util.Locale toJavaLocale(com.vanniktech.locale.Locale);
   }
 
-  public final class MultiplatformKt {
-    method public static String displayName(com.vanniktech.locale.Country);
-    method public static String displayName(com.vanniktech.locale.Language);
-    method public static java.util.Locale toJavaLocale(com.vanniktech.locale.Locale);
+  public enum Region implements com.vanniktech.locale.Territory {
+    method public String getCode();
+    method public String getCode3();
+    method public String? getEmoji();
+    property public String code;
+    property public String code3;
+    property public String? emoji;
+    enum_constant public static final com.vanniktech.locale.Region CANARY_ISLANDS;
+    enum_constant public static final com.vanniktech.locale.Region EUROPEAN_UNION;
+    enum_constant public static final com.vanniktech.locale.Region INTERNATIONAL_WATERS;
+    enum_constant public static final com.vanniktech.locale.Region LATIN_AMERICA;
+    field public static final com.vanniktech.locale.Region.Companion Companion;
+  }
+
+  public static final class Region.Companion {
+    method public com.vanniktech.locale.Region? fromLenientOrNull(String? string);
+    method public com.vanniktech.locale.Region? fromLocaleOrNull(String? locale);
+    method public com.vanniktech.locale.Region? fromOrNull(String? identifier);
+  }
+
+  public sealed interface Territory {
+    method public default error.NonExistentClass displayName();
+    method public String getCode();
+    method public String getCode3();
+    method public String? getEmoji();
+    property public abstract String code;
+    property public abstract String code3;
+    property public abstract String? emoji;
   }
 
 }

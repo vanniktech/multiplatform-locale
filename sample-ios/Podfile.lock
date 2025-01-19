@@ -1,16 +1,16 @@
 PODS:
-  - MultiplatformLocale (0.6.0-SNAPSHOT)
+  - MultiplatformLocaleAll (0.9.0)
 
 DEPENDENCIES:
-  - MultiplatformLocale (from `../multiplatform-locale`)
+  - MultiplatformLocaleAll (from `../multiplatform-locale-all`)
 
 EXTERNAL SOURCES:
-  MultiplatformLocale:
-    :path: "../multiplatform-locale"
+  MultiplatformLocaleAll:
+    :path: "../multiplatform-locale-all"
 
 SPEC CHECKSUMS:
-  MultiplatformLocale: 2821b6b20e075ce06d4b4c14df3f564aea35605e
+  MultiplatformLocaleAll: 7a8aa6addcfc6e2bcd5dc38d97dcade45fc67a54
 
-PODFILE CHECKSUM: b01388020c35fb53f191fb19fdf5459f1cd809b4
+PODFILE CHECKSUM: 9ed168d98ea160d8c0c0865fb29f7c761bf8bdfe
 
-COCOAPODS: 1.12.1
+COCOAPODS: 1.16.2

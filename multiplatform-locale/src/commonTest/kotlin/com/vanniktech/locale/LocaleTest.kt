@@ -7,20 +7,20 @@ class LocaleTest {
   @Test fun sorted() {
     assertEquals(
       expected = listOf(
-        Locale(Language.ENGLISH, country = Country.USA),
-        Locale(Language.GERMAN, country = Country.GERMANY),
+        Locale(Language.ENGLISH, territory = Country.USA),
+        Locale(Language.GERMAN, territory = Country.GERMANY),
       ),
       actual = listOf(
-        Locale(Language.GERMAN, country = Country.GERMANY),
-        Locale(Language.ENGLISH, country = Country.USA),
+        Locale(Language.GERMAN, territory = Country.GERMANY),
+        Locale(Language.ENGLISH, territory = Country.USA),
       ).sorted(),
     )
   }
 
   @Test fun fromOrNull() {
     listOf(
-      Pair(Locale(Language.ENGLISH, country = null), "en"),
-      Pair(Locale(Language.GERMAN, country = null), "de"),
+      Pair(Locale(Language.ENGLISH, territory = null), "en"),
+      Pair(Locale(Language.GERMAN, territory = null), "de"),
       Pair(Locale(Language.ENGLISH, Country.ENGLAND), "en-GB"),
       Pair(Locale(Language.ENGLISH, Country.USA), "en-US"),
       Pair(Locale(Language.ENGLISH, Country.USA), "en_US"),
@@ -66,194 +66,17 @@ class LocaleTest {
       Pair(Locale(Language.URDU, Country.PAKISTAN), "ur_PK"),
       Pair(Locale(Language.CENTRAL_KMHER, Country.ENGLAND), "km-GB"),
       Pair(Locale(Language.AMHARIC, Country.ETHIOPIA), "am-ET"),
+      Pair(Locale(Language.FILIPINO, Country.PHILIPPINES), "fil-PH"),
+      Pair(Locale(Language.ICELANDIC, Country.ICELAND), "is_IS"),
+      Pair(Locale(Language.SPANISH, Region.LATIN_AMERICA), "es-419"),
+      Pair(Locale(Language.SPANISH, Region.CANARY_ISLANDS), "es-IC"),
     ).forEach { (locale, localeString) ->
-      assertEquals(message = localeString, expected = locale, actual = Locale.fromOrNull(localeString))
+      assertEquals(
+        message = localeString,
+        expected = locale,
+        actual = Locale.fromOrNull(localeString),
+      )
     }
-  }
-
-  @Test fun googlePlayStoreLocaleAllPossibilities() {
-    assertEquals(
-      expected = listOf(
-        GooglePlayStoreLocale.ar,
-        GooglePlayStoreLocale.am,
-        GooglePlayStoreLocale.hy_AM,
-        GooglePlayStoreLocale.az_AZ,
-        GooglePlayStoreLocale.be,
-        GooglePlayStoreLocale.bg,
-        GooglePlayStoreLocale.my_MM,
-        GooglePlayStoreLocale.km_KH,
-        GooglePlayStoreLocale.zh_CN,
-        GooglePlayStoreLocale.zh_TW,
-        GooglePlayStoreLocale.zh_HK,
-        GooglePlayStoreLocale.ca,
-        GooglePlayStoreLocale.cs_CZ,
-        GooglePlayStoreLocale.hr,
-        GooglePlayStoreLocale.da_DK,
-        GooglePlayStoreLocale.nl_NL,
-        GooglePlayStoreLocale.en_US,
-        GooglePlayStoreLocale.en_CA,
-        GooglePlayStoreLocale.en_AU,
-        GooglePlayStoreLocale.en_GB,
-        GooglePlayStoreLocale.et,
-        GooglePlayStoreLocale.fa_IR,
-        GooglePlayStoreLocale.fa_AF,
-        GooglePlayStoreLocale.fa,
-        GooglePlayStoreLocale.fa_AE,
-        GooglePlayStoreLocale.fi_FI,
-        GooglePlayStoreLocale.fr_FR,
-        GooglePlayStoreLocale.fr_CA,
-        GooglePlayStoreLocale.de_DE,
-        GooglePlayStoreLocale.el_GR,
-        GooglePlayStoreLocale.gu,
-        GooglePlayStoreLocale.iw_IL,
-        GooglePlayStoreLocale.hi_IN,
-        GooglePlayStoreLocale.hu_HU,
-        GooglePlayStoreLocale.id,
-        GooglePlayStoreLocale.it_IT,
-        GooglePlayStoreLocale.ja_JP,
-        GooglePlayStoreLocale.ko_KR,
-        GooglePlayStoreLocale.lv,
-        GooglePlayStoreLocale.lt,
-        GooglePlayStoreLocale.ms_MY,
-        GooglePlayStoreLocale.ml_IN,
-        GooglePlayStoreLocale.mr_IN,
-        GooglePlayStoreLocale.no_NO,
-        GooglePlayStoreLocale.pl_PL,
-        GooglePlayStoreLocale.pt_PT,
-        GooglePlayStoreLocale.pt_BR,
-        GooglePlayStoreLocale.ro,
-        GooglePlayStoreLocale.ru_RU,
-        GooglePlayStoreLocale.sr,
-        GooglePlayStoreLocale.sk,
-        GooglePlayStoreLocale.sl,
-        GooglePlayStoreLocale.es_ES,
-        GooglePlayStoreLocale.es_US,
-        GooglePlayStoreLocale.sv_SE,
-        GooglePlayStoreLocale.ta_IN,
-        GooglePlayStoreLocale.te_IN,
-        GooglePlayStoreLocale.th,
-        GooglePlayStoreLocale.tr_TR,
-        GooglePlayStoreLocale.uk,
-        GooglePlayStoreLocale.ur,
-        GooglePlayStoreLocale.vi,
-      ),
-      actual = Language.values().flatMap { language -> (language.officialCountries + language.otherCountries).mapNotNull { Locale(language, it).googlePlayStoreLocale() } }.distinct(),
-    )
-  }
-
-  @Test fun googlePlayStoreLocaleLenient() {
-    // Italian only has one GooglePlayStoreLocale, so we'll match regardless of Country.
-    assertEquals(
-      expected = GooglePlayStoreLocale.it_IT,
-      actual = Locale(Language.ITALIAN, null).googlePlayStoreLocale(),
-    )
-
-    assertEquals(
-      expected = GooglePlayStoreLocale.it_IT,
-      actual = Locale(Language.ITALIAN, Country.AUSTRIA).googlePlayStoreLocale(),
-    )
-
-    assertEquals(
-      expected = GooglePlayStoreLocale.fr_FR,
-      actual = Locale(Language.FRENCH, null).googlePlayStoreLocale(),
-    )
-
-    // English has many, so we'll try to be as close as possible.
-    assertEquals(
-      expected = GooglePlayStoreLocale.en_AU,
-      actual = Locale(Language.ENGLISH, Country.AUSTRIA).googlePlayStoreLocale(),
-    )
-
-    assertEquals(
-      expected = GooglePlayStoreLocale.en_US,
-      actual = Locale(Language.ENGLISH, Country.USA).googlePlayStoreLocale(),
-    )
-
-    assertEquals(
-      expected = GooglePlayStoreLocale.en_CA,
-      actual = Locale(Language.ENGLISH, Country.CANADA).googlePlayStoreLocale(),
-    )
-  }
-
-  @Test fun appleAppStoreLocaleStringAllPossibilities() {
-    assertEquals(
-      expected = listOf(
-        AppleAppStoreLocale.ar_SA,
-        AppleAppStoreLocale.zh_Hans,
-        AppleAppStoreLocale.zh_Hant,
-        AppleAppStoreLocale.ca,
-        AppleAppStoreLocale.cs,
-        AppleAppStoreLocale.hr,
-        AppleAppStoreLocale.da,
-        AppleAppStoreLocale.nl_NL,
-        AppleAppStoreLocale.en_US,
-        AppleAppStoreLocale.en_CA,
-        AppleAppStoreLocale.en_AU,
-        AppleAppStoreLocale.en_GB,
-        AppleAppStoreLocale.fi,
-        AppleAppStoreLocale.fr_FR,
-        AppleAppStoreLocale.fr_CA,
-        AppleAppStoreLocale.de_DE,
-        AppleAppStoreLocale.el,
-        AppleAppStoreLocale.he,
-        AppleAppStoreLocale.hi,
-        AppleAppStoreLocale.hu,
-        AppleAppStoreLocale.id,
-        AppleAppStoreLocale.it,
-        AppleAppStoreLocale.ja,
-        AppleAppStoreLocale.ko,
-        AppleAppStoreLocale.ms,
-        AppleAppStoreLocale.no,
-        AppleAppStoreLocale.pl,
-        AppleAppStoreLocale.pt_PT,
-        AppleAppStoreLocale.pt_BR,
-        AppleAppStoreLocale.ro,
-        AppleAppStoreLocale.ru,
-        AppleAppStoreLocale.sk,
-        AppleAppStoreLocale.es_ES,
-        AppleAppStoreLocale.es_MX,
-        AppleAppStoreLocale.sv,
-        AppleAppStoreLocale.th,
-        AppleAppStoreLocale.tr,
-        AppleAppStoreLocale.uk,
-        AppleAppStoreLocale.vi,
-      ),
-      actual = Language.values().flatMap { language -> (language.officialCountries + language.otherCountries).mapNotNull { Locale(language, it).appleAppStoreLocale() } }.distinct(),
-    )
-  }
-
-  @Test fun appleAppStoreLocaleStringLenient() {
-    // Swedish only has one GooglePlayStoreLocale, so we'll match regardless of Country.
-    assertEquals(
-      expected = AppleAppStoreLocale.it,
-      actual = Locale(Language.ITALIAN, null).appleAppStoreLocale(),
-    )
-
-    assertEquals(
-      expected = AppleAppStoreLocale.it,
-      actual = Locale(Language.ITALIAN, Country.AUSTRIA).appleAppStoreLocale(),
-    )
-
-    assertEquals(
-      expected = AppleAppStoreLocale.fr_FR,
-      actual = Locale(Language.FRENCH, null).appleAppStoreLocale(),
-    )
-
-    // English has many, so we'll try to be as close as possible.
-    assertEquals(
-      expected = AppleAppStoreLocale.en_AU,
-      actual = Locale(Language.ENGLISH, Country.AUSTRIA).appleAppStoreLocale(),
-    )
-
-    assertEquals(
-      expected = AppleAppStoreLocale.en_US,
-      actual = Locale(Language.ENGLISH, Country.USA).appleAppStoreLocale(),
-    )
-
-    assertEquals(
-      expected = AppleAppStoreLocale.en_CA,
-      actual = Locale(Language.ENGLISH, Country.CANADA).appleAppStoreLocale(),
-    )
   }
 
   @Test fun fromAndroidValuesDirectoryName() {

@@ -2,48 +2,17 @@ package com.vanniktech.locale
 
 data class Locale(
   val language: Language,
-  val country: Country?,
+  val territory: Territory?,
 ) : Comparable<Locale> {
   override fun toString() = listOfNotNull(
     language.code,
-    country?.code,
+    territory?.code,
   ).joinToString(separator = "-")
 
-  /** Returns the optional [GooglePlayStoreLocale] that can be used for localizing the Google Play Store. */
-  fun googlePlayStoreLocale(): GooglePlayStoreLocale? {
-    val optimized = Locale(language, country ?: language.defaultCountry)
-    return GooglePlayStoreLocale.values()
-      .groupBy { Language.fromLocaleOrNull(it.toString()) }
-      .firstNotNullOfOrNull { (key, locales) ->
-        locales.firstNotNullOfOrNull { locale ->
-          locale.takeIf {
-            fromOrNull(it.name) == optimized
-          }
-        } ?: locales.firstNotNullOfOrNull { locale -> locale.takeIf { language == key } }
-      }
-  }
-
-  /** Returns the optional [AppleAppStoreLocale] that can be used for localizing the Apple App Store. */
-  fun appleAppStoreLocale(): AppleAppStoreLocale? {
-    val optimized = Locale(language, country ?: language.defaultCountry)
-    return AppleAppStoreLocale.values()
-      .groupBy { Language.fromLocaleOrNull(it.toString()) }
-      .firstNotNullOfOrNull { (key, locales) ->
-        locales.firstNotNullOfOrNull { locale ->
-          locale.takeIf {
-            val isChineseTaiwan = it.name == "zh_Hant" && language == Language.CHINESE && country == Country.TAIWAN
-            fromOrNull(it.name) == optimized || isChineseTaiwan
-          }
-        } ?: locales.firstNotNullOfOrNull { locale -> locale.takeIf { language == key } }
-      }
-  }
-
-  override fun compareTo(other: Locale): Int =
-    compareValuesBy(this, other, { it.language }, { it.country })
+  override fun compareTo(other: Locale): Int = compareValuesBy(this, other, { it.language }, { it.territory as Comparable<*> })
 
   companion object {
-    fun from(locale: String) =
-      requireNotNull(fromOrNull(locale)) { "Can't get locale for $locale" }
+    fun from(locale: String) = requireNotNull(fromOrNull(locale)) { "Can't get locale for $locale" }
 
     fun fromOrNull(locale: String?): Locale? {
       val language = Language.fromLocaleOrNull(locale)
@@ -51,15 +20,14 @@ data class Locale(
       return if (language != null) {
         Locale(
           language = language,
-          country = Country.fromLocaleOrNull(locale),
+          territory = Country.fromLocaleOrNull(locale) ?: Region.fromLocaleOrNull(locale),
         )
       } else {
         null
       }
     }
 
-    fun fromAndroidValuesDirectoryName(androidValuesDirectoryName: String) =
-      requireNotNull(fromAndroidValuesDirectoryNameOrNull(androidValuesDirectoryName)) { "Can't get locale for $androidValuesDirectoryName" }
+    fun fromAndroidValuesDirectoryName(androidValuesDirectoryName: String) = requireNotNull(fromAndroidValuesDirectoryNameOrNull(androidValuesDirectoryName)) { "Can't get locale for $androidValuesDirectoryName" }
 
     fun fromAndroidValuesDirectoryNameOrNull(androidValuesDirectoryName: String): Locale? {
       val name = androidValuesDirectoryName

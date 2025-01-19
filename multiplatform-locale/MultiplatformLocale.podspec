@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
     spec.name                     = 'MultiplatformLocale'
-    spec.version                  = '0.8.0-SNAPSHOT'
+    spec.version                  = '0.9.0'
     spec.homepage                 = 'https://github.com/vanniktech/multiplatform-locale'
     spec.source                   = { :http=> ''}
     spec.authors                  = 'Niklas Baudy'
@@ -21,6 +21,10 @@ Pod::Spec.new do |spec|
 
         Alternatively, proper pod installation is performed during Gradle sync in the IDE (if Podfile location is set)"
     end
+                
+    spec.xcconfig = {
+        'ENABLE_USER_SCRIPT_SANDBOXING' => 'NO',
+    }
                 
     spec.pod_target_xcconfig = {
         'KOTLIN_PROJECT_PATH' => ':multiplatform-locale',
