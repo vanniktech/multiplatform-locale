@@ -1,5 +1,5 @@
 PODS:
-  - MultiplatformLocaleAll (0.9.0-SNAPSHOT)
+  - MultiplatformLocaleAll (0.9.0)
 
 DEPENDENCIES:
   - MultiplatformLocaleAll (from `../multiplatform-locale-all`)
