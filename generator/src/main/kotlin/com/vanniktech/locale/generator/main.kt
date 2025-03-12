@@ -11,7 +11,8 @@ import okio.Path.Companion.toPath
 
 fun main() {
   // Adjust the path of the https://github.com/countries/countries repository as needed.
-  val path = "/Users/niklas/dev/GitHub/countries/lib/countries/data/countries".toPath()
+  val githubDirectory = "/Users/niklas/dev/GitHub/".toPath()
+  val countriesPath = githubDirectory / "countries/lib/countries/data/countries".toPath()
   val fileSystem = FileSystem.SYSTEM
 
   val overwrittenNames = mutableMapOf(
@@ -64,23 +65,8 @@ fun main() {
 
   val yaml = Yaml(configuration = YamlConfiguration(strictMode = false))
   val serializer = MapSerializer(String.serializer(), CountryDto.serializer())
-  val parsedCountries = fileSystem.list(path)
-    .flatMap {
-      yaml.decodeFromSource(serializer, fileSystem.source(path / it)).values
-    }
-
-  val otherCountries = listOf(
-    // https://github.com/countries/countries/issues/793#issuecomment-2027531814
-    CountryDto(
-      alpha2 = "XK",
-      alpha3 = "XKX",
-      countryCode = "383",
-      isoShortName = "Kosovo",
-      continent = "EUROPE",
-    ),
-  )
-
-  val enumOutput = (parsedCountries + otherCountries)
+  val parsedCountries = fileSystem.list(countriesPath)
+    .flatMap { yaml.decodeFromSource(serializer, fileSystem.source(countriesPath / it)).values }
     .map {
       val fallback = it.isoShortName.uppercase()
         .replace(" ", "_")
@@ -91,18 +77,95 @@ fun main() {
         .replace("(", "")
         .replace(")", "")
 
-      val name = overwrittenNames.remove(fallback) ?: fallback
+      it.copy(
+        isoShortName = overwrittenNames.remove(fallback) ?: fallback,
+      )
+    }
+
+  val otherCountries = listOf(
+    // https://github.com/countries/countries/issues/793#issuecomment-2027531814
+    CountryDto(
+      alpha2 = "XK",
+      alpha3 = "XKX",
+      countryCode = "383",
+      isoShortName = "KOSOVO",
+      continent = "EUROPE",
+      geo = Geo(
+        latitude = 42.5833,
+        longitude = 21.0001,
+        maxLatitude = 43.139,
+        maxLongitude = 21.835,
+        minLatitude = 41.877,
+        minLongitude = 19.949,
+      ),
+    ),
+  )
+
+  val countries = (parsedCountries + otherCountries).sortedBy { it.isoShortName }
+  val enumOutput = countries
+    .map {
       val callingCode = it.nanpPrefix ?: it.countryCode
       val continent = it.continent.uppercase()
         .replace(" ", "_")
         .replace("AUSTRALIA", "OCEANIA")
 
-      "$name(code = \"${it.alpha2}\", code3 = \"${it.alpha3}\", callingCodes = listOf(\"+$callingCode\"), continent = Continent.$continent),"
+      "${it.isoShortName}(code = \"${it.alpha2}\", code3 = \"${it.alpha3}\", callingCodes = listOf(\"+$callingCode\"), continent = Continent.$continent),"
     }
-    .sorted()
 
   require(overwrittenNames.isEmpty()) { "Unmatched overwritten names: $overwrittenNames" }
   println(enumOutput.joinToString(separator = "\n"))
+
+  fileSystem.write(githubDirectory / "multiplatform-locale/multiplatform-locale-geo/src/commonMain/kotlin/com/vanniktech/locale/geo/CountryGeo.kt") {
+    writeUtf8(
+      """
+      |package com.vanniktech.locale.geo
+      |
+      |import com.vanniktech.locale.Country
+      |
+      |
+      """.trimMargin(),
+    )
+
+    countries.forEach {
+      writeUtf8(
+        """
+      |private val GEO_${it.isoShortName} = Geo(
+      |  latitude = ${it.geo.latitude},
+      |  longitude = ${it.geo.longitude},
+      |  maxLatitude = ${it.geo.maxLatitude},
+      |  maxLongitude = ${it.geo.maxLongitude},
+      |  minLatitude = ${it.geo.minLatitude},
+      |  minLongitude = ${it.geo.minLongitude},
+      |)
+      |
+      |
+        """.trimMargin(),
+      )
+    }
+
+    writeUtf8(
+      """
+      |val Country.geo get() = when (this) {
+      |
+      """.trimMargin(),
+    )
+
+    countries.forEach {
+      writeUtf8(
+        """
+      |  Country.${it.isoShortName} -> GEO_${it.isoShortName}
+      |
+        """.trimMargin(),
+      )
+    }
+
+    writeUtf8(
+      """
+    |}
+    |
+      """.trimMargin(),
+    )
+  }
 }
 
 // https://github.com/countries/countries/blob/master/lib/countries/data/countries/TL.yaml
@@ -113,4 +176,14 @@ fun main() {
   @SerialName("nanp_prefix") val nanpPrefix: String? = null,
   @SerialName("iso_short_name") val isoShortName: String,
   @SerialName("continent") val continent: String,
+  @SerialName("geo") val geo: Geo,
+)
+
+@Serializable data class Geo(
+  @SerialName("latitude") val latitude: Double,
+  @SerialName("longitude") val longitude: Double,
+  @SerialName("max_latitude") val maxLatitude: Double,
+  @SerialName("max_longitude") val maxLongitude: Double,
+  @SerialName("min_latitude") val minLatitude: Double,
+  @SerialName("min_longitude") val minLongitude: Double,
 )

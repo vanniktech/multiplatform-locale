@@ -28,37 +28,54 @@ kotlin {
   iosArm64()
   iosSimulatorArm64()
 
+  targets.withType<org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget> {
+    compilations["main"].kotlinOptions.freeCompilerArgs += "-Xexport-kdoc"
+  }
+
   sourceSets {
     val commonMain by getting {
       dependencies {
         api(project(":multiplatform-locale"))
-        api(project(":multiplatform-locale-apple-app-store"))
-        api(project(":multiplatform-locale-geo"))
-        api(project(":multiplatform-locale-google-play-store"))
+      }
+    }
+
+    val commonTest by getting {
+      dependencies {
+        implementation(libs.kotlin.test.common)
+        implementation(libs.kotlin.test.annotations.common)
+      }
+    }
+
+    val androidUnitTest by getting {
+      dependencies {
+        implementation(libs.kotlin.test.junit)
+      }
+    }
+
+    val jvmTest by getting {
+      dependencies {
+        implementation(libs.kotlin.test.junit)
       }
     }
   }
 
   cocoapods {
-    summary = "Multiplatform Locale All for iOS, Android and JVM via Kotlin Multiplatform"
+    summary = "Multiplatform Locale Geo for iOS, Android and JVM via Kotlin Multiplatform"
     homepage = "https://github.com/vanniktech/multiplatform-locale"
     license = "MIT"
-    name = "MultiplatformLocaleAll"
+    name = "MultiplatformLocaleGeo"
     authors = "Niklas Baudy"
     version = project.property("VERSION_NAME").toString()
 
     framework {
       isStatic = true
       export(project(":multiplatform-locale"))
-      export(project(":multiplatform-locale-apple-app-store"))
-      export(project(":multiplatform-locale-geo"))
-      export(project(":multiplatform-locale-google-play-store"))
     }
   }
 }
 
 android {
-  namespace = "com.vanniktech.locale.all"
+  namespace = "com.vanniktech.locale.geo"
 
   compileSdk = libs.versions.compileSdk.get().toInt()
 
@@ -71,5 +88,5 @@ android {
     targetCompatibility = JavaVersion.VERSION_11
   }
 
-  resourcePrefix = "locale_all_"
+  resourcePrefix = "locale_geo"
 }

@@ -1,0 +1,31 @@
+// Signature format: 4.0
+package com.vanniktech.locale.geo {
+
+  public final class CountryGeoKt {
+    method public static com.vanniktech.locale.geo.Geo getGeo(com.vanniktech.locale.Country);
+  }
+
+  public final class Geo {
+    method public double component1();
+    method public double component2();
+    method public double component3();
+    method public double component4();
+    method public double component5();
+    method public double component6();
+    method public com.vanniktech.locale.geo.Geo copy(double latitude, double longitude, double maxLatitude, double maxLongitude, double minLatitude, double minLongitude);
+    method public double getLatitude();
+    method public double getLongitude();
+    method public double getMaxLatitude();
+    method public double getMaxLongitude();
+    method public double getMinLatitude();
+    method public double getMinLongitude();
+    property public final double latitude;
+    property public final double longitude;
+    property public final double maxLatitude;
+    property public final double maxLongitude;
+    property public final double minLatitude;
+    property public final double minLongitude;
+  }
+
+}
+
