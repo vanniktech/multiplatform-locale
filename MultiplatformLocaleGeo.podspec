@@ -1,0 +1,1 @@
+multiplatform-locale-geo/MultiplatformLocaleGeo.podspec
