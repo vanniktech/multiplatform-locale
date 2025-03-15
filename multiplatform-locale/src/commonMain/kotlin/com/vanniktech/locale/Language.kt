@@ -247,6 +247,11 @@ enum class Language(
     officialTerritories = listOf(Country.SPAIN, Country.MEXICO, Country.COLOMBIA, Country.ARGENTINA, Country.CHILE, Country.NICARAGUA, Country.URUGUAY, Country.EQUATORIAL_GUINEA, Country.PANAMA, Country.COSTA_RICA, Country.EL_SALVADOR, Country.PARAGUAY, Country.HONDURAS, Country.DOMINICAN_REPUBLIC, Country.CUBA, Country.BOLIVIA, Country.ECUADOR, Country.GUATEMALA, Country.VENEZUELA, Country.PERU, Country.PARAGUAY, Country.BOLIVIA, Region.CANARY_ISLANDS, Region.LATIN_AMERICA),
     otherTerritories = listOf(Country.USA, Country.BELIZE, Country.ANDORRA, Country.GIBRALTAR),
   ),
+  SWAHILI(
+    code = "sw",
+    officialTerritories = listOf(Country.TANZANIA, Country.KENYA, Country.UGANDA, Country.DEMOCRATIC_REPUBLIC_OF_CONGO),
+    otherTerritories = listOf(Country.RWANDA, Country.BURUNDI, Country.SOMALIA, Country.MOZAMBIQUE, Country.MALAWI, Country.ZAMBIA, Country.COMOROS, Country.SOUTH_SUDAN),
+  ),
   SWEDISH(
     code = "sv",
     officialTerritories = listOf(Country.SWEDEN, Country.FINLAND),

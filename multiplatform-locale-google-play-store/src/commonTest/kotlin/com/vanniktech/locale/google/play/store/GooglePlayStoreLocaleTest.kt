@@ -67,6 +67,7 @@ class GooglePlayStoreLocaleTest {
         GooglePlayStoreLocale.es_ES,
         GooglePlayStoreLocale.es_419,
         GooglePlayStoreLocale.es_US,
+        GooglePlayStoreLocale.sw,
         GooglePlayStoreLocale.sv_SE,
         GooglePlayStoreLocale.ta_IN,
         GooglePlayStoreLocale.te_IN,
