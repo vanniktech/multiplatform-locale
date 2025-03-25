@@ -308,6 +308,7 @@ package com.vanniktech.locale {
     property public final String? legacyCode;
     property public final java.util.List<com.vanniktech.locale.Territory> officialTerritories;
     property public final java.util.List<com.vanniktech.locale.Territory> otherTerritories;
+    enum_constant public static final com.vanniktech.locale.Language AFRIKAANS;
     enum_constant public static final com.vanniktech.locale.Language AMHARIC;
     enum_constant public static final com.vanniktech.locale.Language ARABIC;
     enum_constant public static final com.vanniktech.locale.Language ARMENIAN;

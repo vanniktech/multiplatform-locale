@@ -11,6 +11,7 @@ class GooglePlayStoreLocaleTest {
     assertEquals(
       expected = listOf(
         GooglePlayStoreLocale.ar,
+        GooglePlayStoreLocale.af,
         GooglePlayStoreLocale.am,
         GooglePlayStoreLocale.hy_AM,
         GooglePlayStoreLocale.az_AZ,
