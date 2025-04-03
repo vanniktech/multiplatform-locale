@@ -12,6 +12,7 @@ class GooglePlayStoreLocaleTest {
       expected = listOf(
         GooglePlayStoreLocale.ar,
         GooglePlayStoreLocale.af,
+        GooglePlayStoreLocale.sq,
         GooglePlayStoreLocale.am,
         GooglePlayStoreLocale.hy_AM,
         GooglePlayStoreLocale.az_AZ,

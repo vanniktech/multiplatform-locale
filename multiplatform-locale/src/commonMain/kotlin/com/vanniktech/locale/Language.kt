@@ -20,6 +20,11 @@ enum class Language(
     officialTerritories = listOf(Country.SOUTH_AFRICA),
     otherTerritories = listOf(Country.NAMIBIA),
   ),
+  ALBANIAN(
+    code = "sq",
+    officialTerritories = listOf(Country.ALBANIA, Country.KOSOVO),
+    otherTerritories = listOf(Country.NORTH_MACEDONIA, Country.MONTENEGRO),
+  ),
   AMHARIC(
     code = "am",
     officialTerritories = listOf(Country.ETHIOPIA),
