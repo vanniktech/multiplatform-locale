@@ -182,6 +182,11 @@ enum class Language(
     officialTerritories = listOf(Country.JAPAN),
     otherTerritories = emptyList(),
   ),
+  KANNADA(
+    code = "kn",
+    officialTerritories = listOf(Country.INDIA),
+    otherTerritories = emptyList(),
+  ),
   KOREAN(
     code = "ko",
     officialTerritories = listOf(Country.SOUTH_KOREA, Country.NORTH_KOREA),
