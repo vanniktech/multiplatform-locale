@@ -331,6 +331,7 @@ package com.vanniktech.locale {
     enum_constant public static final com.vanniktech.locale.Language FILIPINO;
     enum_constant public static final com.vanniktech.locale.Language FINNISH;
     enum_constant public static final com.vanniktech.locale.Language FRENCH;
+    enum_constant public static final com.vanniktech.locale.Language GEORGIAN;
     enum_constant public static final com.vanniktech.locale.Language GERMAN;
     enum_constant public static final com.vanniktech.locale.Language GREEK;
     enum_constant public static final com.vanniktech.locale.Language GUJARATI;
