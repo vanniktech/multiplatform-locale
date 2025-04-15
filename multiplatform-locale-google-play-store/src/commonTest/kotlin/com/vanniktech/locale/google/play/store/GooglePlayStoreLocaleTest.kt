@@ -41,6 +41,7 @@ class GooglePlayStoreLocaleTest {
         GooglePlayStoreLocale.fi_FI,
         GooglePlayStoreLocale.fr_FR,
         GooglePlayStoreLocale.fr_CA,
+        GooglePlayStoreLocale.ka_GE,
         GooglePlayStoreLocale.de_DE,
         GooglePlayStoreLocale.el_GR,
         GooglePlayStoreLocale.gu,
