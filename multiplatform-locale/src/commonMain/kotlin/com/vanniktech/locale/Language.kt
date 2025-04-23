@@ -45,6 +45,11 @@ enum class Language(
     officialTerritories = listOf(Country.BELARUS),
     otherTerritories = listOf(Country.RUSSIA, Country.LITHUANIA, Country.LATVIA, Country.POLAND, Country.UKRAINE),
   ),
+  BENGALI(
+    code = "bn",
+    officialTerritories = listOf(Country.BANGLADESH),
+    otherTerritories = listOf(Country.INDIA),
+  ),
   BOKMAL(
     code = "nb",
     officialTerritories = listOf(Country.NORWAY),
