@@ -70,6 +70,7 @@ class LocaleTest {
       Pair(Locale(Language.ICELANDIC, Country.ICELAND), "is_IS"),
       Pair(Locale(Language.SPANISH, Region.LATIN_AMERICA), "es-419"),
       Pair(Locale(Language.SPANISH, Region.CANARY_ISLANDS), "es-IC"),
+      Pair(Locale(Language.BOSNIAN, Country.BOSNIA_AND_HERZEGOVINA), "bs-BA"),
     ).forEach { (locale, localeString) ->
       assertEquals(
         message = localeString,
