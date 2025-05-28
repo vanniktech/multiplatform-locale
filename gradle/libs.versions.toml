@@ -14,7 +14,7 @@ kotlin-test-common = { module = "org.jetbrains.kotlin:kotlin-test-common", versi
 kotlin-test-junit = { module = "org.jetbrains.kotlin:kotlin-test-junit", version.ref = "kotlin" }
 leakcanary-android = "com.squareup.leakcanary:leakcanary-android:2.14"
 material = "com.google.android.material:material:1.12.0"
-okio = "com.squareup.okio:okio:3.11.0"
+okio = "com.squareup.okio:okio:3.12.0"
 plugin-android-cache-fix = "org.gradle.android.cache-fix:org.gradle.android.cache-fix.gradle.plugin:3.0.1"
 plugin-androidgradleplugin = { module = "com.android.tools.build:gradle", version.ref = "androidgradleplugin" }
 plugin-dokka = "org.jetbrains.dokka:dokka-gradle-plugin:2.0.0"
