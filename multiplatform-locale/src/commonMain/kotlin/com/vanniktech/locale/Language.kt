@@ -207,6 +207,11 @@ enum class Language(
     officialTerritories = listOf(Country.SOUTH_KOREA, Country.NORTH_KOREA),
     otherTerritories = emptyList(),
   ),
+  LAO(
+    code = "lo",
+    officialTerritories = listOf(Country.LAOS),
+    otherTerritories = emptyList(),
+  ),
   LATVIAN(
     code = "lv",
     officialTerritories = listOf(Country.LATVIA),
