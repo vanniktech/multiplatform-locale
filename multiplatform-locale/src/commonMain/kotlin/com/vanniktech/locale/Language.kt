@@ -282,6 +282,11 @@ enum class Language(
     officialTerritories = listOf(Country.SLOVENIA),
     otherTerritories = listOf(Country.AUSTRIA, Country.ITALY),
   ),
+  SOMALI(
+    code = "so",
+    officialTerritories = listOf(Country.SOMALIA),
+    otherTerritories = listOf(Country.DJIBOUTI, Country.ETHIOPIA, Country.KENYA),
+  ),
   SPANISH(
     code = "es",
     officialTerritories = listOf(Country.SPAIN, Country.MEXICO, Country.COLOMBIA, Country.ARGENTINA, Country.CHILE, Country.NICARAGUA, Country.URUGUAY, Country.EQUATORIAL_GUINEA, Country.PANAMA, Country.COSTA_RICA, Country.EL_SALVADOR, Country.PARAGUAY, Country.HONDURAS, Country.DOMINICAN_REPUBLIC, Country.CUBA, Country.BOLIVIA, Country.ECUADOR, Country.GUATEMALA, Country.VENEZUELA, Country.PERU, Country.PARAGUAY, Country.BOLIVIA, Region.CANARY_ISLANDS, Region.LATIN_AMERICA),
