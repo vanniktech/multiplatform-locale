@@ -276,10 +276,7 @@ enum class Country(
       else -> entries.firstOrNull { it.code.equals(identifier, ignoreCase = true) || it.code3.equals(identifier, ignoreCase = true) }
     }
 
-    fun fromLocaleOrNull(locale: String?): Country? {
-      val splits = localeSplit(locale)
-      return fromOrNull(splits.getOrNull(1))
-    }
+    fun fromLocaleOrNull(locale: String?): Country? = fromOrNull(localeComponents(locale)?.country)
 
     /** Tries every possible combination that I know to somehow get a meaningful country. */
     fun fromLenientOrNull(string: String?) = entries.firstOrNull { it.name.equals(string, ignoreCase = true) }
