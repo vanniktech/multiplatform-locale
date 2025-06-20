@@ -210,7 +210,7 @@ enum class Language(
   LAO(
     code = "lo",
     officialTerritories = listOf(Country.LAOS),
-    otherTerritories = emptyList(),
+    otherTerritories = listOf(Country.THAILAND),
   ),
   LATVIAN(
     code = "lv",
