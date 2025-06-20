@@ -4,6 +4,10 @@ plugins {
   alias(libs.plugins.kotlinSerialization)
 }
 
+kotlin {
+  jvmToolchain(11)
+}
+
 application {
   mainClass.set("com.vanniktech.locale.generator.MainKt")
 }
