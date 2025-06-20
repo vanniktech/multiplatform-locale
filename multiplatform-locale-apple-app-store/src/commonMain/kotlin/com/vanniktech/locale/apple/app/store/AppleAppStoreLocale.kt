@@ -62,8 +62,11 @@ fun Locale.appleAppStoreLocale(): AppleAppStoreLocale? {
     .firstNotNullOfOrNull { (key, locales) ->
       locales.firstNotNullOfOrNull { locale ->
         locale.takeIf {
-          val isChineseTaiwan = it.name == "zh_Hant" && language == Language.CHINESE && territory == Country.TAIWAN
-          fromOrNull(it.name) == optimized || isChineseTaiwan
+          optimized == when (it) {
+            AppleAppStoreLocale.zh_Hant -> Locale(Language.CHINESE, Country.TAIWAN)
+            AppleAppStoreLocale.zh_Hans -> Locale(Language.CHINESE, Country.CHINA)
+            else -> fromOrNull(it.name)
+          }
         }
       } ?: locales.firstNotNullOfOrNull { locale -> locale.takeIf { language == key } }
     }
