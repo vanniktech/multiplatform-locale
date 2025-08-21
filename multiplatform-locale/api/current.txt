@@ -293,18 +293,18 @@ package com.vanniktech.locale {
   public static final class Country.Companion {
     method public com.vanniktech.locale.Country? fromLenientOrNull(String? string);
     method public com.vanniktech.locale.Country? fromLocaleOrNull(String? locale);
-    method public com.vanniktech.locale.Country? fromOrNull(String? identifier);
+    method public Void? fromOrNull(String? identifier);
   }
 
   public enum Language {
     method public error.NonExistentClass displayName();
     method public String getCode();
-    method public com.vanniktech.locale.Territory getDefaultCountry();
+    method public error.NonExistentClass getDefaultCountry();
     method public String? getLegacyCode();
     method public java.util.List<com.vanniktech.locale.Territory> getOfficialTerritories();
     method public java.util.List<com.vanniktech.locale.Territory> getOtherTerritories();
     property public final String code;
-    property public final com.vanniktech.locale.Territory defaultCountry;
+    property public final error.NonExistentClass defaultCountry;
     property public final String? legacyCode;
     property public final java.util.List<com.vanniktech.locale.Territory> officialTerritories;
     property public final java.util.List<com.vanniktech.locale.Territory> otherTerritories;
@@ -408,21 +408,22 @@ package com.vanniktech.locale {
     method public com.vanniktech.locale.Locale copy(com.vanniktech.locale.Language language, com.vanniktech.locale.Territory? territory);
     method public com.vanniktech.locale.Language getLanguage();
     method public com.vanniktech.locale.Territory? getTerritory();
+    method public error.NonExistentClass toString();
     property public final com.vanniktech.locale.Language language;
     property public final com.vanniktech.locale.Territory? territory;
     field public static final com.vanniktech.locale.Locale.Companion Companion;
   }
 
   public static final class Locale.Companion {
-    method public com.vanniktech.locale.Locale from(String locale);
-    method public com.vanniktech.locale.Locale fromAndroidValuesDirectoryName(String androidValuesDirectoryName);
+    method public error.NonExistentClass from(String locale);
+    method public error.NonExistentClass fromAndroidValuesDirectoryName(String androidValuesDirectoryName);
     method public com.vanniktech.locale.Locale? fromAndroidValuesDirectoryNameOrNull(String androidValuesDirectoryName);
     method public com.vanniktech.locale.Locale? fromOrNull(String? locale);
   }
 
   public final class Locales {
     method public String currentLocaleString();
-    method public java.util.List<java.lang.String> currentLocaleStrings();
+    method public error.NonExistentClass currentLocaleStrings();
     field public static final com.vanniktech.locale.Locales INSTANCE;
   }
 
@@ -434,7 +435,7 @@ package com.vanniktech.locale {
 
   public final class Locales {
     method public String currentLocaleString();
-    method public java.util.List<java.lang.String> currentLocaleStrings();
+    method public error.NonExistentClass currentLocaleStrings();
     field public static final com.vanniktech.locale.Locales INSTANCE;
   }
 
@@ -463,7 +464,7 @@ package com.vanniktech.locale {
   public static final class Region.Companion {
     method public com.vanniktech.locale.Region? fromLenientOrNull(String? string);
     method public com.vanniktech.locale.Region? fromLocaleOrNull(String? locale);
-    method public com.vanniktech.locale.Region? fromOrNull(String? identifier);
+    method public Void? fromOrNull(String? identifier);
   }
 
   public sealed interface Territory {
