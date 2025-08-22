@@ -2,6 +2,7 @@
 package com.vanniktech.locale.apple.app.store {
 
   public enum AppleAppStoreLocale {
+    method public error.NonExistentClass toString();
     enum_constant public static final com.vanniktech.locale.apple.app.store.AppleAppStoreLocale ar_SA;
     enum_constant public static final com.vanniktech.locale.apple.app.store.AppleAppStoreLocale ca;
     enum_constant public static final com.vanniktech.locale.apple.app.store.AppleAppStoreLocale cs;

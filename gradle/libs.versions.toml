@@ -3,9 +3,9 @@ minSdk = "21"
 compileSdk = "34"
 targetSdk = "34"
 
-androidgradleplugin = "8.9.2"
-kotlin = "2.1.21"
-ktlint = "1.4.1"
+androidgradleplugin = "8.12.1"
+kotlin = "2.2.10"
+ktlint = "1.7.1"
 
 [libraries]
 kaml = "com.charleskorn.kaml:kaml:0.92.0"
