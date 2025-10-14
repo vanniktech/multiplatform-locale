@@ -19,7 +19,7 @@ plugin-android-cache-fix = "org.gradle.android.cache-fix:org.gradle.android.cach
 plugin-androidgradleplugin = { module = "com.android.tools.build:gradle", version.ref = "androidgradleplugin" }
 plugin-dokka = "org.jetbrains.dokka:dokka-gradle-plugin:2.0.0"
 plugin-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
-plugin-licensee = "app.cash.licensee:licensee-gradle-plugin:1.13.0"
+plugin-licensee = "app.cash.licensee:licensee-gradle-plugin:1.14.1"
 plugin-metalava = "me.tylerbwong.gradle.metalava:plugin:0.4.0-alpha03"
 plugin-publish = "com.vanniktech:gradle-maven-publish-plugin:0.34.0"
 timber = "com.jakewharton.timber:timber:5.0.1"
