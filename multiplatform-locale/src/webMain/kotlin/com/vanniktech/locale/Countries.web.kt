@@ -5,5 +5,5 @@ import kotlin.js.ExperimentalWasmJsInterop
 
 @Suppress(names = ["EXPECT_ACTUAL_CLASSIFIERS_ARE_IN_BETA_WARNING"])
 actual object Countries {
-    actual fun currentCountryCode(): String? = countryDataFromLocale().countryCode.toString()
+  actual fun currentCountryCode(): String? = countryDataFromLocale().countryCode.toString()
 }
