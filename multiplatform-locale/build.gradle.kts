@@ -45,6 +45,7 @@ kotlin {
         outputFileName = "multiplatform_locale_js.js"
       }
     }
+    generateTypeScriptDefinitions()
     useCommonJs()
     binaries.executable()
   }
