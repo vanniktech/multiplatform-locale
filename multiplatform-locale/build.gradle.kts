@@ -2,7 +2,7 @@ plugins {
   id("org.jetbrains.dokka")
   id("org.jetbrains.kotlin.multiplatform")
   id("org.jetbrains.kotlin.native.cocoapods")
-  id("com.android.library")
+  id("com.android.kotlin.multiplatform.library")
   id("me.tylerbwong.gradle.metalava")
   id("com.vanniktech.maven.publish")
   id("app.cash.licensee")
@@ -19,8 +19,11 @@ metalava {
 kotlin {
   applyDefaultHierarchyTemplate()
 
-  androidTarget {
-    publishLibraryVariants("release")
+  androidLibrary {
+    namespace = "com.vanniktech.locale"
+
+    minSdk = libs.versions.minSdk.get().toInt()
+    compileSdk = libs.versions.compileSdk.get().toInt()
   }
   jvm()
   jvmToolchain(11)
@@ -28,21 +31,11 @@ kotlin {
   iosArm64()
   iosSimulatorArm64()
 
-  targets.withType<org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget> {
-    compilations["main"].kotlinOptions.freeCompilerArgs += "-Xexport-kdoc"
-  }
-
   sourceSets {
     val commonTest by getting {
       dependencies {
         implementation(libs.kotlin.test.common)
         implementation(libs.kotlin.test.annotations.common)
-      }
-    }
-
-    val androidUnitTest by getting {
-      dependencies {
-        implementation(libs.kotlin.test.junit)
       }
     }
 
@@ -65,21 +58,4 @@ kotlin {
       isStatic = true
     }
   }
-}
-
-android {
-  namespace = "com.vanniktech.locale"
-
-  compileSdk = libs.versions.compileSdk.get().toInt()
-
-  defaultConfig {
-    minSdk = libs.versions.minSdk.get().toInt()
-  }
-
-  compileOptions {
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
-  }
-
-  resourcePrefix = "locale_"
 }
