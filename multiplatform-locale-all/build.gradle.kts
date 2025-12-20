@@ -1,8 +1,10 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
   id("org.jetbrains.dokka")
   id("org.jetbrains.kotlin.multiplatform")
   id("org.jetbrains.kotlin.native.cocoapods")
-  id("com.android.library")
+  id("com.android.kotlin.multiplatform.library")
   id("me.tylerbwong.gradle.metalava")
   id("com.vanniktech.maven.publish")
   id("app.cash.licensee")
@@ -19,8 +21,14 @@ metalava {
 kotlin {
   applyDefaultHierarchyTemplate()
 
-  androidTarget {
-    publishLibraryVariants("release")
+  androidLibrary {
+    namespace = "com.vanniktech.locale.all"
+
+    minSdk = libs.versions.minSdk.get().toInt()
+    compileSdk = libs.versions.compileSdk.get().toInt()
+    compilerOptions.jvmTarget.set(JvmTarget.JVM_11)
+    // https://issuetracker.google.com/issues/470478219
+    // resourcePrefix = "locale_all_"
   }
   jvm()
   jvmToolchain(11)
@@ -55,21 +63,4 @@ kotlin {
       export(project(":multiplatform-locale-google-play-store"))
     }
   }
-}
-
-android {
-  namespace = "com.vanniktech.locale.all"
-
-  compileSdk = libs.versions.compileSdk.get().toInt()
-
-  defaultConfig {
-    minSdk = libs.versions.minSdk.get().toInt()
-  }
-
-  compileOptions {
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
-  }
-
-  resourcePrefix = "locale_all_"
 }

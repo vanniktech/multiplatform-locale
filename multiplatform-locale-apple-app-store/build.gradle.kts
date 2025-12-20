@@ -1,8 +1,10 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
   id("org.jetbrains.dokka")
   id("org.jetbrains.kotlin.multiplatform")
   id("org.jetbrains.kotlin.native.cocoapods")
-  id("com.android.library")
+  id("com.android.kotlin.multiplatform.library")
   id("me.tylerbwong.gradle.metalava")
   id("com.vanniktech.maven.publish")
   id("app.cash.licensee")
@@ -19,18 +21,20 @@ metalava {
 kotlin {
   applyDefaultHierarchyTemplate()
 
-  androidTarget {
-    publishLibraryVariants("release")
+  androidLibrary {
+    namespace = "com.vanniktech.locale.apple.app.store"
+
+    minSdk = libs.versions.minSdk.get().toInt()
+    compileSdk = libs.versions.compileSdk.get().toInt()
+    compilerOptions.jvmTarget.set(JvmTarget.JVM_11)
+    // https://issuetracker.google.com/issues/470478219
+    // resourcePrefix = "locale_apple_app_store_"
   }
   jvm()
   jvmToolchain(11)
   iosX64()
   iosArm64()
   iosSimulatorArm64()
-
-  targets.withType<org.jetbrains.kotlin.gradle.plugin.mpp.KotlinNativeTarget> {
-    compilations["main"].kotlinOptions.freeCompilerArgs += "-Xexport-kdoc"
-  }
 
   sourceSets {
     val commonMain by getting {
@@ -43,12 +47,6 @@ kotlin {
       dependencies {
         implementation(libs.kotlin.test.common)
         implementation(libs.kotlin.test.annotations.common)
-      }
-    }
-
-    val androidUnitTest by getting {
-      dependencies {
-        implementation(libs.kotlin.test.junit)
       }
     }
 
@@ -72,21 +70,4 @@ kotlin {
       export(project(":multiplatform-locale"))
     }
   }
-}
-
-android {
-  namespace = "com.vanniktech.locale.apple.app.store"
-
-  compileSdk = libs.versions.compileSdk.get().toInt()
-
-  defaultConfig {
-    minSdk = libs.versions.minSdk.get().toInt()
-  }
-
-  compileOptions {
-    sourceCompatibility = JavaVersion.VERSION_11
-    targetCompatibility = JavaVersion.VERSION_11
-  }
-
-  resourcePrefix = "locale_apple_app_store_"
 }

@@ -4,8 +4,8 @@ compileSdk = "34"
 targetSdk = "34"
 
 androidgradleplugin = "8.13.2"
-kotlin = "2.2.21"
-ktlint = "1.7.1"
+kotlin = "2.3.0"
+ktlint = "1.8.0"
 
 [libraries]
 kaml = "com.charleskorn.kaml:kaml:0.104.0"

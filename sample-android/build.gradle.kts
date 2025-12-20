@@ -10,12 +10,11 @@ kotlin {
 android {
   namespace = "com.vanniktech.locale.sample.android"
 
-  compileSdk = libs.versions.compileSdk.get().toInt()
-
   defaultConfig {
     applicationId = "com.vanniktech.locale.sample.android"
     vectorDrawables.useSupportLibrary = true
     minSdk = libs.versions.minSdk.get().toInt()
+    compileSdk = libs.versions.compileSdk.get().toInt()
     targetSdk = libs.versions.targetSdk.get().toInt()
     versionCode = 1
     versionName = project.property("VERSION_NAME").toString()
