@@ -247,6 +247,11 @@ enum class Language(
     officialTerritories = listOf(Country.NORWAY),
     otherTerritories = emptyList(),
   ),
+  OROMO(
+    code = "om",
+    officialTerritories = listOf(Country.ETHIOPIA),
+    otherTerritories = listOf(Country.KENYA, Country.SOMALIA),
+  ),
   POLISH(
     code = "pl",
     officialTerritories = listOf(Country.POLAND),
