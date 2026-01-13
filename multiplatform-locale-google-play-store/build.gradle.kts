@@ -1,5 +1,3 @@
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
-
 plugins {
   id("org.jetbrains.dokka")
   id("org.jetbrains.kotlin.multiplatform")
@@ -26,7 +24,6 @@ kotlin {
 
     minSdk = libs.versions.minSdk.get().toInt()
     compileSdk = libs.versions.compileSdk.get().toInt()
-    compilerOptions.jvmTarget.set(JvmTarget.JVM_11)
     // https://issuetracker.google.com/issues/470478219
     // resourcePrefix = "locale_google_play_store_"
   }
