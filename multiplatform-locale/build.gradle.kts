@@ -1,3 +1,7 @@
+@file:OptIn(ExperimentalWasmDsl::class)
+
+import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
+
 plugins {
   id("org.jetbrains.dokka")
   id("org.jetbrains.kotlin.multiplatform")
@@ -32,18 +36,41 @@ kotlin {
   iosX64()
   iosArm64()
   iosSimulatorArm64()
+  wasmJs {
+    browser {
+      commonWebpackConfig {
+        outputFileName = "multiplatform_locale_wasmJs.js"
+      }
+    }
+    binaries.executable()
+  }
+  js {
+    browser {
+      commonWebpackConfig {
+        outputFileName = "multiplatform_locale_js.js"
+      }
+    }
+    generateTypeScriptDefinitions()
+    useCommonJs()
+    binaries.executable()
+  }
 
   sourceSets {
     val commonTest by getting {
       dependencies {
-        implementation(libs.kotlin.test.common)
-        implementation(libs.kotlin.test.annotations.common)
+        implementation(kotlin("test"))
       }
     }
 
     val jvmTest by getting {
       dependencies {
         implementation(libs.kotlin.test.junit)
+      }
+    }
+    val webMain by getting {
+      dependencies {
+        implementation(npm("get-user-locale", "3.0.0"))
+        implementation(npm("country-codes-list", "2.0.0"))
       }
     }
   }
