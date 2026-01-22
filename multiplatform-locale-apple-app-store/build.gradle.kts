@@ -26,6 +26,8 @@ kotlin {
     compileSdk = libs.versions.compileSdk.get().toInt()
     // https://issuetracker.google.com/issues/470478219
     // resourcePrefix = "locale_apple_app_store_"
+
+    withHostTest { }
   }
   jvm()
   jvmToolchain(11)
@@ -44,6 +46,12 @@ kotlin {
       dependencies {
         implementation(libs.kotlin.test.common)
         implementation(libs.kotlin.test.annotations.common)
+      }
+    }
+
+    val androidHostTest by getting {
+      dependencies {
+        implementation(libs.kotlin.test.junit)
       }
     }
 
