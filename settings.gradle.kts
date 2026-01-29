@@ -1,5 +1,3 @@
-rootProject.name = "MultiplatformLocale"
-
 pluginManagement {
   repositories {
     mavenCentral()
