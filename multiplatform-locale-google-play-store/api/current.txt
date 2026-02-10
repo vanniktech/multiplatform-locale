@@ -2,7 +2,6 @@
 package com.vanniktech.locale.google.play.store {
 
   public enum GooglePlayStoreLocale {
-    method public error.NonExistentClass toString();
     enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale af;
     enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale am;
     enum_constant public static final com.vanniktech.locale.google.play.store.GooglePlayStoreLocale ar;

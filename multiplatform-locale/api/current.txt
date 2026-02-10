@@ -16,26 +16,16 @@ package com.vanniktech.locale {
     field public static final com.vanniktech.locale.Countries INSTANCE;
   }
 
-  public final class Countries {
-    method public String? currentCountryCode();
-    field public static final com.vanniktech.locale.Countries INSTANCE;
-  }
-
-  public final class Countries {
-    method public String? currentCountryCode();
-    field public static final com.vanniktech.locale.Countries INSTANCE;
-  }
-
   public enum Country implements com.vanniktech.locale.Territory {
-    method public java.util.List<java.lang.String> getCallingCodes();
-    method public String getCode();
-    method public String getCode3();
-    method public com.vanniktech.locale.Continent getContinent();
-    method public String getEmoji();
-    property public final java.util.List<java.lang.String> callingCodes;
+    method @InaccessibleFromKotlin public java.util.List<java.lang.String> getCallingCodes();
+    method @InaccessibleFromKotlin public String getCode();
+    method @InaccessibleFromKotlin public String getCode3();
+    method @InaccessibleFromKotlin public com.vanniktech.locale.Continent getContinent();
+    method @InaccessibleFromKotlin public String getEmoji();
+    property public java.util.List<java.lang.String> callingCodes;
     property public String code;
     property public String code3;
-    property public final com.vanniktech.locale.Continent continent;
+    property public com.vanniktech.locale.Continent continent;
     property public String emoji;
     enum_constant public static final com.vanniktech.locale.Country AFGHANISTAN;
     enum_constant public static final com.vanniktech.locale.Country ALAND_ISLANDS;
@@ -293,21 +283,21 @@ package com.vanniktech.locale {
   public static final class Country.Companion {
     method public com.vanniktech.locale.Country? fromLenientOrNull(String? string);
     method public com.vanniktech.locale.Country? fromLocaleOrNull(String? locale);
-    method public Void? fromOrNull(String? identifier);
+    method public com.vanniktech.locale.Country? fromOrNull(String? identifier);
   }
 
   public enum Language {
-    method public error.NonExistentClass displayName();
-    method public String getCode();
-    method public error.NonExistentClass getDefaultCountry();
-    method public String? getLegacyCode();
-    method public java.util.List<com.vanniktech.locale.Territory> getOfficialTerritories();
-    method public java.util.List<com.vanniktech.locale.Territory> getOtherTerritories();
-    property public final String code;
-    property public final error.NonExistentClass defaultCountry;
-    property public final String? legacyCode;
-    property public final java.util.List<com.vanniktech.locale.Territory> officialTerritories;
-    property public final java.util.List<com.vanniktech.locale.Territory> otherTerritories;
+    method public error.NonExistentClass! displayName();
+    method @InaccessibleFromKotlin public String getCode();
+    method @InaccessibleFromKotlin public com.vanniktech.locale.Territory getDefaultCountry();
+    method @InaccessibleFromKotlin public String? getLegacyCode();
+    method @InaccessibleFromKotlin public java.util.List<com.vanniktech.locale.Territory> getOfficialTerritories();
+    method @InaccessibleFromKotlin public java.util.List<com.vanniktech.locale.Territory> getOtherTerritories();
+    property public String code;
+    property public com.vanniktech.locale.Territory defaultCountry;
+    property public String? legacyCode;
+    property public java.util.List<com.vanniktech.locale.Territory> officialTerritories;
+    property public java.util.List<com.vanniktech.locale.Territory> otherTerritories;
     enum_constant public static final com.vanniktech.locale.Language AFRIKAANS;
     enum_constant public static final com.vanniktech.locale.Language ALBANIAN;
     enum_constant public static final com.vanniktech.locale.Language AMHARIC;
@@ -391,52 +381,29 @@ package com.vanniktech.locale {
     field public static final com.vanniktech.locale.Languages INSTANCE;
   }
 
-  public final class Languages {
-    method public error.NonExistentClass currentLanguageCode();
-    field public static final com.vanniktech.locale.Languages INSTANCE;
-  }
-
-  public final class Languages {
-    method public String currentLanguageCode();
-    field public static final com.vanniktech.locale.Languages INSTANCE;
-  }
-
   public final class Locale implements java.lang.Comparable<com.vanniktech.locale.Locale> {
     ctor public Locale(com.vanniktech.locale.Language language, com.vanniktech.locale.Territory? territory);
     method public int compareTo(com.vanniktech.locale.Locale other);
     method public com.vanniktech.locale.Language component1();
     method public com.vanniktech.locale.Territory? component2();
-    method public com.vanniktech.locale.Locale copy(com.vanniktech.locale.Language language, com.vanniktech.locale.Territory? territory);
-    method public com.vanniktech.locale.Language getLanguage();
-    method public com.vanniktech.locale.Territory? getTerritory();
-    method public error.NonExistentClass toString();
-    property public final com.vanniktech.locale.Language language;
-    property public final com.vanniktech.locale.Territory? territory;
+    method public com.vanniktech.locale.Locale copy(optional com.vanniktech.locale.Language language, optional com.vanniktech.locale.Territory? territory);
+    method @InaccessibleFromKotlin public com.vanniktech.locale.Language getLanguage();
+    method @InaccessibleFromKotlin public com.vanniktech.locale.Territory? getTerritory();
+    property public com.vanniktech.locale.Language language;
+    property public com.vanniktech.locale.Territory? territory;
     field public static final com.vanniktech.locale.Locale.Companion Companion;
   }
 
   public static final class Locale.Companion {
-    method public error.NonExistentClass from(String locale);
-    method public error.NonExistentClass fromAndroidValuesDirectoryName(String androidValuesDirectoryName);
+    method public com.vanniktech.locale.Locale from(String locale);
+    method public com.vanniktech.locale.Locale fromAndroidValuesDirectoryName(String androidValuesDirectoryName);
     method public com.vanniktech.locale.Locale? fromAndroidValuesDirectoryNameOrNull(String androidValuesDirectoryName);
     method public com.vanniktech.locale.Locale? fromOrNull(String? locale);
   }
 
   public final class Locales {
     method public String currentLocaleString();
-    method public error.NonExistentClass currentLocaleStrings();
-    field public static final com.vanniktech.locale.Locales INSTANCE;
-  }
-
-  public final class Locales {
-    method public error.NonExistentClass currentLocaleString();
-    method public error.NonExistentClass currentLocaleStrings();
-    field public static final com.vanniktech.locale.Locales INSTANCE;
-  }
-
-  public final class Locales {
-    method public String currentLocaleString();
-    method public error.NonExistentClass currentLocaleStrings();
+    method public java.util.List<java.lang.String> currentLocaleStrings();
     field public static final com.vanniktech.locale.Locales INSTANCE;
   }
 
@@ -449,9 +416,9 @@ package com.vanniktech.locale {
   }
 
   public enum Region implements com.vanniktech.locale.Territory {
-    method public String getCode();
-    method public String getCode3();
-    method public String? getEmoji();
+    method @InaccessibleFromKotlin public String getCode();
+    method @InaccessibleFromKotlin public String getCode3();
+    method @InaccessibleFromKotlin public String? getEmoji();
     property public String code;
     property public String code3;
     property public String? emoji;
@@ -465,14 +432,14 @@ package com.vanniktech.locale {
   public static final class Region.Companion {
     method public com.vanniktech.locale.Region? fromLenientOrNull(String? string);
     method public com.vanniktech.locale.Region? fromLocaleOrNull(String? locale);
-    method public Void? fromOrNull(String? identifier);
+    method public com.vanniktech.locale.Region? fromOrNull(String? identifier);
   }
 
-  public sealed interface Territory {
-    method public default error.NonExistentClass displayName();
-    method public String getCode();
-    method public String getCode3();
-    method public String? getEmoji();
+  public sealed exhaustive interface Territory {
+    method public default error.NonExistentClass! displayName();
+    method @InaccessibleFromKotlin public String getCode();
+    method @InaccessibleFromKotlin public String getCode3();
+    method @InaccessibleFromKotlin public String? getEmoji();
     property public abstract String code;
     property public abstract String code3;
     property public abstract String? emoji;
