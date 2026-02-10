@@ -75,6 +75,7 @@ class LocaleTest {
       Pair(Locale(Language.SOMALI, Country.SOMALIA), "so-SO"),
       Pair(Locale(Language.CHINESE, Country.NEW_ZEALAND), "zh-Hans_NZ"),
       Pair(Locale(Language.OROMO, Country.ETHIOPIA), "om-ET"),
+      Pair(Locale(Language.KAZAKH, Country.KAZAKHSTAN), "kk-KZ"),
     ).forEach { (locale, localeString) ->
       assertEquals(
         message = localeString,
