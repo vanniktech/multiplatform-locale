@@ -1,7 +1,22 @@
 # Change Log
 
-Version 0.10.0 *(In development)*
----------------------------------
+Version 0.10.0 *(2026-02-22)*
+-----------------------------
+
+- API: Language add Afrikaans. [\#275](https://github.com/vanniktech/multiplatform-locale/pull/275) ([vanniktech](https://github.com/vanniktech))
+- API: Language add Albanian. [\#277](https://github.com/vanniktech/multiplatform-locale/pull/277) ([vanniktech](https://github.com/vanniktech))
+- API: Language add Bengali. [\#285](https://github.com/vanniktech/multiplatform-locale/pull/285) ([vanniktech](https://github.com/vanniktech))
+- API: Language add Bosnian. [\#288](https://github.com/vanniktech/multiplatform-locale/pull/288) ([vanniktech](https://github.com/vanniktech))
+- API: Language add Georgian. [\#283](https://github.com/vanniktech/multiplatform-locale/pull/283) ([vanniktech](https://github.com/vanniktech))
+- API: Language add Kannada. [\#279](https://github.com/vanniktech/multiplatform-locale/pull/279) ([vanniktech](https://github.com/vanniktech))
+- API: Language add Kazakh. [\#360](https://github.com/vanniktech/multiplatform-locale/pull/360) ([vanniktech](https://github.com/vanniktech))
+- API: Language add Lao [\#303](https://github.com/vanniktech/multiplatform-locale/pull/303) ([vanniktech](https://github.com/vanniktech))
+- API: Language add Macedonian. [\#286](https://github.com/vanniktech/multiplatform-locale/pull/286) ([vanniktech](https://github.com/vanniktech))
+- API: Language add Oromo. [\#352](https://github.com/vanniktech/multiplatform-locale/pull/352) ([vanniktech](https://github.com/vanniktech))
+- API: Language add Somali. [\#305](https://github.com/vanniktech/multiplatform-locale/pull/305) ([vanniktech](https://github.com/vanniktech))
+- API: Language add Swahili. [\#270](https://github.com/vanniktech/multiplatform-locale/pull/270) ([vanniktech](https://github.com/vanniktech))
+- Bug fix: Support parsing of 'zh-Hans_NZ' locale. [\#306](https://github.com/vanniktech/multiplatform-locale/pull/306) ([vanniktech](https://github.com/vanniktech))
+- multiplatform-locale-geo: Module that exposes geometry data for each Country. [\#269](https://github.com/vanniktech/multiplatform-locale/pull/269) ([vanniktech](https://github.com/vanniktech))
 
 Version 0.9.0 *(2025-01-19)*
 ----------------------------
