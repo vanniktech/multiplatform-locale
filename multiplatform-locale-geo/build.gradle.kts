@@ -28,7 +28,7 @@ kotlin {
     // resourcePrefix = "locale_geo"
   }
   jvm()
-  jvmToolchain(11)
+  jvmToolchain(17)
   iosX64()
   iosArm64()
   iosSimulatorArm64()
