@@ -414,7 +414,7 @@ package com.vanniktech.locale {
   }
 
   public final class Multiplatform_jvmKt {
-    method public static java.util.Locale toJavaLocale(com.vanniktech.locale.Locale);
+    method public static error.NonExistentClass toJavaLocale(com.vanniktech.locale.Locale);
   }
 
   public enum Region implements com.vanniktech.locale.Territory {
