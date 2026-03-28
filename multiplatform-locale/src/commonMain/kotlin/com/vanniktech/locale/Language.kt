@@ -247,6 +247,11 @@ enum class Language(
     officialTerritories = listOf(Country.INDIA),
     otherTerritories = emptyList(),
   ),
+  NEPALI(
+    code = "ne",
+    officialTerritories = listOf(Country.NEPAL),
+    otherTerritories = listOf(Country.BHUTAN, Country.INDIA),
+  ),
   NORWEGIAN(
     code = "no",
     officialTerritories = listOf(Country.NORWAY),

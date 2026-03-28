@@ -63,6 +63,7 @@ class GooglePlayStoreLocaleTest {
         GooglePlayStoreLocale.ms_MY,
         GooglePlayStoreLocale.ml_IN,
         GooglePlayStoreLocale.mr_IN,
+        GooglePlayStoreLocale.ne_NP,
         GooglePlayStoreLocale.no_NO,
         GooglePlayStoreLocale.pl_PL,
         GooglePlayStoreLocale.pt_PT,
