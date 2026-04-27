@@ -28,7 +28,7 @@ kotlin {
     // resourcePrefix = "locale_all_"
   }
   jvm()
-  jvmToolchain(11)
+  jvmToolchain(17)
   iosX64()
   iosArm64()
   iosSimulatorArm64()
