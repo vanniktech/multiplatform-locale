@@ -1,19 +1,22 @@
 package com.vanniktech.locale
 
-internal actual fun Language.commonDisplayName() = java.util.Locale(
-  code,
-  "",
-).displayLanguage.capitalized()
+import java.util.Locale as JavaLocale
+
+internal actual fun Language.commonDisplayName() = JavaLocale.Builder()
+  .setLanguage(code)
+  .build()
+  .displayLanguage.capitalized()
 
 internal actual fun Territory.commonDisplayName() = when (this) {
   Region.INTERNATIONAL_WATERS -> "International Waters"
-  else -> java.util.Locale(
-    java.util.Locale.getDefault().language,
-    code,
-  ).displayCountry.capitalized()
+  else -> JavaLocale.Builder()
+    .setLanguage(JavaLocale.getDefault().language)
+    .setRegion(code)
+    .build()
+    .displayCountry.capitalized()
 }
 
-fun Locale.toJavaLocale() = java.util.Locale(
-  language.code,
-  territory?.code.orEmpty(),
-)
+fun Locale.toJavaLocale() = JavaLocale.Builder()
+  .setLanguage(language.code)
+  .setRegion(territory?.code.orEmpty())
+  .build()
