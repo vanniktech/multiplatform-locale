@@ -52,6 +52,11 @@ enum class Language(
     officialTerritories = listOf(Country.BANGLADESH),
     otherTerritories = listOf(Country.INDIA),
   ),
+  BASQUE(
+    code = "eu",
+    officialTerritories = listOf(),
+    otherTerritories = listOf(Country.SPAIN),
+  ),
   BOKMAL(
     code = "nb",
     officialTerritories = listOf(Country.NORWAY),
@@ -369,7 +374,7 @@ enum class Language(
   ),
   ;
 
-  val defaultCountry = officialTerritories.first()
+  val defaultCountry = officialTerritories.firstOrNull() ?: otherTerritories.first()
 
   fun displayName() = commonDisplayName()
 
