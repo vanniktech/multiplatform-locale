@@ -301,6 +301,11 @@ enum class Language(
     officialTerritories = listOf(Country.SERBIA),
     otherTerritories = listOf(Country.CROATIA, Country.BOSNIA_AND_HERZEGOVINA, Country.MONTENEGRO),
   ),
+  SINHALA(
+    code = "si",
+    officialTerritories = listOf(Country.SRI_LANKA),
+    otherTerritories = listOf(),
+  ),
   SLOVAK(
     code = "sk",
     officialTerritories = listOf(Country.SLOVAKIA),
