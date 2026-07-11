@@ -3,6 +3,7 @@ plugins {
   id("org.jetbrains.kotlin.multiplatform")
   id("org.jetbrains.kotlin.native.cocoapods")
   id("com.android.kotlin.multiplatform.library")
+  id("com.android.lint")
   id("me.tylerbwong.gradle.metalava")
   id("com.vanniktech.maven.publish")
   id("app.cash.licensee")
@@ -19,13 +20,13 @@ metalava {
 kotlin {
   applyDefaultHierarchyTemplate()
 
-  androidLibrary {
+  android {
     namespace = "com.vanniktech.locale"
 
     minSdk = libs.versions.minSdk.get().toInt()
     compileSdk = libs.versions.compileSdk.get().toInt()
-    // https://issuetracker.google.com/issues/470478219
-    // resourcePrefix = "locale_"
+    androidResources.resourcePrefix = "locale_"
+    withHostTest { }
   }
   jvm()
   jvmToolchain(21)
