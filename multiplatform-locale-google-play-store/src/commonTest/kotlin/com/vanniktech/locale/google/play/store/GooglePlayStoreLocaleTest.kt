@@ -75,6 +75,7 @@ class GooglePlayStoreLocaleTest {
         GooglePlayStoreLocale.rm,
         GooglePlayStoreLocale.ru_RU,
         GooglePlayStoreLocale.sr,
+        GooglePlayStoreLocale.si_LK,
         GooglePlayStoreLocale.sk,
         GooglePlayStoreLocale.sl,
         GooglePlayStoreLocale.es_ES,
