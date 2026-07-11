@@ -104,13 +104,10 @@ fun Locale.googlePlayStoreLocale(): GooglePlayStoreLocale? {
     language = language,
     territory = territory ?: language.defaultCountry,
   )
-  return GooglePlayStoreLocale.entries
-    .groupBy { Language.fromLocaleOrNull(it.toString()) }
-    .firstNotNullOfOrNull { (key, locales) ->
-      locales.firstNotNullOfOrNull { locale ->
-        locale.takeIf {
-          fromOrNull(it.name) == optimized
-        }
-      } ?: locales.firstNotNullOfOrNull { locale -> locale.takeIf { language == key } }
-    }
+
+  val candidates = GooglePlayStoreLocale.entries
+    .filter { Language.from(it.name.split("_").first()) == language }
+
+  return candidates.firstNotNullOfOrNull { locale -> locale.takeIf { fromOrNull(it.toString()) == optimized } }
+    ?: candidates.firstOrNull()
 }
