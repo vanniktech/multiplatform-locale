@@ -356,6 +356,7 @@ package com.vanniktech.locale {
     enum_constant public static final com.vanniktech.locale.Language POLISH;
     enum_constant public static final com.vanniktech.locale.Language PORTUGUESE;
     enum_constant public static final com.vanniktech.locale.Language ROMANIAN;
+    enum_constant public static final com.vanniktech.locale.Language ROMANSH;
     enum_constant public static final com.vanniktech.locale.Language RUSSIAN;
     enum_constant public static final com.vanniktech.locale.Language SERBIAN;
     enum_constant public static final com.vanniktech.locale.Language SLOVAK;

@@ -296,6 +296,11 @@ enum class Language(
     officialTerritories = listOf(Country.ROMANIA, Country.MOLDOVA),
     otherTerritories = emptyList(),
   ),
+  ROMANSH(
+    code = "rm",
+    officialTerritories = listOf(),
+    otherTerritories = listOf(Country.SWITZERLAND),
+  ),
   RUSSIAN(
     code = "ru",
     officialTerritories = listOf(Country.RUSSIA, Country.BELARUS, Country.KAZAKHSTAN, Country.KYRGYZSTAN),
