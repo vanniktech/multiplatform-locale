@@ -293,8 +293,10 @@ package com.vanniktech.locale {
     method @InaccessibleFromKotlin public String? getLegacyCode();
     method @InaccessibleFromKotlin public java.util.List<com.vanniktech.locale.Territory> getOfficialTerritories();
     method @InaccessibleFromKotlin public java.util.List<com.vanniktech.locale.Territory> getOtherTerritories();
+    method @InaccessibleFromKotlin public boolean isRtl();
     property public String code;
     property public com.vanniktech.locale.Territory defaultCountry;
+    property public boolean isRtl;
     property public String? legacyCode;
     property public java.util.List<com.vanniktech.locale.Territory> officialTerritories;
     property public java.util.List<com.vanniktech.locale.Territory> otherTerritories;
