@@ -87,6 +87,7 @@ class GooglePlayStoreLocaleTest {
         GooglePlayStoreLocale.uk,
         GooglePlayStoreLocale.ur,
         GooglePlayStoreLocale.vi,
+        GooglePlayStoreLocale.zu,
       ),
       actual = Language.entries.flatMap { language -> (language.officialTerritories + language.otherTerritories).mapNotNull { Locale(language, it).googlePlayStoreLocale() } }.distinct(),
     )
