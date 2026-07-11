@@ -375,6 +375,7 @@ package com.vanniktech.locale {
     enum_constant public static final com.vanniktech.locale.Language URDU;
     enum_constant public static final com.vanniktech.locale.Language UZBEK;
     enum_constant public static final com.vanniktech.locale.Language VIETNAMESE;
+    enum_constant public static final com.vanniktech.locale.Language ZULU;
     field public static final com.vanniktech.locale.Language.Companion Companion;
   }
 

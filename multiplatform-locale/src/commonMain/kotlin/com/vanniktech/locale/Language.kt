@@ -392,6 +392,11 @@ enum class Language(
     officialTerritories = listOf(Country.VIETNAM),
     otherTerritories = emptyList(),
   ),
+  ZULU(
+    code = "zu",
+    officialTerritories = listOf(Country.SOUTH_AFRICA),
+    otherTerritories = emptyList(),
+  ),
   ;
 
   val defaultCountry = officialTerritories.firstOrNull() ?: otherTerritories.first()
