@@ -40,4 +40,16 @@ class LanguageTest {
     assertEquals(expected = Language.INDONESIAN, actual = Language.from("id"))
     assertEquals(expected = Language.INDONESIAN, actual = Language.from("in"))
   }
+
+  @Test fun isRtl() {
+    assertEquals(
+      expected = """
+      ARABIC
+      FARSI
+      HEBREW
+      URDU
+      """.trimIndent(),
+      actual = Language.entries.filter { it.isRtl }.joinToString(separator = "\n"),
+    )
+  }
 }

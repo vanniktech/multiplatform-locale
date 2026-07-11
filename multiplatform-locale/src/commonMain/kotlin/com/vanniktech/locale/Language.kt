@@ -9,11 +9,13 @@ enum class Language(
   val officialTerritories: List<Territory>,
   /** Territories, where this [Language] is spoken in. */
   val otherTerritories: List<Territory>,
+  val isRtl: Boolean = false,
 ) {
   ARABIC(
     code = "ar",
     officialTerritories = listOf(Country.SAUDI_ARABIA, Country.ALGERIA, Country.BAHRAIN, Country.MALI, Country.NIGER, Country.SENEGAL, Country.CHAD, Country.COMOROS, Country.DJIBOUTI, Country.EGYPT, Country.IRAQ, Country.JORDAN, Country.KUWAIT, Country.LEBANON, Country.LIBYA, Country.MAURITANIA, Country.MOROCCO, Country.OMAN, Country.QATAR, Country.SOMALIA, Country.SUDAN, Country.SYRIA, Country.TUNISIA, Country.UNITED_ARAB_EMIRATES, Country.YEMEN),
     otherTerritories = listOf(Country.PALESTINE, Country.SOMALIA, Country.SAHRAWI_ARAB_DEMOCRATIC_REPUBLIC, Country.TANZANIA),
+    isRtl = true,
   ),
   AFRIKAANS(
     code = "af",
@@ -119,6 +121,7 @@ enum class Language(
     code = "fa",
     officialTerritories = listOf(Country.IRAN),
     otherTerritories = listOf(Country.AFGHANISTAN, Country.BAHRAIN, Country.IRAQ, Country.OMAN, Country.YEMEN, Country.UNITED_ARAB_EMIRATES),
+    isRtl = true,
   ),
   FILIPINO(
     code = "fil",
@@ -160,6 +163,7 @@ enum class Language(
     legacyCode = "iw",
     officialTerritories = listOf(Country.ISRAEL),
     otherTerritories = emptyList(),
+    isRtl = true,
   ),
   ICELANDIC(
     code = "is",
@@ -351,6 +355,7 @@ enum class Language(
     code = "ur",
     officialTerritories = listOf(Country.PAKISTAN),
     otherTerritories = listOf(),
+    isRtl = true,
   ),
   UZBEK(
     code = "uz",
