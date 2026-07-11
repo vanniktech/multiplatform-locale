@@ -58,6 +58,7 @@ class GooglePlayStoreLocaleTest {
         GooglePlayStoreLocale.kn_IN,
         GooglePlayStoreLocale.kk,
         GooglePlayStoreLocale.ko_KR,
+        GooglePlayStoreLocale.ky_KG,
         GooglePlayStoreLocale.lo_LA,
         GooglePlayStoreLocale.lv,
         GooglePlayStoreLocale.lt,
