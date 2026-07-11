@@ -291,6 +291,11 @@ enum class Language(
     officialTerritories = listOf(Country.PORTUGAL, Country.BRAZIL, Country.ANGOLA, Country.MOZAMBIQUE),
     otherTerritories = listOf(Country.GUINEA_BISSAU, Country.CAPE_VERDE, Country.SAO_TOME_AND_PRINCE, Country.MACAO),
   ),
+  PUNJABI(
+    code = "pa",
+    officialTerritories = listOf(),
+    otherTerritories = listOf(Country.PAKISTAN, Country.INDIA),
+  ),
   ROMANIAN(
     code = "ro",
     officialTerritories = listOf(Country.ROMANIA, Country.MOLDOVA),
