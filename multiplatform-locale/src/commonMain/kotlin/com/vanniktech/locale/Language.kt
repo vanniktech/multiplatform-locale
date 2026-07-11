@@ -143,6 +143,11 @@ enum class Language(
     officialTerritories = listOf(Country.FRANCE, Country.CANADA, Country.BELGIUM, Country.BENIN, Country.BURKINA_FASO, Country.BURUNDI, Country.CAMEROON, Country.CHAD, Country.COTE_DIVOIRE, Country.DEMOCRATIC_REPUBLIC_OF_CONGO, Country.DJIBOUTI, Country.EQUATORIAL_GUINEA, Country.HAITI, Country.LUXEMBOURG, Country.MADAGASCAR, Country.MALI, Country.MONACO, Country.NIGER, Country.RWANDA, Country.SENEGAL, Country.SEYCHELLES, Country.SWITZERLAND, Country.TOGO, Country.VANUATU),
     otherTerritories = emptyList(),
   ),
+  GALICIAN(
+    code = "gl",
+    officialTerritories = listOf(),
+    otherTerritories = listOf(Country.SPAIN),
+  ),
   GEORGIAN(
     code = "ka",
     officialTerritories = listOf(Country.GEORGIA),
