@@ -18,6 +18,7 @@ class GooglePlayStoreLocaleTest {
         GooglePlayStoreLocale.az_AZ,
         GooglePlayStoreLocale.be,
         GooglePlayStoreLocale.bn_BD,
+        GooglePlayStoreLocale.eu_ES,
         GooglePlayStoreLocale.bg,
         GooglePlayStoreLocale.my_MM,
         GooglePlayStoreLocale.km_KH,

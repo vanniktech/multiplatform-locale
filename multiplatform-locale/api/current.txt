@@ -289,7 +289,7 @@ package com.vanniktech.locale {
   public enum Language {
     method public error.NonExistentClass! displayName();
     method @InaccessibleFromKotlin public String getCode();
-    method @InaccessibleFromKotlin public error.NonExistentClass getDefaultCountry();
+    method @InaccessibleFromKotlin public error.NonExistentClass! getDefaultCountry();
     method @InaccessibleFromKotlin public String? getLegacyCode();
     method @InaccessibleFromKotlin public java.util.List<com.vanniktech.locale.Territory> getOfficialTerritories();
     method @InaccessibleFromKotlin public java.util.List<com.vanniktech.locale.Territory> getOtherTerritories();
@@ -306,6 +306,7 @@ package com.vanniktech.locale {
     enum_constant public static final com.vanniktech.locale.Language ARABIC;
     enum_constant public static final com.vanniktech.locale.Language ARMENIAN;
     enum_constant public static final com.vanniktech.locale.Language AZERBAIJANI;
+    enum_constant public static final com.vanniktech.locale.Language BASQUE;
     enum_constant public static final com.vanniktech.locale.Language BELARUSIAN;
     enum_constant public static final com.vanniktech.locale.Language BENGALI;
     enum_constant public static final com.vanniktech.locale.Language BOKMAL;
