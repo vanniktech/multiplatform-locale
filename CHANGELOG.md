@@ -1,7 +1,22 @@
 # Change Log
 
-Version 0.11.0 *(In development)*
----------------------------------
+Version 0.11.0 *(2026-07-11)*
+-----------------------------
+
+- API: Add Language#isRtl property. [\#383](https://github.com/vanniktech/multiplatform-locale/pull/383) ([vanniktech](https://github.com/vanniktech))
+- API: Language add Basque. [\#385](https://github.com/vanniktech/multiplatform-locale/pull/385) ([vanniktech](https://github.com/vanniktech))
+- API: Language add Galician. [\#386](https://github.com/vanniktech/multiplatform-locale/pull/386) ([vanniktech](https://github.com/vanniktech))
+- API: Language add Kyrgyz. [\#387](https://github.com/vanniktech/multiplatform-locale/pull/387) ([vanniktech](https://github.com/vanniktech))
+- API: Language add Mongolian. [\#375](https://github.com/vanniktech/multiplatform-locale/pull/375) ([vanniktech](https://github.com/vanniktech))
+- API: Language add Nepali. [\#373](https://github.com/vanniktech/multiplatform-locale/pull/373) ([vanniktech](https://github.com/vanniktech))
+- API: Language add Punjabi. [\#392](https://github.com/vanniktech/multiplatform-locale/pull/392) ([vanniktech](https://github.com/vanniktech))
+- API: Language add Romansh. [\#388](https://github.com/vanniktech/multiplatform-locale/pull/388) ([vanniktech](https://github.com/vanniktech))
+- API: Language add Sinhala. [\#389](https://github.com/vanniktech/multiplatform-locale/pull/389) ([vanniktech](https://github.com/vanniktech))
+- API: Language add Zulu. [\#390](https://github.com/vanniktech/multiplatform-locale/pull/390) ([vanniktech](https://github.com/vanniktech))
+- Breaking: Use Java 21 instead of 11. [\#372](https://github.com/vanniktech/multiplatform-locale/pull/372) ([vanniktech](https://github.com/vanniktech))
+- Prepare next development version. ([vanniktech](https://github.com/vanniktech))
+- Technical: Improve Locale#googlePlayStoreLocale implementation. [\#391](https://github.com/vanniktech/multiplatform-locale/pull/391) ([vanniktech](https://github.com/vanniktech))
+- Technical: Update to AGP 9.2.1 (bumps minSdk to 23 & compileSdk to 37) [\#384](https://github.com/vanniktech/multiplatform-locale/pull/384) ([vanniktech](https://github.com/vanniktech))
 
 Version 0.10.0 *(2026-02-22)*
 -----------------------------
