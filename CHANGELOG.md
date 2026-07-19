@@ -17,7 +17,6 @@ Version 0.11.0 *(2026-07-11)*
 - API: Language add Sinhala. [\#389](https://github.com/vanniktech/multiplatform-locale/pull/389) ([vanniktech](https://github.com/vanniktech))
 - API: Language add Zulu. [\#390](https://github.com/vanniktech/multiplatform-locale/pull/390) ([vanniktech](https://github.com/vanniktech))
 - Breaking: Use Java 21 instead of 11. [\#372](https://github.com/vanniktech/multiplatform-locale/pull/372) ([vanniktech](https://github.com/vanniktech))
-- Prepare next development version. ([vanniktech](https://github.com/vanniktech))
 - Technical: Improve Locale#googlePlayStoreLocale implementation. [\#391](https://github.com/vanniktech/multiplatform-locale/pull/391) ([vanniktech](https://github.com/vanniktech))
 - Technical: Update to AGP 9.2.1 (bumps minSdk to 23 & compileSdk to 37) [\#384](https://github.com/vanniktech/multiplatform-locale/pull/384) ([vanniktech](https://github.com/vanniktech))
 
