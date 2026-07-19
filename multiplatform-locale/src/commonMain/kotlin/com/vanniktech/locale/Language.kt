@@ -168,6 +168,11 @@ enum class Language(
     officialTerritories = listOf(Country.INDIA, Country.SRI_LANKA, Country.SINGAPORE),
     otherTerritories = listOf(Country.MALAYSIA, Country.MAURITIUS, Country.FIJI, Country.SOUTH_AFRICA),
   ),
+  HAUSA(
+    code = "ha",
+    officialTerritories = listOf(Country.NIGER),
+    otherTerritories = listOf(Country.NIGERIA),
+  ),
   HEBREW(
     code = "he",
     legacyCode = "iw",
