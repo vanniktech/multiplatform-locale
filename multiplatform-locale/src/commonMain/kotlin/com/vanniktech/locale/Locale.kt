@@ -9,7 +9,7 @@ data class Locale(
     territory?.code,
   ).joinToString(separator = "-")
 
-  override fun compareTo(other: Locale): Int = compareValuesBy(this, other, { it.language }, { it.territory as Comparable<*> })
+  override fun compareTo(other: Locale): Int = compareValuesBy(this, other, { it.language }, { it.territory as? Comparable<*> })
 
   companion object {
     fun from(locale: String) = requireNotNull(fromOrNull(locale)) { "Can't get locale for $locale" }
