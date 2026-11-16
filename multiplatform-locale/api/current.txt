@@ -21,11 +21,13 @@ package com.vanniktech.locale {
     method @InaccessibleFromKotlin public String getCode();
     method @InaccessibleFromKotlin public String getCode3();
     method @InaccessibleFromKotlin public com.vanniktech.locale.Continent getContinent();
+    method @InaccessibleFromKotlin public String getCurrencyCode();
     method @InaccessibleFromKotlin public String getEmoji();
     property public java.util.List<java.lang.String> callingCodes;
     property public String code;
     property public String code3;
     property public com.vanniktech.locale.Continent continent;
+    property public String currencyCode;
     property public String emoji;
     enum_constant public static final com.vanniktech.locale.Country AFGHANISTAN;
     enum_constant public static final com.vanniktech.locale.Country ALAND_ISLANDS;
