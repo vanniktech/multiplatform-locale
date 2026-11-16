@@ -98,6 +98,7 @@ fun main() {
         minLatitude = 41.877,
         minLongitude = 19.949,
       ),
+      currencyCode = "EUR",
     ),
   )
 
@@ -109,7 +110,7 @@ fun main() {
         .replace(" ", "_")
         .replace("AUSTRALIA", "OCEANIA")
 
-      "${it.isoShortName}(code = \"${it.alpha2}\", code3 = \"${it.alpha3}\", callingCodes = listOf(\"+$callingCode\"), continent = Continent.$continent),"
+      "${it.isoShortName}(code = \"${it.alpha2}\", code3 = \"${it.alpha3}\", currencyCode = \"${it.currencyCode}\", callingCodes = listOf(\"+$callingCode\"), continent = Continent.$continent),"
     }
 
   require(overwrittenNames.isEmpty()) { "Unmatched overwritten names: $overwrittenNames" }
@@ -177,6 +178,7 @@ fun main() {
   @SerialName("iso_short_name") val isoShortName: String,
   @SerialName("continent") val continent: String,
   @SerialName("geo") val geo: Geo,
+  @SerialName("currency_code") val currencyCode: String,
 )
 
 @Serializable data class Geo(
