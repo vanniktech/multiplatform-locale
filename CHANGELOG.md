@@ -1,7 +1,11 @@
 # Change Log
 
-Version 0.12.0 *(In development)*
----------------------------------
+Version 0.12.0 *(2026-11-09)*
+-----------------------------
+
+- API: Country add currencyCode field. [\#409](https://github.com/vanniktech/multiplatform-locale/pull/409) ([vanniktech](https://github.com/vanniktech))
+- API: Language add Hausa. [\#394](https://github.com/vanniktech/multiplatform-locale/pull/394) ([vanniktech](https://github.com/vanniktech))
+- Bug fix: Fix Locale crashing when comparing against a Locale with a null territory. [\#402](https://github.com/vanniktech/multiplatform-locale/pull/402) ([vanniktech](https://github.com/vanniktech))
 
 Version 0.11.0 *(2026-07-11)*
 -----------------------------
